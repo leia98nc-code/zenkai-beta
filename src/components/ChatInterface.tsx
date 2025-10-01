@@ -1,5 +1,13 @@
 import { useEffect, useRef } from "react";
 
+declare global {
+  interface Window {
+    botpressWebChat?: {
+      init: (config: any) => void;
+    };
+  }
+}
+
 interface ChatInterfaceProps {
   botpressConfig?: {
     botId?: string;
@@ -18,30 +26,39 @@ const ChatInterface = ({ botpressConfig }: ChatInterfaceProps) => {
     const script = document.createElement("script");
     script.src = "https://cdn.botpress.cloud/webchat/v3.2/inject.js";
     script.async = true;
-    document.body.appendChild(script);
-
+    
     script.onload = () => {
-      const configScript = document.createElement("script");
-      configScript.innerHTML = `
-        window.botpressWebChat.init({
-          botId: "f0490f8c-ab7a-4960-9809-9321526ce89d",
-          clientId: "a3ab0d66-9824-413a-b644-e8feffc665cb",
-          hostUrl: "https://cdn.botpress.cloud/webchat/v3.2",
-          messagingUrl: "https://messaging.botpress.cloud",
-          composerPlaceholder: "Posez votre question...",
-          botName: "LEIA",
-          botDescription: "LEAI est un robot à l'intelligence artificielle générative, répondant à toutes vos questions en matière de droit du travail applicable en Nouvelle-Calédonie",
-          useSessionStorage: true,
-          enableConversationDeletion: true,
-          showPoweredBy: false
-        });
-      `;
-      document.body.appendChild(configScript);
-      scriptLoaded.current = true;
+      // Wait for botpressWebChat to be available
+      const initBotpress = () => {
+        if (window.botpressWebChat) {
+          window.botpressWebChat.init({
+            botId: "f0490f8c-ab7a-4960-9809-9321526ce89d",
+            clientId: "a3ab0d66-9824-413a-b644-e8feffc665cb",
+            hostUrl: "https://cdn.botpress.cloud/webchat/v3.2",
+            messagingUrl: "https://messaging.botpress.cloud",
+            composerPlaceholder: "Posez votre question...",
+            botName: "LEIA",
+            botDescription: "LEAI est un robot à l'intelligence artificielle générative, répondant à toutes vos questions en matière de droit du travail applicable en Nouvelle-Calédonie",
+            useSessionStorage: true,
+            enableConversationDeletion: true,
+            showPoweredBy: false
+          });
+          scriptLoaded.current = true;
+        } else {
+          setTimeout(initBotpress, 100);
+        }
+      };
+      initBotpress();
     };
 
+    script.onerror = () => {
+      console.error("Failed to load Botpress webchat script");
+    };
+
+    document.body.appendChild(script);
+
     return () => {
-      if (scriptLoaded.current) {
+      if (scriptLoaded.current && script.parentNode) {
         script.remove();
       }
     };
