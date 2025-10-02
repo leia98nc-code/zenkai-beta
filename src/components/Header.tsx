@@ -22,7 +22,7 @@ const Header = () => {
         title: "Déconnexion",
         description: "À bientôt !",
       });
-      navigate("/auth");
+      navigate("/");
     }
   };
 
@@ -34,8 +34,8 @@ const Header = () => {
             <Bot className="w-6 h-6 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-xl font-bold">Agent IA</h1>
-            <p className="text-xs text-muted-foreground">Accès sécurisé</p>
+            <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">LEIA</h1>
+            <p className="text-xs text-muted-foreground">L'Expert Intelligent Administratif</p>
           </div>
         </div>
         

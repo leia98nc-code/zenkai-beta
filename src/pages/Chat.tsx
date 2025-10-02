@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import ChatInterface from "@/components/ChatInterface";
 import { Session } from "@supabase/supabase-js";
 
-const Index = () => {
+const Chat = () => {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -52,4 +52,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Chat;
