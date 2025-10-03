@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { LogOut, Bot } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import leiaLogo from "@/assets/leia-logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -30,9 +31,11 @@ const Header = () => {
     <header className="border-b border-border/50 bg-card/30 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gradient-primary rounded-lg">
-            <Bot className="w-6 h-6 text-primary-foreground" />
-          </div>
+          <img 
+            src={leiaLogo} 
+            alt="LEIA Logo" 
+            className="w-10 h-10 rounded-full object-cover"
+          />
           <div>
             <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">LEIA</h1>
             <p className="text-xs text-muted-foreground">L'Expert Intelligent Administratif</p>

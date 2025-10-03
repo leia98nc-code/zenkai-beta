@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Bot, Mail, Shield } from "lucide-react";
+import leiaLogo from "@/assets/leia-logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +10,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="p-2 bg-gradient-primary rounded-lg">
-                <Bot className="w-5 h-5 text-primary-foreground" />
-              </div>
+            <img 
+              src={leiaLogo} 
+              alt="LEIA Logo" 
+              className="w-10 h-10 rounded-full object-cover"
+            />
               <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
                 LEIA
               </span>

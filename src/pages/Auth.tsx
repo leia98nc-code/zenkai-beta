@@ -6,8 +6,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Bot, Mail, Shield } from "lucide-react";
+import { Mail, Shield } from "lucide-react";
 import { z } from "zod";
+import leiaLogo from "@/assets/leia-logo.png";
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Email invalide" }).max(255),
@@ -122,9 +123,11 @@ const Auth = () => {
         <Card className="w-full max-w-md border-border/50">
           <CardHeader className="space-y-4">
             <div className="flex justify-center">
-              <div className="p-4 bg-gradient-primary rounded-full">
-                <Bot className="w-8 h-8 text-primary-foreground" />
-              </div>
+              <img 
+                src={leiaLogo} 
+                alt="LEIA Logo" 
+                className="w-16 h-16 rounded-full object-cover"
+              />
             </div>
             <CardTitle className="text-2xl text-center">
               {isLogin ? "Connexion" : "Inscription"}
@@ -207,9 +210,11 @@ const Auth = () => {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                <Bot className="w-5 h-5" />
-              </div>
+              <img 
+                src={leiaLogo} 
+                alt="LEIA Logo" 
+                className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+              />
               <div>
                 <h3 className="font-semibold mb-1">Réponses instantanées</h3>
                 <p className="text-sm opacity-90">

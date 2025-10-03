@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bot, Target, Users, Shield, Zap } from "lucide-react";
+import leiaLogo from "@/assets/leia-logo.png";
 
 const About = () => {
   return (
@@ -46,7 +47,11 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card>
                   <CardContent className="p-6 space-y-3">
-                    <Bot className="w-8 h-8 text-primary" />
+                    <img 
+                      src={leiaLogo} 
+                      alt="LEIA Logo" 
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
                     <h3 className="text-xl font-semibold">Technologie IA Avancée</h3>
                     <p className="text-muted-foreground">
                       LEIA utilise les dernières avancées en intelligence
