@@ -44,12 +44,7 @@ const Chat = () => {
     return null;
   }
 
-  return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
-      <ChatInterface />
-    </div>
-  );
+  return <ChatInterface />;
 };
 
 export default Chat;
