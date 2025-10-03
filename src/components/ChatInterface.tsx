@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { LogOut, Bot, Menu } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import leiaLogo from "@/assets/leia-logo.png";
 
 const ChatInterface = () => {
   const navigate = useNavigate();
@@ -30,9 +31,11 @@ const ChatInterface = () => {
     <div className="w-full h-screen flex flex-col">
       <header className="bg-card border-b border-border p-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gradient-primary rounded-lg">
-            <Bot className="w-5 h-5 text-primary-foreground" />
-          </div>
+          <img 
+            src={leiaLogo} 
+            alt="LEIA Logo" 
+            className="w-10 h-10 rounded-full object-cover"
+          />
           <h1 className="text-xl font-semibold bg-gradient-primary bg-clip-text text-transparent">
             LEIA - Assistant Juridique
           </h1>
