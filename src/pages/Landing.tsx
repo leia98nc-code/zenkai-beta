@@ -174,7 +174,7 @@ const Landing = () => {
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               LEIA maîtrise tous les aspects du droit du travail et des procédures
-              administratives en Nouvelle-Calédonie
+              administratives en Nouvelle-Calédonie. Cette intelligence artificielle est secondée par une expertise et un savoir-faire de compétences humaines à votre appui en cas de besoin.
             </p>
           </div>
 
