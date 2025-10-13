@@ -8,83 +8,93 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    /* Couleurs de base - Palette Zen Japonaise */
+    --sumi: 0 0% 10%;           /* Noir encre #1A1A1A */
+    --gofun: 0 0% 98%;          /* Blanc gofun #FAFAFA */
+    --indigo: 229 35% 44%;      /* Indigo aï #4A5899 */
+    --purple: 258 34% 56%;      /* Violet pourpre #7B68B6 */
+    --beni: 13 79% 56%;         /* Orange beni #E85D35 */
+    
+    --background: var(--gofun);
+    --foreground: var(--sumi);
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    --card: var(--gofun);
+    --card-foreground: var(--sumi);
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 0 0% 10%;
+    --popover: var(--gofun);
+    --popover-foreground: var(--sumi);
 
-    --primary: 229 35% 44%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 258 34% 56%;
+    --primary: var(--indigo);
+    --primary-foreground: var(--gofun);
+    --primary-glow: var(--purple);
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 0 0% 91%;
+    --secondary-foreground: var(--sumi);
 
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 91%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 13 79% 56%;
-    --accent-foreground: 0 0% 98%;
+    --accent: var(--beni);
+    --accent-foreground: var(--gofun);
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: var(--gofun);
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 229 35% 44%;
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: var(--indigo);
 
     --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
 
     --radius: 0.5rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(229 35% 44%), hsl(258 34% 56%));
-    --gradient-glow: linear-gradient(135deg, hsl(229 35% 44% / 0.1), hsl(258 34% 56% / 0.1));
-    --shadow-glow: 0 10px 40px hsl(229 35% 44% / 0.1);
-    --shadow-zen: 0 2px 8px hsl(0 0% 10% / 0.05);
+    /* Effets visuels zen */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--indigo)), hsl(var(--purple)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--indigo) / 0.1), hsl(var(--purple) / 0.1));
+    --shadow-zen: 0 2px 8px hsl(var(--sumi) / 0.04);
+    --shadow-hover: 0 4px 12px hsl(var(--sumi) / 0.08);
+    --shadow-glow: 0 10px 40px hsl(var(--indigo) / 0.12);
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
+    --background: var(--sumi);
+    --foreground: var(--gofun);
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: var(--sumi);
+    --card-foreground: var(--gofun);
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: var(--sumi);
+    --popover-foreground: var(--gofun);
 
-    --primary: 229 35% 44%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 258 34% 56%;
+    --primary: var(--indigo);
+    --primary-foreground: var(--gofun);
+    --primary-glow: var(--purple);
 
     --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: var(--gofun);
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 13 79% 56%;
-    --accent-foreground: 0 0% 98%;
+    --accent: var(--beni);
+    --accent-foreground: var(--gofun);
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: var(--gofun);
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 229 35% 44%;
+    --ring: var(--indigo);
 
     --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(229 35% 44%), hsl(258 34% 56%));
-    --gradient-glow: linear-gradient(135deg, hsl(229 35% 44% / 0.2), hsl(258 34% 56% / 0.2));
-    --shadow-glow: 0 10px 40px hsl(229 35% 44% / 0.15);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--indigo)), hsl(var(--purple)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--indigo) / 0.2), hsl(var(--purple) / 0.2));
     --shadow-zen: 0 2px 8px hsl(0 0% 0% / 0.2);
+    --shadow-hover: 0 4px 12px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 10px 40px hsl(var(--indigo) / 0.2);
   }
 }
 

@@ -19,6 +19,11 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        sumi: "hsl(var(--sumi))",
+        gofun: "hsl(var(--gofun))",
+        indigo: "hsl(var(--indigo))",
+        purple: "hsl(var(--purple))",
+        beni: "hsl(var(--beni))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -60,6 +65,7 @@ export default {
       boxShadow: {
         'glow': 'var(--shadow-glow)',
         'zen': 'var(--shadow-zen)',
+        'hover': 'var(--shadow-hover)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -69,6 +75,11 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+        '160': '40rem',
       },
       keyframes: {
         "accordion-down": {
