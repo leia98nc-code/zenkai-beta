@@ -59,6 +59,11 @@ export default {
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
+        'zen': 'var(--shadow-zen)',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
