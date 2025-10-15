@@ -20,10 +20,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         sumi: "hsl(var(--sumi))",
-        gofun: "hsl(var(--gofun))",
-        indigo: "hsl(var(--indigo))",
-        purple: "hsl(var(--purple))",
-        beni: "hsl(var(--beni))",
+        sand: "hsl(var(--sand))",
+        'sand-dark': "hsl(var(--sand-dark))",
+        navy: "hsl(var(--navy))",
+        'navy-light': "hsl(var(--navy-light))",
+        sage: "hsl(var(--sage))",
+        stone: "hsl(var(--stone))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -60,6 +62,7 @@ export default {
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
+        'gradient-sand': 'var(--gradient-sand)',
         'gradient-glow': 'var(--gradient-glow)',
       },
       boxShadow: {
@@ -70,6 +73,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

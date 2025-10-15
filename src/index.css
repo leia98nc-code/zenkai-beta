@@ -8,93 +8,97 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Couleurs de base - Palette Zen Japonaise */
-    --sumi: 0 0% 10%;           /* Noir encre #1A1A1A */
-    --gofun: 0 0% 98%;          /* Blanc gofun #FAFAFA */
-    --indigo: 229 35% 44%;      /* Indigo aï #4A5899 */
-    --purple: 258 34% 56%;      /* Violet pourpre #7B68B6 */
-    --beni: 13 79% 56%;         /* Orange beni #E85D35 */
+    /* Couleurs de base - Palette Zen Jardin */
+    --sumi: 0 0% 10%;              /* Noir encre #1A1A1A */
+    --sand: 35 35% 92%;            /* Sable/Beige clair #F5EFE7 */
+    --sand-dark: 35 25% 85%;       /* Sable foncé #E5D5C3 */
+    --navy: 207 65% 20%;           /* Bleu marine profond #12365C */
+    --navy-light: 207 50% 35%;     /* Bleu marine clair #2C5F8D */
+    --sage: 140 20% 45%;           /* Vert sauge #5F8567 */
+    --stone: 0 0% 30%;             /* Gris pierre #4D4D4D */
     
-    --background: var(--gofun);
+    --background: var(--sand);
     --foreground: var(--sumi);
 
-    --card: var(--gofun);
+    --card: 0 0% 100%;
     --card-foreground: var(--sumi);
 
-    --popover: var(--gofun);
+    --popover: 0 0% 100%;
     --popover-foreground: var(--sumi);
 
-    --primary: var(--indigo);
-    --primary-foreground: var(--gofun);
-    --primary-glow: var(--purple);
+    --primary: var(--navy);
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: var(--navy-light);
 
-    --secondary: 0 0% 91%;
+    --secondary: var(--sand-dark);
     --secondary-foreground: var(--sumi);
 
-    --muted: 0 0% 91%;
-    --muted-foreground: 0 0% 40%;
+    --muted: var(--sand-dark);
+    --muted-foreground: var(--stone);
 
-    --accent: var(--beni);
-    --accent-foreground: var(--gofun);
+    --accent: var(--sage);
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: var(--gofun);
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 91%;
-    --input: 0 0% 91%;
-    --ring: var(--indigo);
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: var(--navy);
 
-    --success: 160 84% 39%;
+    --success: 140 60% 40%;
     --success-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Effets visuels zen */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--indigo)), hsl(var(--purple)));
-    --gradient-glow: linear-gradient(135deg, hsl(var(--indigo) / 0.1), hsl(var(--purple) / 0.1));
-    --shadow-zen: 0 2px 8px hsl(var(--sumi) / 0.04);
-    --shadow-hover: 0 4px 12px hsl(var(--sumi) / 0.08);
-    --shadow-glow: 0 10px 40px hsl(var(--indigo) / 0.12);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--navy)), hsl(var(--navy-light)));
+    --gradient-sand: linear-gradient(180deg, hsl(var(--sand)), hsl(var(--sand-dark)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--navy) / 0.05), hsl(var(--sage) / 0.05));
+    --shadow-zen: 0 2px 12px hsl(var(--sumi) / 0.06);
+    --shadow-hover: 0 4px 20px hsl(var(--sumi) / 0.1);
+    --shadow-glow: 0 10px 40px hsl(var(--navy) / 0.15);
   }
 
   .dark {
     --background: var(--sumi);
-    --foreground: var(--gofun);
+    --foreground: var(--sand);
 
-    --card: var(--sumi);
-    --card-foreground: var(--gofun);
+    --card: 0 0% 12%;
+    --card-foreground: var(--sand);
 
-    --popover: var(--sumi);
-    --popover-foreground: var(--gofun);
+    --popover: 0 0% 12%;
+    --popover-foreground: var(--sand);
 
-    --primary: var(--indigo);
-    --primary-foreground: var(--gofun);
-    --primary-glow: var(--purple);
+    --primary: var(--navy-light);
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: var(--sage);
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: var(--gofun);
+    --secondary: 0 0% 18%;
+    --secondary-foreground: var(--sand);
 
-    --muted: 0 0% 15%;
+    --muted: 0 0% 18%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: var(--beni);
-    --accent-foreground: var(--gofun);
+    --accent: var(--sage);
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: var(--gofun);
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: var(--indigo);
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: var(--navy-light);
 
-    --success: 160 84% 39%;
+    --success: 140 60% 40%;
     --success-foreground: 0 0% 100%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(var(--indigo)), hsl(var(--purple)));
-    --gradient-glow: linear-gradient(135deg, hsl(var(--indigo) / 0.2), hsl(var(--purple) / 0.2));
-    --shadow-zen: 0 2px 8px hsl(0 0% 0% / 0.2);
-    --shadow-hover: 0 4px 12px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 10px 40px hsl(var(--indigo) / 0.2);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--navy-light)), hsl(var(--sage)));
+    --gradient-sand: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 18%));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--navy) / 0.15), hsl(var(--sage) / 0.15));
+    --shadow-zen: 0 2px 12px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 4px 20px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 10px 40px hsl(var(--navy) / 0.3);
   }
 }
 

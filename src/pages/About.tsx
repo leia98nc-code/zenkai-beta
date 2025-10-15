@@ -6,92 +6,126 @@ import leiaLogo from "@/assets/leia-logo.png";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-sand">
       <Navigation />
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-background via-primary/5 to-accent/5 py-20">
+        <section className="bg-gradient-sand py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <h1 className="text-4xl md:text-5xl font-bold font-serif text-sumi">
                 À propos de{" "}
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  LEIA
+                <span className="text-navy">
+                  Zenkai
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground">
-                L'Expert Intelligent Administratif au service des Calédoniens
+              <p className="text-xl text-stone">
+                L'Intelligence Artificielle au service de votre performance RH
               </p>
             </div>
           </div>
         </section>
 
         {/* Mission */}
-        <section className="py-20">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-12">
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-                  <Target className="w-8 h-8 text-primary-foreground" />
+                  <Target className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold">Notre Mission</h2>
-                <p className="text-lg text-muted-foreground">
-                  Rendre le droit du travail et les procédures administratives
-                  accessibles à tous en Nouvelle-Calédonie grâce à l'intelligence
-                  artificielle. LEIA démocratise l'accès à l'information juridique
-                  pour permettre à chacun de connaître et faire valoir ses droits.
+                <h2 className="text-3xl font-bold font-serif text-sumi">Notre Mission</h2>
+                <p className="text-lg text-stone max-w-2xl mx-auto leading-relaxed">
+                  Accompagner les TPE/PME calédoniennes dans leur transformation digitale avec pragmatisme et efficacité.
                 </p>
               </div>
 
+              <div className="bg-sand-dark p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre positionnement unique</h3>
+                <ul className="space-y-3 text-stone">
+                  <li>• Une expertise RH/Formation couplée à la puissance de l'IA, par des solutions concrètes d'utilisation</li>
+                  <li>• Une expertise humaine au service de votre organisation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Baptiste Faure */}
+        <section className="py-20 bg-gradient-sand">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl shadow-zen p-8 md:p-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <Users className="w-8 h-8 text-navy" />
+                  <h2 className="text-3xl font-bold font-serif text-sumi">Baptiste Faure</h2>
+                </div>
+                <p className="text-lg text-stone mb-4">Fondateur de Zenkai</p>
+                <p className="text-stone leading-relaxed mb-4">
+                  Fort de 13 années d'expérience en management stratégique, Baptiste FAURE combine avec Zenkai une expertise métier éprouvée avec une maîtrise des technologies d'IA les plus performantes.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-sand-dark p-6 rounded-lg">
+                    <h4 className="font-semibold text-navy mb-2">Expertise</h4>
+                    <p className="text-sm text-stone">13 années en gestion des organisations, spécialisé droit social. Formateur certifié.</p>
+                  </div>
+                  <div className="bg-sand-dark p-6 rounded-lg">
+                    <h4 className="font-semibold text-navy mb-2">Spécialisation</h4>
+                    <p className="text-sm text-stone">Connaissance fine des TPE/PME de Nouvelle-Calédonie et du droit calédonien.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-12">
+              <h2 className="text-3xl font-bold text-center font-serif text-sumi">Notre accompagnement RH</h2>
+              <p className="text-lg text-stone text-center max-w-3xl mx-auto">
+                Nous intervenons sur une large gamme de situations RH, transformant les défis en opportunités grâce à notre expertise boostée à l'intelligence artificielle.
+              </p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6 space-y-3">
-                    <img 
-                      src={leiaLogo} 
-                      alt="LEIA Logo" 
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <h3 className="text-xl font-semibold">Technologie IA Avancée</h3>
-                    <p className="text-muted-foreground">
-                      LEIA utilise les dernières avancées en intelligence
-                      artificielle pour comprendre vos questions et y répondre avec
-                      précision, en langage naturel.
+                    <Shield className="w-8 h-8 text-navy" />
+                    <h3 className="text-xl font-semibold font-serif text-sumi">Audits de Conformité</h3>
+                    <p className="text-stone">
+                      Réalisez un diagnostic approfondi de vos pratiques RH pour prévenir les risques légaux et optimiser vos processus.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6 space-y-3">
-                    <Shield className="w-8 h-8 text-primary" />
-                    <h3 className="text-xl font-semibold">Sources Officielles</h3>
-                    <p className="text-muted-foreground">
-                      Toutes les réponses de LEIA sont basées sur la législation
-                      officielle de Nouvelle-Calédonie, les codes du travail locaux
-                      et les textes réglementaires en vigueur.
+                    <Bot className="w-8 h-8 text-navy" />
+                    <h3 className="text-xl font-semibold font-serif text-sumi">LEIA</h3>
+                    <p className="text-stone">
+                      Votre assistant IA spécialisé en droit du travail, disponible 24/7 pour répondre à toutes vos questions.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6 space-y-3">
-                    <Users className="w-8 h-8 text-primary" />
-                    <h3 className="text-xl font-semibold">Pour Tous</h3>
-                    <p className="text-muted-foreground">
-                      Que vous soyez salarié, employeur, entrepreneur ou RH, LEIA
-                      est conçue pour répondre à vos questions juridiques
-                      spécifiques avec clarté.
+                    <Users className="w-8 h-8 text-navy" />
+                    <h3 className="text-xl font-semibold font-serif text-sumi">Ateliers</h3>
+                    <p className="text-stone">
+                      Nous animons des ateliers pratiques pour faciliter la collaboration et l'émergence de solutions avec votre personnel.
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6 space-y-3">
-                    <Zap className="w-8 h-8 text-primary" />
-                    <h3 className="text-xl font-semibold">Disponible 24/7</h3>
-                    <p className="text-muted-foreground">
-                      LEIA ne dort jamais. Obtenez des réponses instantanées à vos
-                      questions juridiques, à toute heure du jour ou de la nuit.
+                    <Zap className="w-8 h-8 text-navy" />
+                    <h3 className="text-xl font-semibold font-serif text-sumi">Plans stratégiques</h3>
+                    <p className="text-stone">
+                      Nous concevons des plans stratégiques personnalisés pour implémenter les changements nécessaires à votre entreprise.
                     </p>
                   </CardContent>
                 </Card>
@@ -100,19 +134,19 @@ const About = () => {
           </div>
         </section>
 
-        {/* Engagement */}
-        <section className="py-20 bg-muted/30">
+        {/* Engagements */}
+        <section className="py-20 bg-sand-dark">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-3xl font-bold text-center">Nos Engagements</h2>
+              <h2 className="text-3xl font-bold text-center font-serif text-sumi">Nos Engagements</h2>
 
               <div className="space-y-6">
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">
+                    <h3 className="text-xl font-semibold mb-3 font-serif text-sumi">
                       Protection des Données
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-stone">
                       Vos conversations avec LEIA sont strictement confidentielles.
                       Nous respectons le RGPD et ne partageons jamais vos données
                       personnelles avec des tiers.
@@ -120,10 +154,10 @@ const About = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Neutralité</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-xl font-semibold mb-3 font-serif text-sumi">Neutralité</h3>
+                    <p className="text-stone">
                       LEIA fournit des informations objectives basées uniquement sur
                       la législation en vigueur, sans parti pris ni influence
                       externe.
@@ -131,24 +165,13 @@ const About = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="border-0 shadow-zen">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Fiabilité</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-xl font-semibold mb-3 font-serif text-sumi">Fiabilité</h3>
+                    <p className="text-stone">
                       Nous mettons régulièrement à jour LEIA pour refléter les
                       dernières évolutions législatives et garantir l'exactitude des
                       informations fournies.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">Transparence</h3>
-                    <p className="text-muted-foreground">
-                      LEIA cite toujours ses sources et indique clairement les
-                      limites de ses réponses. Elle ne remplace pas un conseil
-                      juridique personnalisé par un professionnel.
                     </p>
                   </CardContent>
                 </Card>
@@ -158,10 +181,10 @@ const About = () => {
         </section>
 
         {/* Disclaimer */}
-        <section className="py-12 bg-destructive/10">
+        <section className="py-12 bg-navy/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <p className="text-center text-sm text-muted-foreground">
+              <p className="text-center text-sm text-stone">
                 <strong>Important :</strong> LEIA est un outil d'information
                 juridique et ne constitue pas un conseil juridique personnalisé. Pour
                 des situations complexes ou des litiges, nous vous recommandons de

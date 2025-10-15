@@ -21,34 +21,34 @@ import Footer from "@/components/Footer";
 const Landing = () => {
   const features = [
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Contrats de travail",
-      description: "CDI, CDD, périodes d'essai, clauses spécifiques NC"
+      icon: <Clock className="w-6 h-6" />,
+      title: "Gain de temps considérable",
+      description: "Fini les recherches interminables dans les textes juridiques"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Sécurité juridique",
+      description: "Informations toujours à jour et conformes"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Fin de contrat",
-      description: "Licenciements, ruptures conventionnelles, indemnités"
+      title: "Autonomie des équipes",
+      description: "Vos collaborateurs trouvent les réponses par eux-mêmes"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Temps de travail",
-      description: "Durées légales, heures supplémentaires, repos"
-    },
-    {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Réglementation sociale",
-      description: "Congés, maladie, maternité, formation"
+      icon: <Target className="w-6 h-6" />,
+      title: "Économies substantielles",
+      description: "Réduisez vos frais de conseils externes"
     }
   ];
 
   const benefits = [
-    { icon: <Clock className="w-5 h-5" />, title: "Disponible 24/7", description: "Réponses instantanées à toute heure" },
-    { icon: <Target className="w-5 h-5" />, title: "Expert Nouvelle-Calédonie", description: "Spécialisé dans le droit calédonien" },
-    { icon: <BookOpen className="w-5 h-5" />, title: "Sources législatives précises", description: "Références officielles vérifiées" },
-    { icon: <Lock className="w-5 h-5" />, title: "Confidentialité garantie", description: "Vos données restent privées" },
-    { icon: <Sparkles className="w-5 h-5" />, title: "Interface intuitive", description: "Simple comme une conversation" },
-    { icon: <CheckCircle2 className="w-5 h-5" />, title: "Gratuit pour débuter", description: "Testez sans engagement" }
+    { icon: <Target className="w-5 h-5" />, title: "Pas de jargon technique", description: "Nous expliquons l'IA en termes simples et compréhensibles" },
+    { icon: <Users className="w-5 h-5" />, title: "Accompagnement humain", description: "Un suivi personnalisé à chaque étape de votre transformation" },
+    { icon: <CheckCircle2 className="w-5 h-5" />, title: "ROI rapide", description: "Des résultats mesurables et un retour sur investissement immédiat" },
+    { icon: <Sparkles className="w-5 h-5" />, title: "Solutions clés en main", description: "Des outils prêts à l'emploi, immédiatement opérationnels" },
+    { icon: <BookOpen className="w-5 h-5" />, title: "Spécialisation locale", description: "Expertise adaptée aux spécificités de la Nouvelle-Calédonie" },
+    { icon: <Lock className="w-5 h-5" />, title: "Confidentialité garantie", description: "Vos données restent privées et sécurisées" }
   ];
 
   const steps = [
@@ -59,10 +59,10 @@ const Landing = () => {
 
   const faqs = [
     { question: "LEIA remplace-t-elle un avocat ?", answer: "Non, LEIA fournit des informations juridiques basées sur la législation calédonienne mais ne remplace pas un conseil juridique personnalisé par un avocat. Pour des cas complexes ou des décisions importantes, nous recommandons de consulter un professionnel du droit." },
-    { question: "Quelles sources utilise LEIA ?", answer: "LEIA s'appuie sur les textes officiels du droit du travail de Nouvelle-Calédonie, les conventions collectives applicables, et la jurisprudence locale. Cette intelligence artificielle est secondée par une expertise et un savoir-faire de compétences humaines à votre appui en cas de besoin." },
+    { question: "Quelles sources utilise LEIA ?", answer: "LEIA s'appuie sur le Code du travail NC, l'AIT, les conventions collectives applicables, la jurisprudence locale et des fiches pratiques. Cette intelligence artificielle est secondée par une expertise et un savoir-faire de compétences humaines à votre appui en cas de besoin." },
     { question: "Mes données sont-elles sécurisées ?", answer: "Oui, absolument. Nous appliquons les normes de sécurité les plus strictes. Vos conversations et données personnelles sont chiffrées et ne sont jamais partagées avec des tiers." },
-    { question: "Le service est-il payant ?", answer: "LEIA propose une formule gratuite pour débuter et découvrir le service. Des formules premium sont disponibles pour un usage professionnel intensif." },
-    { question: "Puis-je poser n'importe quelle question juridique ?", answer: "LEIA est spécialisée en droit du travail calédonien. Pour d'autres domaines juridiques, elle pourra vous orienter vers les ressources appropriées." },
+    { question: "Comment accéder à LEIA ?", answer: "LEIA est accessible sur le web, WhatsApp ou Messenger. Vous pouvez l'utiliser depuis n'importe quel appareil connecté, à tout moment." },
+    { question: "Quel est le tarif ?", answer: "LEIA est disponible à partir de 5 000 XPF/mois seulement. Ce tarif inclus l'accès complet à l'assistant IA et la validation des réponses par un expert humain." },
     { question: "LEIA est-elle à jour des dernières lois ?", answer: "Oui, la base de connaissances de LEIA est régulièrement mise à jour pour refléter les évolutions législatives et réglementaires en Nouvelle-Calédonie." }
   ];
 
@@ -73,118 +73,171 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gofun">
+    <div className="min-h-screen bg-sand">
       <Navigation />
       
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-32 pb-40 md:pt-40 md:pb-48">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <span className="text-sm font-medium text-purple uppercase tracking-wider">Zenkai présente</span>
-            <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-display">
-              LEIA, votre experte juridique IA
+            <span className="text-sm font-medium text-navy uppercase tracking-wider">Zenkai présente</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
+              L'Intelligence Artificielle au Service de votre Performance RH
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              L'Expert Intelligent Administratif spécialisé en droit du travail calédonien. 
-              Réponses précises, disponibles 24/7, en toute confidentialité.
+            <p className="text-lg md:text-xl text-stone leading-relaxed">
+              Votre partenaire spécialisé dans l'intégration de l'IA pour le management, les RH et la formation en Nouvelle-Calédonie
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild size="lg" className="bg-indigo hover:bg-purple transition-all duration-300 shadow-zen hover:shadow-hover">
+              <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
                 <Link to="/auth">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-indigo text-indigo hover:bg-indigo hover:text-white transition-all duration-300">
+              <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300">
                 <Link to="/about">Découvrir Zenkai</Link>
               </Button>
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center">
             <div className="relative w-80 h-80">
-              <div className="absolute inset-0 bg-gradient-primary opacity-10 rounded-full blur-3xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-4 border-indigo rotate-45 rounded-2xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple opacity-20 rotate-12 rounded-2xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-beni rounded-full"></div>
+              <div className="absolute inset-0 bg-gradient-glow opacity-20 rounded-full blur-3xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-4 border-navy rotate-45 rounded-2xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-sage opacity-20 rotate-12 rounded-2xl"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-navy rounded-full"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Domaines d'expertise */}
+      {/* Notre Mission */}
+      <section className="bg-white py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">Qui sommes-nous ?</h2>
+            <p className="text-xl text-stone leading-relaxed mb-8">
+              Zenkai est votre partenaire de confiance spécialisé dans l'intégration de l'Intelligence Artificielle au service du management, des ressources humaines et de la formation en Nouvelle-Calédonie.
+            </p>
+            <div className="bg-sand-dark p-8 rounded-xl">
+              <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre mission</h3>
+              <p className="text-lg text-sumi">
+                Accompagner les TPE/PME calédoniennes dans leur transformation digitale avec pragmatisme et efficacité.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LEIA - Domaines d'expertise */}
       <section className="container mx-auto px-6 py-32">
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-display">Domaines d'expertise</h2>
-          <p className="text-lg text-muted-foreground">LEIA maîtrise l'ensemble du droit du travail et des procédures administratives de Nouvelle-Calédonie</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">LEIA - Votre Assistant IA Droit du Travail</h2>
+          <p className="text-xl text-stone leading-relaxed">
+            Un chatbot intelligent disponible 24/7, spécialisé dans le droit du travail applicable en Nouvelle-Calédonie.
+          </p>
         </div>
+        
+        <div className="max-w-4xl mx-auto mb-16">
+          <h3 className="text-2xl font-bold text-navy mb-8 text-center font-serif">Fonctionnalités clés</h3>
+          <div className="space-y-4">
+            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <p className="text-stone">✓ Réponses instantanées à toutes vos questions RH</p>
+            </Card>
+            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <p className="text-stone">✓ Base de données : Code du travail NC, AIT, conventions collectives, jurisprudences et fiches pratiques</p>
+            </Card>
+            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <p className="text-stone">✓ Accessible sur le web, WhatsApp ou Messenger</p>
+            </Card>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {features.map((feature, idx) => (
-            <Card key={idx} className="p-8 border border-border bg-card hover:shadow-hover transition-all duration-300 group">
-              <div className="text-indigo mb-4 group-hover:text-purple transition-colors duration-300">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-sumi mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+            <Card key={idx} className="p-8 border border-border bg-white hover:shadow-hover transition-all duration-300 group">
+              <div className="text-navy mb-4 group-hover:text-navy-light transition-colors duration-300">{feature.icon}</div>
+              <h3 className="text-xl font-semibold text-sumi mb-3 font-serif">{feature.title}</h3>
+              <p className="text-stone leading-relaxed">{feature.description}</p>
             </Card>
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <Card className="inline-block p-6 bg-sand-dark border-0">
+            <p className="text-lg font-semibold text-navy">Tarif : À partir de 5 000 XPF/mois seulement</p>
+          </Card>
+        </div>
       </section>
 
-      {/* Philosophie Zenkai */}
-      <section className="bg-gradient-glow py-32">
+      {/* Les défis des TPE/PME */}
+      <section className="bg-gradient-sand py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <div>
-              <div className="inline-block mb-6"><span className="text-6xl font-bold text-indigo">改善</span></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-display">Kaizen : L'amélioration continue</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Chez Zenkai, nous croyons que chaque défi est une opportunité de devenir plus fort. 
-                Comme un sensei transmet son art, nous accompagnons les TPE/PME calédoniennes dans leur éveil digital, une étape à la fois.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Les défis des TPE/PME calédoniennes</h2>
+            <p className="text-xl text-stone text-center mb-16 leading-relaxed">
+              Les entreprises locales font face à trois obstacles majeurs qui freinent leur croissance :
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="p-8 bg-white border-0 shadow-zen">
+                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Complexité réglementaire</h3>
+                <ul className="space-y-3 text-stone">
+                  <li>• Droit du travail calédonien spécifique et en constante évolution</li>
+                  <li>• Difficultés d'accès à l'information juridique fiable</li>
+                  <li>• Risques de non-conformité pouvant coûter cher</li>
+                </ul>
+              </Card>
+              <Card className="p-8 bg-white border-0 shadow-zen">
+                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Processus RH</h3>
+                <ul className="space-y-3 text-stone">
+                  <li>• Recrutement, entretiens annuels, gestion de la formation</li>
+                  <li>• Tâches administratives répétitives et fastidieuses</li>
+                  <li>• Manque de temps pour les missions stratégiques</li>
+                </ul>
+              </Card>
+              <Card className="p-8 bg-white border-0 shadow-zen">
+                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Retard sur la transformation digitale</h3>
+                <ul className="space-y-3 text-stone">
+                  <li>• IA perçue comme complexe et inaccessible</li>
+                  <li>• Absence de compétences internes spécialisées</li>
+                  <li>• Investissements considérés comme trop importants</li>
+                </ul>
+              </Card>
             </div>
-            <div className="grid md:grid-cols-3 gap-8 pt-8">
-              {principles.map((p, idx) => (
-                <div key={idx} className="space-y-3">
-                  <h3 className="text-2xl font-bold text-indigo font-display">{p.title}</h3>
-                  <p className="text-sm font-medium text-purple uppercase tracking-wider">{p.subtitle}</p>
-                  <p className="text-muted-foreground">{p.description}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Notre approche */}
+      <section className="container mx-auto px-6 py-32">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Notre approche : Rendre l'IA accessible</h2>
+          <p className="text-xl text-stone text-center mb-16 leading-relaxed">
+            Chez Zenkai, nous rendons l'Intelligence Artificielle accessible, concrète et mesurable pour toutes les entreprises
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="text-navy mt-1">{benefit.icon}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-sumi mb-2">{benefit.title}</h3>
+                      <p className="text-stone">{benefit.description}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Comment fonctionne LEIA */}
-      <section className="container mx-auto px-6 py-32">
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-display">Comment fonctionne LEIA</h2>
-          <p className="text-lg text-muted-foreground">Trois étapes simples pour obtenir des réponses juridiques précises</p>
-        </div>
-        <div className="max-w-2xl mx-auto space-y-12">
-          {steps.map((step, idx) => (
-            <div key={idx} className="flex gap-8 items-start group">
-              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-2xl shadow-zen group-hover:shadow-hover transition-all duration-300">
-                {step.number}
-              </div>
-              <div className="flex-1 pt-2">
-                <h3 className="text-2xl font-semibold text-sumi mb-2 font-display">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
+            <div className="space-y-6">
+              {benefits.slice(3, 6).map((benefit, idx) => (
+                <div key={idx} className="bg-white p-6 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="text-navy mt-1">{benefit.icon}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-sumi mb-2">{benefit.title}</h3>
+                      <p className="text-stone">{benefit.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Avantages */}
-      <section className="bg-secondary/30 py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-display">Pourquoi choisir LEIA</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, idx) => (
-              <div key={idx} className="bg-card p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300 space-y-3">
-                <div className="text-indigo">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-sumi">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -193,31 +246,71 @@ const Landing = () => {
       <section className="container mx-auto px-6 py-32">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-display">Questions fréquentes</h2>
-            <p className="text-lg text-muted-foreground">Tout ce que vous devez savoir sur LEIA</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">Questions fréquentes</h2>
+            <p className="text-lg text-stone">Tout ce que vous devez savoir sur LEIA</p>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-lg px-6 bg-card shadow-zen hover:shadow-hover transition-all duration-300">
-                <AccordionTrigger className="text-left text-lg font-semibold text-sumi hover:text-indigo transition-colors">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pt-2">{faq.answer}</AccordionContent>
+              <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-xl px-6 bg-white shadow-zen hover:shadow-hover transition-all duration-300">
+                <AccordionTrigger className="text-left text-lg font-semibold text-sumi hover:text-navy transition-colors">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-stone leading-relaxed pt-2">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </section>
 
+      {/* Pourquoi choisir Zenkai */}
+      <section className="bg-gradient-sand py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Pourquoi choisir Zenkai ?</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="p-8 bg-white border-0 shadow-zen text-center">
+                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Expertise métier reconnue</h3>
+                <p className="text-stone leading-relaxed">13 années d'expérience en gestion des organisations, spécialisé droit social. Connaissance fine des TPE/PME de Nouvelle-Calédonie. Formateur certifié.</p>
+              </Card>
+              <Card className="p-8 bg-white border-0 shadow-zen text-center">
+                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Intégration de l'IA</h3>
+                <p className="text-stone leading-relaxed">Solutions no-code, intuitives et efficaces, adaptées à vos besoins. Réseau professionnel établi.</p>
+              </Card>
+              <Card className="p-8 bg-white border-0 shadow-zen text-center">
+                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Ancrage local fort</h3>
+                <p className="text-stone leading-relaxed">Spécialisation en droit calédonien. Disponibilité et proximité garanties.</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Final */}
-      <section className="bg-gradient-glow py-32">
+      <section className="bg-white py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-sumi font-display">Prêt à simplifier vos démarches juridiques ?</h2>
-            <p className="text-lg text-muted-foreground">Rejoignez les entreprises calédoniennes qui font confiance à LEIA</p>
-            <div className="flex flex-col items-center gap-4 pt-4">
-              <Button asChild size="lg" className="bg-indigo hover:bg-purple transition-all duration-300 shadow-zen hover:shadow-hover">
-                <Link to="/auth">Commencer avec LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <h2 className="text-4xl md:text-5xl font-bold text-sumi font-serif">Commencez dès aujourd'hui</h2>
+            <p className="text-xl text-stone leading-relaxed">Trois options pour démarrer votre transformation digitale avec Zenkai</p>
+            <div className="grid md:grid-cols-3 gap-6 pt-8">
+              <Card className="p-8 bg-sand-dark border-0">
+                <div className="text-3xl font-bold text-navy mb-2">1</div>
+                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Atelier découverte gratuit</h3>
+                <p className="text-stone">1 heure pour explorer les possibilités de l'IA dans votre entreprise, sans engagement</p>
+              </Card>
+              <Card className="p-8 bg-sand-dark border-0">
+                <div className="text-3xl font-bold text-navy mb-2">2</div>
+                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Test LEIA gratuit</h3>
+                <p className="text-stone">3 mois d'essai de notre assistant IA Droit du Travail pour évaluer les bénéfices</p>
+              </Card>
+              <Card className="p-8 bg-sand-dark border-0">
+                <div className="text-3xl font-bold text-navy mb-2">3</div>
+                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Audit express</h3>
+                <p className="text-stone">1 journée d'analyse de vos processus avec recommandations concrètes</p>
+              </Card>
+            </div>
+            <div className="flex flex-col items-center gap-4 pt-8">
+              <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
+                <Link to="/auth">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <p className="text-sm text-muted-foreground">Aucune carte bancaire requise</p>
+              <p className="text-sm text-stone">« Prenons 30 minutes pour discuter de vos enjeux RH et Formation. »</p>
             </div>
           </div>
         </div>

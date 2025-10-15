@@ -4,7 +4,7 @@ import leiaLogo from "@/assets/leia-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted border-t border-border">
+    <footer className="bg-sand-dark border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -15,35 +15,35 @@ const Footer = () => {
               alt="LEIA Logo" 
               className="w-10 h-10 rounded-full object-cover"
             />
-              <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
-                LEIA
+              <span className="text-lg font-bold text-navy font-serif">
+                Zenkai
               </span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              L'Expert Intelligent Administratif pour la Nouvelle-Calédonie
+            <p className="text-sm text-stone">
+              L'Intelligence Artificielle au service de votre performance RH
             </p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="w-4 h-4 text-success" />
+            <div className="flex items-center gap-2 text-sm text-stone">
+              <Shield className="w-4 h-4 text-sage" />
               <span>Données sécurisées</span>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-semibold mb-4">Navigation</h3>
+            <h3 className="font-semibold mb-4 text-sumi">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-sm text-stone hover:text-navy transition-colors">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about" className="text-sm text-stone hover:text-navy transition-colors">
                   À propos
                 </Link>
               </li>
               <li>
-                <Link to="/auth" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/auth" className="text-sm text-stone hover:text-navy transition-colors">
                   Connexion
                 </Link>
               </li>
@@ -52,44 +52,52 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-4">Légal</h3>
+            <h3 className="font-semibold mb-4 text-sumi">Légal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/legal/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/legal/terms" className="text-sm text-stone hover:text-navy transition-colors">
                   Conditions d'utilisation
                 </Link>
               </li>
               <li>
-                <Link to="/legal/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/legal/privacy" className="text-sm text-stone hover:text-navy transition-colors">
                   Politique de confidentialité
                 </Link>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">Mentions légales</span>
+                <span className="text-sm text-stone">Mentions légales</span>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4 text-sumi">Contact</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+              <li className="text-sm text-stone">
+                <span className="font-semibold">Baptiste Faure</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-stone">
                 <Mail className="w-4 h-4" />
-                <span>contact@leia.nc</span>
+                <a href="mailto:faure.baptiste@gmail.com" className="hover:text-navy transition-colors">
+                  faure.baptiste@gmail.com
+                </a>
+              </li>
+              <li className="text-sm text-stone">
+                5 rue du Bellay
+              </li>
+              <li className="text-sm text-stone">
+                Nouméa, Nouvelle-Calédonie
               </li>
             </ul>
-            <p className="text-xs text-muted-foreground mt-4">
-              Nouvelle-Calédonie
-            </p>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} LEIA. Tous droits réservés.
+          <p className="text-sm text-stone">
+            © {new Date().getFullYear()} Zenkai. Tous droits réservés.
           </p>
-          <p className="text-xs text-muted-foreground mt-2">
+          <p className="text-xs text-stone mt-2">
             LEIA ne remplace pas un conseil juridique professionnel.
           </p>
         </div>
