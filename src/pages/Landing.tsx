@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import leiaAvatar from "@/assets/leia-avatar.png";
 import { 
   FileText, 
   Clock, 
@@ -128,6 +129,13 @@ const Landing = () => {
       {/* LEIA - Domaines d'expertise */}
       <section className="container mx-auto px-6 py-32">
         <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="flex justify-center mb-8">
+            <img 
+              src={leiaAvatar} 
+              alt="LEIA - L'Expert Intelligent Administratif" 
+              className="w-32 h-32 rounded-full shadow-zen"
+            />
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">LEIA - Votre Assistant IA Droit du Travail</h2>
           <p className="text-xl text-stone leading-relaxed">
             Un chatbot intelligent disponible 24/7, spécialisé dans le droit du travail applicable en Nouvelle-Calédonie.
