@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Shield } from "lucide-react";
+import { Mail, Shield, ArrowLeft } from "lucide-react";
 import { z } from "zod";
 import zenkaiLogo from "@/assets/zenkai-logo.png";
 
@@ -119,7 +119,15 @@ const Auth = () => {
   return (
     <div className="min-h-screen flex">
       {/* Left Column - Form */}
-      <div className="flex-1 flex items-center justify-center p-8 bg-background">
+      <div className="flex-1 flex items-center justify-center p-8 bg-background relative">
+        <Button
+          variant="ghost"
+          className="absolute top-4 left-4"
+          onClick={() => navigate("/")}
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Retour
+        </Button>
         <Card className="w-full max-w-md border-border/50">
           <CardHeader className="space-y-4">
             <div className="flex justify-center">
