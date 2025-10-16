@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
-import { 
+import zenGarden from "@/assets/zen-garden.png";
+import {
   FileText, 
   Clock, 
   Users, 
@@ -98,12 +99,11 @@ const Landing = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center">
-            <div className="relative w-80 h-80">
-              <div className="absolute inset-0 bg-gradient-glow opacity-20 rounded-full blur-3xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-4 border-navy rotate-45 rounded-2xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-sage opacity-20 rotate-12 rounded-2xl"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-navy rounded-full"></div>
-            </div>
+            <img 
+              src={zenGarden} 
+              alt="Jardin zen - Philosophie Zenkai" 
+              className="w-full max-w-lg rounded-2xl shadow-zen"
+            />
           </div>
         </div>
       </section>
