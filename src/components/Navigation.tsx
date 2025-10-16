@@ -21,7 +21,7 @@ const Navigation = () => {
               className="w-10 h-10 rounded-full object-cover"
             />
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              LEIA
+              ZENKAI
             </span>
           </Link>
 
