@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Shield } from "lucide-react";
 import { z } from "zod";
-import leiaLogo from "@/assets/leia-logo.png";
+import zenkaiLogo from "@/assets/zenkai-logo.png";
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Email invalide" }).max(255),
@@ -124,8 +124,8 @@ const Auth = () => {
           <CardHeader className="space-y-4">
             <div className="flex justify-center">
               <img 
-                src={leiaLogo} 
-                alt="LEIA Logo" 
+                src={zenkaiLogo} 
+                alt="ZENKAI Logo" 
                 className="w-16 h-16 rounded-full object-cover"
               />
             </div>
@@ -211,8 +211,8 @@ const Auth = () => {
           <div className="space-y-6">
             <div className="flex items-start gap-4">
               <img 
-                src={leiaLogo} 
-                alt="LEIA Logo" 
+                src={zenkaiLogo} 
+                alt="ZENKAI Logo" 
                 className="w-10 h-10 rounded-full object-cover flex-shrink-0"
               />
               <div>
