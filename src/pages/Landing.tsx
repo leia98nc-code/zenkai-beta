@@ -140,6 +140,11 @@ const Landing = () => {
           <p className="text-xl text-stone leading-relaxed">
             Un chatbot intelligent disponible 24/7, spécialisé dans le droit du travail applicable en Nouvelle-Calédonie.
           </p>
+          <div className="flex justify-center mt-8">
+            <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
+              <Link to="/auth">Se connecter à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+          </div>
         </div>
         
         <div className="max-w-4xl mx-auto mb-16">
