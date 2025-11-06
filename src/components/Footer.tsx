@@ -74,17 +74,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4 text-sumi">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-sm text-stone">
-                <span className="font-semibold">Baptiste Faure</span>
-              </li>
               <li className="flex items-center gap-2 text-sm text-stone">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:faure.baptiste@gmail.com" className="hover:text-navy transition-colors">
-                  faure.baptiste@gmail.com
+                <a href="mailto:leia98nc@gmail.com" className="hover:text-navy transition-colors">
+                  leia98nc@gmail.com
                 </a>
               </li>
               <li className="text-sm text-stone">
-                5 rue du Bellay
+                Tél: +687 75.49.20
               </li>
               <li className="text-sm text-stone">
                 Nouméa, Nouvelle-Calédonie

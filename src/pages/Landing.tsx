@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
-import zenGarden from "@/assets/zen-garden.png";
+import heroImage from "@/assets/hero-image.jpg";
 import {
   FileText, 
   Clock, 
@@ -45,12 +45,8 @@ const Landing = () => {
   ];
 
   const benefits = [
-    { icon: <Target className="w-5 h-5" />, title: "Pas de jargon technique", description: "Nous expliquons l'IA en termes simples et compréhensibles" },
-    { icon: <Users className="w-5 h-5" />, title: "Accompagnement humain", description: "Un suivi personnalisé à chaque étape de votre transformation" },
-    { icon: <CheckCircle2 className="w-5 h-5" />, title: "ROI rapide", description: "Des résultats mesurables et un retour sur investissement immédiat" },
-    { icon: <Sparkles className="w-5 h-5" />, title: "Solutions clés en main", description: "Des outils prêts à l'emploi, immédiatement opérationnels" },
-    { icon: <BookOpen className="w-5 h-5" />, title: "Spécialisation locale", description: "Expertise adaptée aux spécificités de la Nouvelle-Calédonie" },
-    { icon: <Lock className="w-5 h-5" />, title: "Confidentialité garantie", description: "Vos données restent privées et sécurisées" }
+    { icon: <Users className="w-5 h-5" />, title: "Compétences humaines", description: "ZENKAI apporte un accompagnement sur mesure, ancré dans une expertise locale approfondie des entreprises et organisations. L'IA n'est pas une fin en soit mais est un outil pour maximiser le savoir-faire humain." },
+    { icon: <Sparkles className="w-5 h-5" />, title: "Intelligence artificielle", description: "ZENKAI rend l'Intelligence Artificielle accessible, concrète et mesurable, en offrant des solutions clés en main, des outils prêts à l'emploi. Elle favorise ainsi l'adaptation de votre entreprise à l'intelligence artificielle dans une démarche stratégique et perspicace." }
   ];
 
   const steps = [
@@ -64,7 +60,7 @@ const Landing = () => {
     { question: "Quelles sources utilise LEIA ?", answer: "LEIA s'appuie sur le Code du travail NC, l'AIT, les conventions collectives applicables, la jurisprudence locale et des fiches pratiques. Cette intelligence artificielle est secondée par une expertise et un savoir-faire de compétences humaines à votre appui en cas de besoin." },
     { question: "Mes données sont-elles sécurisées ?", answer: "Oui, absolument. Nous appliquons les normes de sécurité les plus strictes. Vos conversations et données personnelles sont chiffrées et ne sont jamais partagées avec des tiers." },
     { question: "Comment accéder à LEIA ?", answer: "LEIA est accessible sur le web, WhatsApp ou Messenger. Vous pouvez l'utiliser depuis n'importe quel appareil connecté, à tout moment." },
-    { question: "Quel est le tarif ?", answer: "LEIA est disponible à partir de 5 000 XPF/mois seulement. Ce tarif inclus l'accès complet à l'assistant IA et la validation des réponses par un expert humain." },
+    { question: "Quel est le tarif ?", answer: "LEIA est disponible à partir de 4 900 XPF/mois. Ce tarif inclus l'accès complet à l'assistant IA et la validation des réponses par un expert humain." },
     { question: "LEIA est-elle à jour des dernières lois ?", answer: "Oui, la base de connaissances de LEIA est régulièrement mise à jour pour refléter les évolutions législatives et réglementaires en Nouvelle-Calédonie." }
   ];
 
@@ -82,12 +78,12 @@ const Landing = () => {
       <section className="container mx-auto px-6 pt-32 pb-40 md:pt-40 md:pb-48">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <span className="text-sm font-medium text-navy uppercase tracking-wider">Zenkai présente</span>
+            <span className="text-sm font-medium text-navy uppercase tracking-wider">Nouvelle-Calédonie</span>
             <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
-              L'Intelligence Artificielle au Service de votre Performance RH
+              La gestion d'entreprise boostée à l'IA
             </h1>
             <p className="text-lg md:text-xl text-stone leading-relaxed">
-              Votre partenaire spécialisé dans l'intégration de l'IA pour le management, les RH et la formation en Nouvelle-Calédonie
+              Zenkai est votre partenaire de confiance pour l'intégration de l'Intelligence Artificielle dans votre entreprise
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
@@ -100,8 +96,8 @@ const Landing = () => {
           </div>
           <div className="hidden md:flex items-center justify-center">
             <img 
-              src={zenGarden} 
-              alt="Jardin zen - Philosophie Zenkai" 
+              src={heroImage} 
+              alt="Zenkai - L'IA au service de votre entreprise" 
               className="w-full max-w-lg rounded-2xl shadow-zen"
             />
           </div>
@@ -114,12 +110,26 @@ const Landing = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">Qui sommes-nous ?</h2>
             <p className="text-xl text-stone leading-relaxed mb-8">
-              Zenkai est votre partenaire de confiance spécialisé dans l'intégration de l'Intelligence Artificielle au service du management, des ressources humaines et de la formation en Nouvelle-Calédonie.
+              Zenkai est votre partenaire de confiance pour l'intégration de l'Intelligence Artificielle dans votre entreprise.
             </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-sand-dark p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre mission</h3>
+                <p className="text-lg text-sumi">
+                  Accompagner les TPE et PME calédoniennes vers une gestion de leur entreprises intégrant l'intelligence artificielle.
+                </p>
+              </div>
+              <div className="bg-sand-dark p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Nos produits</h3>
+                <p className="text-lg text-sumi">
+                  Nous proposons des solutions IA prêt-à-usage ou sur-mesure selon vos besoins.
+                </p>
+              </div>
+            </div>
             <div className="bg-sand-dark p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre mission</h3>
+              <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Nos services</h3>
               <p className="text-lg text-sumi">
-                Accompagner les TPE/PME calédoniennes dans leur transformation digitale avec pragmatisme et efficacité.
+                Nous conseillons et formons en gestion managériale et ressources humaines.
               </p>
             </div>
           </div>
@@ -174,7 +184,7 @@ const Landing = () => {
 
         <div className="mt-16 text-center">
           <Card className="inline-block p-6 bg-sand-dark border-0">
-            <p className="text-lg font-semibold text-navy">Tarif : À partir de 5 000 XPF/mois seulement</p>
+            <p className="text-lg font-semibold text-navy">Tarif : À partir de 4 900 XPF/mois</p>
           </Card>
         </div>
       </section>
@@ -220,37 +230,22 @@ const Landing = () => {
       {/* Notre approche */}
       <section className="container mx-auto px-6 py-32">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Notre approche : Rendre l'IA accessible</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Notre positionnement</h2>
           <p className="text-xl text-stone text-center mb-16 leading-relaxed">
-            Chez Zenkai, nous rendons l'Intelligence Artificielle accessible, concrète et mesurable pour toutes les entreprises
+            Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en réduisant les tâches répétitives, chronophages et manuelles.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-navy mt-1">{benefit.icon}</div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-sumi mb-2">{benefit.title}</h3>
-                      <p className="text-stone">{benefit.description}</p>
-                    </div>
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {benefits.map((benefit, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="text-navy mt-1">{benefit.icon}</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-sumi mb-3">{benefit.title}</h3>
+                    <p className="text-stone leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3, 6).map((benefit, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-navy mt-1">{benefit.icon}</div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-sumi mb-2">{benefit.title}</h3>
-                      <p className="text-stone">{benefit.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -281,15 +276,15 @@ const Landing = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-8 bg-white border-0 shadow-zen text-center">
                 <h3 className="text-xl font-bold text-navy mb-4 font-serif">Expertise métier reconnue</h3>
-                <p className="text-stone leading-relaxed">13 années d'expérience en gestion des organisations, spécialisé droit social. Connaissance fine des TPE/PME de Nouvelle-Calédonie. Formateur certifié.</p>
+                <p className="text-stone leading-relaxed">10 années d'expérience en gestion des organisations, spécialisé droit social. Connaissance fine des TPE/PME de Nouvelle-Calédonie. Formateur certifié.</p>
               </Card>
               <Card className="p-8 bg-white border-0 shadow-zen text-center">
                 <h3 className="text-xl font-bold text-navy mb-4 font-serif">Intégration de l'IA</h3>
-                <p className="text-stone leading-relaxed">Solutions no-code, intuitives et efficaces, adaptées à vos besoins. Réseau professionnel établi.</p>
+                <p className="text-stone leading-relaxed">Proposer des solutions no-code, intuitive et efficace, adaptée à vos besoins.</p>
               </Card>
               <Card className="p-8 bg-white border-0 shadow-zen text-center">
                 <h3 className="text-xl font-bold text-navy mb-4 font-serif">Ancrage local fort</h3>
-                <p className="text-stone leading-relaxed">Spécialisation en droit calédonien. Disponibilité et proximité garanties.</p>
+                <p className="text-stone leading-relaxed">Spécialisation en droit calédonien. Réseau professionnel établi. Disponibilité et proximité garanties.</p>
               </Card>
             </div>
           </div>

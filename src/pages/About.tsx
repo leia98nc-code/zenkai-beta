@@ -37,7 +37,7 @@ const About = () => {
                 </div>
                 <h2 className="text-3xl font-bold font-serif text-sumi">Notre Mission</h2>
                 <p className="text-lg text-stone max-w-2xl mx-auto leading-relaxed">
-                  Accompagner les TPE/PME calédoniennes dans leur transformation digitale avec pragmatisme et efficacité.
+                  Accompagner les TPE et PME calédoniennes vers une gestion de leur entreprises intégrant l'intelligence artificielle.
                 </p>
               </div>
 
@@ -63,12 +63,12 @@ const About = () => {
                 </div>
                 <p className="text-lg text-stone mb-4">Fondateur de Zenkai</p>
                 <p className="text-stone leading-relaxed mb-4">
-                  Fort de 13 années d'expérience en management stratégique, Baptiste FAURE combine avec Zenkai une expertise métier éprouvée avec une maîtrise des technologies d'IA les plus performantes.
+                  Fort de 10 années d'expérience en management stratégique, Baptiste FAURE combine avec Zenkai une expertise métier éprouvée avec une maîtrise des technologies d'IA les plus performantes.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   <div className="bg-sand-dark p-6 rounded-lg">
                     <h4 className="font-semibold text-navy mb-2">Expertise</h4>
-                    <p className="text-sm text-stone">13 années en gestion des organisations, spécialisé droit social. Formateur certifié.</p>
+                    <p className="text-sm text-stone">10 années en gestion des organisations, spécialisé droit social. Formateur certifié.</p>
                   </div>
                   <div className="bg-sand-dark p-6 rounded-lg">
                     <h4 className="font-semibold text-navy mb-2">Spécialisation</h4>

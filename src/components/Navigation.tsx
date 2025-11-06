@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import leiaLogo from "@/assets/leia-logo.png";
+import zenkaiLogo from "@/assets/zenkai-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,13 +16,10 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src={leiaLogo} 
-              alt="LEIA Logo" 
-              className="w-10 h-10 rounded-full object-cover"
+              src={zenkaiLogo} 
+              alt="ZENKAI Logo" 
+              className="h-8 object-contain"
             />
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              ZENKAI
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
