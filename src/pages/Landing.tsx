@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/zenkai-hero.png";
 import {
   FileText, 
   Clock, 
