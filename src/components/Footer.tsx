@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Bot, Mail, Shield } from "lucide-react";
-import leiaLogo from "@/assets/leia-logo.png";
+import zenkaiTextLogo from "@/assets/zenkai-text-logo.png";
 
 const Footer = () => {
   return (
@@ -9,15 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-            <img 
-              src={leiaLogo} 
-              alt="LEIA Logo" 
-              className="w-10 h-10 rounded-full object-cover"
-            />
-              <span className="text-lg font-bold text-navy font-serif">
-                Zenkai
-              </span>
+            <div className="flex items-center gap-3">
+              <img 
+                src={zenkaiTextLogo} 
+                alt="ZENKAI Logo" 
+                className="h-8 object-contain"
+              />
             </div>
             <p className="text-sm text-stone">
               L'Intelligence Artificielle au service de votre performance RH
