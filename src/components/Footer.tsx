@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src={zenkaiTextLogo} 
                 alt="ZENKAI Logo" 
-                className="h-8 object-contain"
+                className="h-12 object-contain"
               />
             </div>
             <p className="text-sm text-stone">

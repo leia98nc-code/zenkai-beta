@@ -18,7 +18,7 @@ const Navigation = () => {
             <img 
               src={zenkaiLogo} 
               alt="ZENKAI Logo" 
-              className="h-8 object-contain"
+              className="h-12 object-contain"
             />
           </Link>
 
