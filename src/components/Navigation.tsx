@@ -40,14 +40,17 @@ const Navigation = () => {
             >
               À propos
             </Link>
-            <Link to="/auth">
-              <Button variant="outline" size="sm">
-                Connexion
-              </Button>
+            <Link
+              to="/products"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/products") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              Nos produits
             </Link>
             <Link to="/auth">
               <Button size="sm" className="bg-gradient-primary">
-                Essayer gratuitement
+                Essayer LEIA
               </Button>
             </Link>
           </div>
@@ -79,15 +82,17 @@ const Navigation = () => {
             >
               À propos
             </Link>
+            <Link
+              to="/products"
+              className="block px-4 py-2 text-sm font-medium hover:bg-muted rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Nos produits
+            </Link>
             <div className="px-4 pt-2 space-y-2">
               <Link to="/auth" onClick={() => setIsOpen(false)}>
-                <Button variant="outline" size="sm" className="w-full">
-                  Connexion
-                </Button>
-              </Link>
-              <Link to="/auth" onClick={() => setIsOpen(false)}>
                 <Button size="sm" className="w-full bg-gradient-primary">
-                  Essayer gratuitement
+                  Essayer LEIA
                 </Button>
               </Link>
             </div>

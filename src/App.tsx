@@ -7,6 +7,7 @@ import Landing from "./pages/Landing";
 import Chat from "./pages/Chat";
 import Auth from "./pages/Auth";
 import About from "./pages/About";
+import Products from "./pages/Products";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/chat" element={<Chat />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/legal/terms" element={<Terms />} />
           <Route path="/legal/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
