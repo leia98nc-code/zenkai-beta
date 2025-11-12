@@ -180,19 +180,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Disclaimer */}
-        <section className="py-12 bg-navy/10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-center text-sm text-stone">
-                <strong>Important :</strong> LEIA est un outil d'information
-                juridique et ne constitue pas un conseil juridique personnalisé. Pour
-                des situations complexes ou des litiges, nous vous recommandons de
-                consulter un avocat qualifié en Nouvelle-Calédonie.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
