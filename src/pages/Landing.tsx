@@ -4,74 +4,82 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import heroImage from "@/assets/zenkai-hero.png";
-import {
-  FileText, 
-  Clock, 
-  Users, 
-  Calendar,
-  Sparkles,
-  Shield,
-  BookOpen,
-  Lock,
-  Target,
-  CheckCircle2,
-  ArrowRight
-} from "lucide-react";
+import { FileText, Clock, Users, Calendar, Sparkles, Shield, BookOpen, Lock, Target, CheckCircle2, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
 const Landing = () => {
-  const features = [
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Gain de temps considérable",
-      description: "Fini les recherches interminables dans les textes juridiques"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Sécurité juridique",
-      description: "Informations toujours à jour et conformes"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Autonomie des équipes",
-      description: "Vos collaborateurs trouvent les réponses par eux-mêmes"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Économies substantielles",
-      description: "Réduisez vos frais de conseils externes"
-    }
-  ];
-
-  const benefits = [
-    { icon: <Users className="w-5 h-5" />, title: "Compétences humaines", description: "ZENKAI apporte un accompagnement sur mesure, ancré dans une expertise locale approfondie des entreprises et organisations. L'IA n'est pas une fin en soit mais est un outil pour maximiser le savoir-faire humain." },
-    { icon: <Sparkles className="w-5 h-5" />, title: "Intelligence artificielle", description: "ZENKAI rend l'Intelligence Artificielle accessible, concrète et mesurable, en offrant des solutions clés en main, des outils prêts à l'emploi. Elle favorise ainsi l'adaptation de votre entreprise à l'intelligence artificielle dans une démarche stratégique et perspicace." }
-  ];
-
-  const steps = [
-    { number: "1", title: "Créez votre compte", description: "Inscription gratuite et sécurisée" },
-    { number: "2", title: "Posez votre question", description: "En langage naturel, comme à un expert" },
-    { number: "3", title: "Recevez des réponses sourcées", description: "Précises, basées sur le droit NC" }
-  ];
-
-  const faqs = [
-    { question: "LEIA remplace-t-elle un avocat ?", answer: "Non, LEIA fournit des informations juridiques basées sur la législation calédonienne mais ne remplace pas un conseil juridique personnalisé par un avocat. Pour des cas complexes ou des décisions importantes, nous recommandons de consulter un professionnel du droit." },
-    { question: "Quelles sources utilise LEIA ?", answer: "LEIA s'appuie sur le Code du travail NC, l'AIT, les conventions collectives applicables, la jurisprudence locale et des fiches pratiques. Cette intelligence artificielle est secondée par une expertise et un savoir-faire de compétences humaines à votre appui en cas de besoin." },
-    { question: "Mes données sont-elles sécurisées ?", answer: "Oui, absolument. Nous appliquons les normes de sécurité les plus strictes. Vos conversations et données personnelles sont chiffrées et ne sont jamais partagées avec des tiers." },
-    { question: "Comment accéder à LEIA ?", answer: "LEIA est accessible sur le web, WhatsApp ou Messenger. Vous pouvez l'utiliser depuis n'importe quel appareil connecté, à tout moment." },
-    { question: "Quel est le tarif ?", answer: "LEIA est disponible à partir de 4 900 XPF/mois. Ce tarif inclus l'accès complet à l'assistant IA et la validation des réponses par un expert humain." },
-    { question: "LEIA est-elle à jour des dernières lois ?", answer: "Oui, la base de connaissances de LEIA est régulièrement mise à jour pour refléter les évolutions législatives et réglementaires en Nouvelle-Calédonie." }
-  ];
-
-  const principles = [
-    { title: "Shokunin", subtitle: "Maître artisan", description: "Excellence dans chaque détail" },
-    { title: "Sensei", subtitle: "Enseignant", description: "Transmission bienveillante du savoir" },
-    { title: "Zen", subtitle: "Simplicité", description: "Élégance et efficacité" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-sand">
+  const features = [{
+    icon: <Clock className="w-6 h-6" />,
+    title: "Gain de temps considérable",
+    description: "Fini les recherches interminables dans les textes juridiques"
+  }, {
+    icon: <Shield className="w-6 h-6" />,
+    title: "Sécurité juridique",
+    description: "Informations toujours à jour et conformes"
+  }, {
+    icon: <Users className="w-6 h-6" />,
+    title: "Autonomie des équipes",
+    description: "Vos collaborateurs trouvent les réponses par eux-mêmes"
+  }, {
+    icon: <Target className="w-6 h-6" />,
+    title: "Économies substantielles",
+    description: "Réduisez vos frais de conseils externes"
+  }];
+  const benefits = [{
+    icon: <Users className="w-5 h-5" />,
+    title: "Compétences humaines",
+    description: "ZENKAI apporte un accompagnement sur mesure, ancré dans une expertise locale approfondie des entreprises et organisations. L'IA n'est pas une fin en soit mais est un outil pour maximiser le savoir-faire humain."
+  }, {
+    icon: <Sparkles className="w-5 h-5" />,
+    title: "Intelligence artificielle",
+    description: "ZENKAI rend l'Intelligence Artificielle accessible, concrète et mesurable, en offrant des solutions clés en main, des outils prêts à l'emploi. Elle favorise ainsi l'adaptation de votre entreprise à l'intelligence artificielle dans une démarche stratégique et perspicace."
+  }];
+  const steps = [{
+    number: "1",
+    title: "Créez votre compte",
+    description: "Inscription gratuite et sécurisée"
+  }, {
+    number: "2",
+    title: "Posez votre question",
+    description: "En langage naturel, comme à un expert"
+  }, {
+    number: "3",
+    title: "Recevez des réponses sourcées",
+    description: "Précises, basées sur le droit NC"
+  }];
+  const faqs = [{
+    question: "LEIA remplace-t-elle un avocat ?",
+    answer: "Non, LEIA fournit des informations juridiques basées sur la législation calédonienne mais ne remplace pas un conseil juridique personnalisé par un avocat. Pour des cas complexes ou des décisions importantes, nous recommandons de consulter un professionnel du droit."
+  }, {
+    question: "Quelles sources utilise LEIA ?",
+    answer: "LEIA s'appuie sur le Code du travail NC, l'AIT, les conventions collectives applicables, la jurisprudence locale et des fiches pratiques. Cette intelligence artificielle est secondée par une expertise et un savoir-faire de compétences humaines à votre appui en cas de besoin."
+  }, {
+    question: "Mes données sont-elles sécurisées ?",
+    answer: "Oui, absolument. Nous appliquons les normes de sécurité les plus strictes. Vos conversations et données personnelles sont chiffrées et ne sont jamais partagées avec des tiers."
+  }, {
+    question: "Comment accéder à LEIA ?",
+    answer: "LEIA est accessible sur le web, WhatsApp ou Messenger. Vous pouvez l'utiliser depuis n'importe quel appareil connecté, à tout moment."
+  }, {
+    question: "Quel est le tarif ?",
+    answer: "LEIA est disponible à partir de 4 900 XPF/mois. Ce tarif inclus l'accès complet à l'assistant IA et la validation des réponses par un expert humain."
+  }, {
+    question: "LEIA est-elle à jour des dernières lois ?",
+    answer: "Oui, la base de connaissances de LEIA est régulièrement mise à jour pour refléter les évolutions législatives et réglementaires en Nouvelle-Calédonie."
+  }];
+  const principles = [{
+    title: "Shokunin",
+    subtitle: "Maître artisan",
+    description: "Excellence dans chaque détail"
+  }, {
+    title: "Sensei",
+    subtitle: "Enseignant",
+    description: "Transmission bienveillante du savoir"
+  }, {
+    title: "Zen",
+    subtitle: "Simplicité",
+    description: "Élégance et efficacité"
+  }];
+  return <div className="min-h-screen bg-sand">
       <Navigation />
       
       {/* Hero Section */}
@@ -95,11 +103,7 @@ const Landing = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center">
-            <img 
-              src={heroImage} 
-              alt="Zenkai - L'IA au service de votre entreprise" 
-              className="w-full max-w-lg rounded-2xl shadow-zen"
-            />
+            <img src={heroImage} alt="Zenkai - L'IA au service de votre entreprise" className="w-full max-w-lg rounded-2xl shadow-zen" />
           </div>
         </div>
       </section>
@@ -116,7 +120,7 @@ const Landing = () => {
               <div className="bg-sand-dark p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre mission</h3>
                 <p className="text-lg text-sumi">
-                  Accompagner les TPE et PME calédoniennes vers une gestion de leur entreprises intégrant l'intelligence artificielle.
+                  Accompagner les TPE et PME calédoniennes vers une gestion de leur entreprise intégrant l'intelligence artificielle.
                 </p>
               </div>
               <div className="bg-sand-dark p-8 rounded-xl">
@@ -140,11 +144,7 @@ const Landing = () => {
       <section className="container mx-auto px-6 py-32">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="flex justify-center mb-8">
-            <img 
-              src={leiaAvatar} 
-              alt="LEIA - L'Expert Intelligent Administratif" 
-              className="w-32 h-32 rounded-full shadow-zen"
-            />
+            <img src={leiaAvatar} alt="LEIA - L'Expert Intelligent Administratif" className="w-32 h-32 rounded-full shadow-zen" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">LEIA - Votre Assistant IA Droit du Travail</h2>
           <p className="text-xl text-stone leading-relaxed">
@@ -176,13 +176,11 @@ const Landing = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {features.map((feature, idx) => (
-            <Card key={idx} className="p-8 border border-border bg-white hover:shadow-hover transition-all duration-300 group">
+          {features.map((feature, idx) => <Card key={idx} className="p-8 border border-border bg-white hover:shadow-hover transition-all duration-300 group">
               <div className="text-navy mb-4 group-hover:text-navy-light transition-colors duration-300">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-sumi mb-3 font-serif">{feature.title}</h3>
               <p className="text-stone leading-relaxed">{feature.description}</p>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="mt-16 text-center">
@@ -238,8 +236,7 @@ const Landing = () => {
             Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en réduisant les tâches répétitives, chronophages et manuelles.
           </p>
           <div className="space-y-6 max-w-3xl mx-auto">
-            {benefits.map((benefit, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
+            {benefits.map((benefit, idx) => <div key={idx} className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="text-navy mt-1">{benefit.icon}</div>
                   <div>
@@ -247,8 +244,7 @@ const Landing = () => {
                     <p className="text-stone leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -261,12 +257,10 @@ const Landing = () => {
             <p className="text-lg text-stone">Tout ce que vous devez savoir sur LEIA</p>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-xl px-6 bg-white shadow-zen hover:shadow-hover transition-all duration-300">
+            {faqs.map((faq, idx) => <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-xl px-6 bg-white shadow-zen hover:shadow-hover transition-all duration-300">
                 <AccordionTrigger className="text-left text-lg font-semibold text-sumi hover:text-navy transition-colors">{faq.question}</AccordionTrigger>
                 <AccordionContent className="text-stone leading-relaxed pt-2">{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
+              </AccordionItem>)}
           </Accordion>
         </div>
       </section>
@@ -328,8 +322,6 @@ const Landing = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Landing;
