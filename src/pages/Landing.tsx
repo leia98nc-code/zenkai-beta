@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import heroImage from "@/assets/zenkai-hero.png";
-import heroBanner from "@/assets/zenkai-banner.jpg";
+import heroBanner from "@/assets/torii-banner.jpg";
 import { FileText, Clock, Users, Calendar, Sparkles, Shield, BookOpen, Lock, Target, CheckCircle2, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
