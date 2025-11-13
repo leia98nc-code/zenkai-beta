@@ -80,20 +80,16 @@ const Landing = () => {
     subtitle: "Simplicité",
     description: "Élégance et efficacité"
   }];
-    return <div className="min-h-screen bg-sand">
+  return <div className="min-h-screen bg-sand">
       <Navigation />
       
       {/* Hero Banner */}
       <div className="w-full">
-        <img 
-          src={heroBanner} 
-          alt="Zenkai - Intelligence Artificielle pour les entreprises" 
-          className="w-full h-48 md:h-64 object-cover"
-        />
+        <img src={heroBanner} alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-48 md:h-64 object-cover" />
       </div>
       
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-16 pb-40 md:pt-20 md:pb-48">
+      <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-0 my-0 py-[30px]">
           <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             
