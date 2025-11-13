@@ -94,7 +94,8 @@ const Landing = () => {
           <div className="space-y-8">
             
             <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
-              La gestion d'entreprise boostée à l'IA
+              
+La gestion d'entreprise boostée à l'IA
             </h1>
             <p className="text-lg md:text-xl text-stone leading-relaxed">
               Zenkai est votre partenaire de confiance pour l'intégration de l'Intelligence Artificielle dans votre entreprise
