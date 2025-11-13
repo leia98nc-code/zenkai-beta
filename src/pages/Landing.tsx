@@ -80,19 +80,20 @@ const Landing = () => {
     subtitle: "Simplicité",
     description: "Élégance et efficacité"
   }];
-  return <div className="min-h-screen bg-sand">
+    return <div className="min-h-screen bg-sand">
       <Navigation />
       
+      {/* Hero Banner */}
+      <div className="w-full">
+        <img 
+          src={heroBanner} 
+          alt="Zenkai - Intelligence Artificielle pour les entreprises" 
+          className="w-full h-48 md:h-64 object-cover"
+        />
+      </div>
+      
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40">
-        <div className="w-full mb-12 md:mb-16">
-          <img 
-            src={heroBanner} 
-            alt="Zenkai - Intelligence Artificielle pour les entreprises" 
-            className="w-full h-48 md:h-64 object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-6 pb-40 md:pb-48">
+      <section className="container mx-auto px-6 pt-16 pb-40 md:pt-20 md:pb-48">
           <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             
@@ -114,7 +115,6 @@ const Landing = () => {
           <div className="hidden md:flex items-center justify-center">
             <img src={heroImage} alt="Zenkai - L'IA au service de votre entreprise" className="w-full max-w-lg rounded-2xl shadow-zen" />
           </div>
-        </div>
         </div>
       </section>
 
