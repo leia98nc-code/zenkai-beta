@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import heroImage from "@/assets/zenkai-hero.png";
+import heroBanner from "@/assets/zenkai-banner.jpg";
 import { FileText, Clock, Users, Calendar, Sparkles, Shield, BookOpen, Lock, Target, CheckCircle2, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -83,8 +84,16 @@ const Landing = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-40 md:pt-40 md:pb-48">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section className="pt-32 md:pt-40">
+        <div className="w-full mb-12 md:mb-16">
+          <img 
+            src={heroBanner} 
+            alt="Zenkai - Intelligence Artificielle pour les entreprises" 
+            className="w-full h-48 md:h-64 object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-6 pb-40 md:pb-48">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             
             <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
@@ -105,6 +114,7 @@ const Landing = () => {
           <div className="hidden md:flex items-center justify-center">
             <img src={heroImage} alt="Zenkai - L'IA au service de votre entreprise" className="w-full max-w-lg rounded-2xl shadow-zen" />
           </div>
+        </div>
         </div>
       </section>
 
