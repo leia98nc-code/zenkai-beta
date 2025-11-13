@@ -164,6 +164,9 @@ const Landing = () => {
               <p className="text-stone">✓ Réponses instantanées à toutes vos questions RH</p>
             </Card>
             <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <p className="text-stone">✓ Réponses instantanées à toutes vos questions RH</p>
+            </Card>
+            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
               <p className="text-stone">✓ Base de données : Code du travail NC, AIT, conventions collectives, jurisprudences et fiches pratiques</p>
             </Card>
             <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
