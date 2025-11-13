@@ -86,7 +86,7 @@ const Landing = () => {
       <section className="container mx-auto px-6 pt-32 pb-40 md:pt-40 md:pb-48">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <span className="text-sm font-medium text-navy uppercase tracking-wider">Nouvelle-Calédonie</span>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
               La gestion d'entreprise boostée à l'IA
             </h1>
