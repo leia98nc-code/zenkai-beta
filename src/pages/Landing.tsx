@@ -90,7 +90,7 @@ const Landing = () => {
       
       {/* Hero Section */}
       <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-0 my-0 py-[30px]">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
             
             <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
