@@ -172,9 +172,6 @@ const Landing = () => {
             <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
               <p className="text-stone">✓ Accessible sur le web, WhatsApp ou Messenger</p>
             </Card>
-            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
-              <p className="text-stone">✓ Human in the loop : accès à l'expertise humaine en soutien</p>
-            </Card>
           </div>
         </div>
 
