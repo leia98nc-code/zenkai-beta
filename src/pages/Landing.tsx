@@ -85,7 +85,7 @@ const Landing = () => {
       
       {/* Hero Banner */}
       <div className="w-full -mt-4">
-        <img src={heroBanner} alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-32 md:h-48 object-cover object-top" />
+        <img src={heroBanner} alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-40 md:h-64 object-cover object-top" />
       </div>
       
       {/* Hero Section */}
