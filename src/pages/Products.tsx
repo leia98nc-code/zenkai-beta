@@ -137,9 +137,11 @@ const Products = () => {
               <p className="text-lg text-stone leading-relaxed mb-8">
                 Automatisez votre webmarketing avec une IA qui produits vos campagnes selon vos critères.
               </p>
-              <p className="text-lg text-stone italic">
-                Solution en développement - Disponible prochainement
-              </p>
+              <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
+                <a href="http://localhost:5678/form/form-cm" target="_blank" rel="noopener noreferrer">
+                  Découvrir SOCIA<ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
