@@ -5,10 +5,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import { MessageSquare, Users, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
-
 const Products = () => {
-  return (
-    <div className="min-h-screen bg-sand">
+  return <div className="min-h-screen bg-sand">
       <Navigation />
       
       {/* Hero Section */}
@@ -31,11 +29,7 @@ const Products = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <div className="flex justify-center md:justify-start mb-6">
-                  <img 
-                    src={leiaAvatar} 
-                    alt="LEIA - L'Expert Intelligent Administratif" 
-                    className="w-32 h-32 rounded-full shadow-zen"
-                  />
+                  <img src={leiaAvatar} alt="LEIA - L'Expert Intelligent Administratif" className="w-32 h-32 rounded-full shadow-zen" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">LEIA</h2>
                 <p className="text-xl text-navy font-semibold mb-4">
@@ -141,8 +135,7 @@ const Products = () => {
                 Communication Automatisée
               </p>
               <p className="text-lg text-stone leading-relaxed mb-8">
-                Automatisez votre communication client avec une IA qui comprend et répond 
-                intelligemment aux demandes de vos clients sur tous vos canaux.
+                Automatisez votre webmarketing avec une IA qui produits vos campagnes selon vos critères.
               </p>
               <p className="text-lg text-stone italic">
                 Solution en développement - Disponible prochainement
@@ -244,8 +237,6 @@ const Products = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Products;
