@@ -197,44 +197,6 @@ La gestion d'entreprise boostée à l'IA
         </div>
       </section>
 
-      {/* Les défis des TPE/PME */}
-      <section className="bg-gradient-sand py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Les défis des TPE/PME calédoniennes</h2>
-            <p className="text-xl text-stone text-center mb-16 leading-relaxed">
-              Les entreprises locales font face à trois obstacles majeurs qui freinent leur croissance :
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 bg-white border-0 shadow-zen">
-                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Complexité réglementaire</h3>
-                <ul className="space-y-3 text-stone">
-                  <li>• Droit du travail calédonien spécifique et en constante évolution</li>
-                  <li>• Difficultés d'accès à l'information juridique fiable</li>
-                  <li>• Risques de non-conformité pouvant coûter cher</li>
-                </ul>
-              </Card>
-              <Card className="p-8 bg-white border-0 shadow-zen">
-                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Processus RH</h3>
-                <ul className="space-y-3 text-stone">
-                  <li>• Recrutement, entretiens annuels, gestion de la formation</li>
-                  <li>• Tâches administratives répétitives et fastidieuses</li>
-                  <li>• Manque de temps pour les missions stratégiques</li>
-                </ul>
-              </Card>
-              <Card className="p-8 bg-white border-0 shadow-zen">
-                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Retard sur la transformation digitale</h3>
-                <ul className="space-y-3 text-stone">
-                  <li>• IA perçue comme complexe et inaccessible</li>
-                  <li>• Absence de compétences internes spécialisées</li>
-                  <li>• Investissements considérés comme trop importants</li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Notre approche */}
       <section className="container mx-auto px-6 py-32">
         <div className="max-w-4xl mx-auto">
