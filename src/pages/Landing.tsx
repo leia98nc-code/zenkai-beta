@@ -190,10 +190,15 @@ La gestion d'entreprise boostée à l'IA
             </Card>)}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center space-y-4">
           <Card className="inline-block p-6 bg-sand-dark border-0">
             <p className="text-lg font-semibold text-navy">Tarif : À partir de 4 900 XPF/mois</p>
           </Card>
+          <div>
+            <Button asChild variant="outline" size="lg" className="border-stone text-stone hover:bg-stone hover:text-white transition-all duration-300">
+              <Link to="/products">Découvrir nos autres produits<ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+          </div>
         </div>
       </section>
 
