@@ -89,7 +89,7 @@ const Landing = () => {
       </div>
       
       {/* Hero Section */}
-      <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-0 my-0 py-[30px]">
+      <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-auto my-0 py-[30px]">
           <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
           <div className="space-y-8 text-center md:text-left mx-auto md:mx-0">
             
