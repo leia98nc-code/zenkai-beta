@@ -109,8 +109,8 @@ La gestion d'entreprise boostée à l'IA
               </Button>
             </div>
           </div>
-          <div className="hidden md:flex items-center justify-center">
-            <img src={heroImage} alt="Zenkai - L'IA au service de votre entreprise" className="w-full max-w-lg rounded-2xl shadow-zen" />
+          <div className="hidden md:flex items-end justify-center">
+            <img src={heroImage} alt="Zenkai - L'IA au service de votre entreprise" className="w-full max-w-md rounded-2xl shadow-zen" />
           </div>
         </div>
       </section>
