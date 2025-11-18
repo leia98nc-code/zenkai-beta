@@ -12,7 +12,7 @@ const Products = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <span className="text-sm font-medium text-navy uppercase tracking-wider">Nos Solutions</span>
+          
           <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
             Nos Produits IA
           </h1>
@@ -33,7 +33,7 @@ const Products = () => {
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">LEIA</h2>
                 <p className="text-xl text-navy font-semibold mb-4">
-                  L'Expert Intelligent Administratif
+                  L'Expert RH    
                 </p>
                 <p className="text-lg text-stone leading-relaxed mb-8">
                   Assistant IA spécialisé en droit du travail applicable en Nouvelle-Calédonie. 
@@ -100,8 +100,8 @@ const Products = () => {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sumi mb-2">Réponses automatiques intelligentes</h4>
-                    <p className="text-stone">Gestion automatisée des questions fréquentes sur vos canaux de communication</p>
+                    <h4 className="font-semibold text-sumi mb-2">Votre Community manager IA       </h4>
+                    <p className="text-stone">Un agent IA spécialiste des réseaux sociaux qui vous produit le post idéal                                                                                        </p>
                   </div>
                 </div>
               </Card>
@@ -109,8 +109,17 @@ const Products = () => {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sumi mb-2">Multi-canal</h4>
-                    <p className="text-stone">Intégration sur réseaux sociaux, messagerie et site web</p>
+                    <h4 className="font-semibold text-sumi mb-2">Images générés par IA ou Recherche d'image web             </h4>
+                    <p className="text-stone">Bénéficiez de la puissance des meilleurs IA générative d'images pour illustrer vos posts.
+Illustrer
+
+
+
+
+
+
+
+                                          </p>
                   </div>
                 </div>
               </Card>
@@ -118,8 +127,8 @@ const Products = () => {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sumi mb-2">Disponibilité 24/7</h4>
-                    <p className="text-stone">Votre entreprise accessible à tout moment pour vos clients</p>
+                    <h4 className="font-semibold text-sumi mb-2">Full automatisation   </h4>
+                    <p className="text-stone">Outil configurable en "full automatisation", sans intervention de l'utilis, si ce n'est le contrôle préalable                                                                                                              </p>
                   </div>
                 </div>
               </Card>
@@ -139,7 +148,7 @@ const Products = () => {
               </p>
               <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
                 <a href="http://localhost:5678/form/form-cm" target="_blank" rel="noopener noreferrer">
-                  Découvrir SOCIA<ArrowRight className="ml-2 w-4 h-4" />
+                  Démo gratuite     <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
             </div>
