@@ -3,7 +3,7 @@ import { LogOut } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-import leiaLogo from "@/assets/leia-logo.png";
+import leiaLogo from "@/assets/leia-avatar-new.png";
 
 const ChatInterface = () => {
   const navigate = useNavigate();
