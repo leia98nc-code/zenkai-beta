@@ -102,7 +102,7 @@ La gestion d'entreprise boostée à l'IA
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
-                <Link to="/auth">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/auth"><ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300">
                 <Link to="/about">Découvrir Zenkai</Link>
