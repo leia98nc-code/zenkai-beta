@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
 import { Bot, Mail, Shield } from "lucide-react";
 import zenkaiTextLogo from "@/assets/zenkai-text-logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-sand-dark border-t border-border">
+  return <footer className="bg-sand-dark border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img 
-                src={zenkaiTextLogo} 
-                alt="ZENKAI Logo" 
-                className="h-12 object-contain"
-              />
+              <img src={zenkaiTextLogo} alt="ZENKAI Logo" className="h-12 object-contain" />
             </div>
             <p className="text-sm text-stone">
               L'Intelligence Artificielle au service de votre performance RH
@@ -73,13 +67,10 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-stone">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:leia98nc@gmail.com" className="hover:text-navy transition-colors">
-                  leia98nc@gmail.com
-                </a>
+                <a href="mailto:leia98nc@gmail.com" className="hover:text-navy transition-colors">contact@zenkai.nc</a>
               </li>
               <li className="text-sm text-stone">
-                Tél: +687 75.49.20
-              </li>
+            </li>
               <li className="text-sm text-stone">
                 Nouméa, Nouvelle-Calédonie
               </li>
@@ -96,8 +87,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
