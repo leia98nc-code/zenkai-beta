@@ -40,19 +40,27 @@ const Navigation = () => {
             >
               À propos
             </Link>
-            <Link
-              to="/products"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive("/products") ? "text-primary" : "text-foreground"
-              }`}
-            >
-              Nos produits
-            </Link>
-            <Link to="/auth">
-              <Button size="sm" className="bg-gradient-primary">
-                Essayer LEIA
-              </Button>
-            </Link>
+          <Link
+            to="/products"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              isActive("/products") ? "text-primary" : "text-foreground"
+            }`}
+          >
+            Nos produits
+          </Link>
+          <Link
+            to="/services"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              isActive("/services") ? "text-primary" : "text-foreground"
+            }`}
+          >
+            Nos prestations
+          </Link>
+          <Link to="/auth">
+            <Button size="sm" className="bg-gradient-primary">
+              Essayer LEIA
+            </Button>
+          </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,6 +96,13 @@ const Navigation = () => {
               onClick={() => setIsOpen(false)}
             >
               Nos produits
+            </Link>
+            <Link
+              to="/services"
+              className="block px-4 py-2 text-sm font-medium hover:bg-muted rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Nos prestations
             </Link>
             <div className="px-4 pt-2 space-y-2">
               <Link to="/auth" onClick={() => setIsOpen(false)}>
