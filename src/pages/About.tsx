@@ -3,10 +3,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bot, Target, Users, Shield, Zap } from "lucide-react";
 import leiaLogo from "@/assets/leia-logo.png";
-
 const About = () => {
-  return (
-    <div className="min-h-screen flex flex-col bg-sand">
+  return <div className="min-h-screen flex flex-col bg-sand">
       <Navigation />
 
       <main className="flex-1">
@@ -71,8 +69,9 @@ const About = () => {
                     <p className="text-sm text-stone">10 années en gestion des organisations, spécialisé droit social. Formateur certifié.</p>
                   </div>
                   <div className="bg-sand-dark p-6 rounded-lg">
-                    <h4 className="font-semibold text-navy mb-2">Spécialisation</h4>
-                    <p className="text-sm text-stone">Connaissance fine des TPE/PME de Nouvelle-Calédonie et du droit calédonien.</p>
+                    <h4 className="font-semibold text-navy mb-2">Innovation</h4>
+                    <p className="text-sm text-stone">
+                  </p>
                   </div>
                 </div>
               </div>
@@ -183,8 +182,6 @@ const About = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
