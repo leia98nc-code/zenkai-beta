@@ -70,7 +70,7 @@ const About = () => {
                   </div>
                   <div className="bg-sand-dark p-6 rounded-lg">
                     <h4 className="font-semibold text-navy mb-2">Innovation</h4>
-                    <p className="text-sm text-stone">La puissance de l'intelligence artificielle accessible à chacun facilement</p>
+                    <p className="text-sm text-stone">La puissance des meilleurs modèles d'intelligence artificielle, accessible à chacun facilement</p>
                   </div>
                 </div>
               </div>
