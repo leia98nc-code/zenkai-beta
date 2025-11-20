@@ -27,7 +27,7 @@ const Services = () => {
     },
     {
       icon: <Brain className="w-12 h-12" />,
-      title: "Formations Intelligence Artificielle",
+      title: "Intégration de l'IA",
       description: "Maîtrisez les outils et concepts de l'IA pour transformer votre façon de travailler et rester compétitif dans un monde en constante évolution."
     }
   ];
