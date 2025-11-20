@@ -101,7 +101,8 @@ const Products = () => {
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-sumi mb-2">Votre Community manager IA       </h4>
-                    <p className="text-stone">Un agent IA spécialiste des réseaux sociaux qui vous produit le post idéal                                                                                        </p>
+                    <p className="text-stone">Un agent IA spécialiste des réseaux sociaux 
+qui vous produit le post idéal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </p>
                   </div>
                 </div>
               </Card>
@@ -110,7 +111,8 @@ const Products = () => {
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-sumi mb-2">Images générés par IA ou Recherche d'images web                          </h4>
-                    <p className="text-stone">Publiez l'image réelle voulue ou bénéficiez de la puissance des meilleurs IA générative d'images pour illustrer vos posts. 
+                    <p className="text-stone">Publiez l'image réelle voulue ou bénéficiez de la puissance des meilleurs IA génératives d'images pour illustrer vos posts. 
+ 
                                             
                                             
                                             
@@ -816,7 +818,8 @@ const Products = () => {
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-sumi mb-2">Automatisation variée                       </h4>
-                    <p className="text-stone">Un outil adaptable à vos besoins. Contribuez à la création ou automatisez la production                                                                                                                                                                                                                       </p>
+                    <p className="text-stone">Un outil adaptable à vos besoins. 
+Contribuez à la création ou automatisez la production                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </p>
                   </div>
                 </div>
               </Card>
@@ -862,9 +865,7 @@ const Products = () => {
                   Sur-Mesure Pour Votre Entreprise
                 </p>
                 <p className="text-lg text-stone leading-relaxed mb-8">
-                  Nous développons des solutions d'automatisation intelligente adaptées 
-                  à vos processus métier spécifiques. De la gestion documentaire à l'analyse 
-                  de données, libérez votre équipe des tâches répétitives.
+                  Nous développons des solutions d'automatisation intelligente adaptées à vos processus métier spécifiques. De la gestion documentaire à de la création de contenus, libérez votre équipe des tâches répétitives.
                 </p>
                 <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300">
                   <Link to="/about">Contactez-nous</Link>
