@@ -19,7 +19,7 @@ const About = () => {
                 </span>
               </h1>
               <p className="text-xl text-stone">
-                L'Intelligence Artificielle au service de votre performance RH
+                L'IA au service de la gestion de votre entreprise
               </p>
             </div>
           </div>
