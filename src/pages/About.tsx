@@ -42,8 +42,8 @@ const About = () => {
               <div className="bg-sand-dark p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre positionnement unique</h3>
                 <ul className="space-y-3 text-stone">
-                  <li>• Une expertise RH/Formation couplée à la puissance de l'IA, par des solutions concrètes d'utilisation</li>
-                  <li>• Une expertise humaine au service de votre organisation</li>
+                  <li>• Une expertise managériale couplée à la puissance de l'IA, par des solutions concrètes d'utilisation</li>
+                  <li>• L'IA comme outil, pour centrer les compétences humaines sur les activités à forte valeur ajoutée                                                                                                                                                                                                                                                                                                                              </li>
                 </ul>
               </div>
             </div>
