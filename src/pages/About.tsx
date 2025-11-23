@@ -27,9 +27,7 @@ const About = () => {
                   Zenkai
                 </span>
               </h1>
-              <p className="text-xl text-stone">
-                L'IA au service de la gestion de votre entreprise
-              </p>
+              
             </div>
           </div>
         </section>
