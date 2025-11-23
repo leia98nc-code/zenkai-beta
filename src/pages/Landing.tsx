@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import heroImage from "@/assets/zenkai-hero.png";
@@ -178,9 +179,11 @@ La gestion d'entreprise boostée à l'IA
             <p className="text-xl text-stone text-center mb-16 leading-relaxed">
               Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en automatisant les tâches des fonctions support (RH, communication, conformité, archivage, etc).
             </p>
-            <div className="grid md:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
-              <div className="flex items-center justify-center">
-                <img alt="Zenkai - Compétences humaines et Intelligence artificielle" className="w-full h-full object-cover rounded-2xl shadow-zen" src="/lovable-uploads/66ed3717-8cb4-49c2-b52c-af1b97521e89.png" />
+            <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
+              <div className="flex items-stretch justify-center h-full">
+                <AspectRatio ratio={9/16} className="w-full">
+                  <img alt="Zenkai - Compétences humaines et Intelligence artificielle" className="w-full h-full object-cover rounded-2xl shadow-zen" src="/lovable-uploads/66ed3717-8cb4-49c2-b52c-af1b97521e89.png" />
+                </AspectRatio>
               </div>
               <div className="space-y-6">
                 <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
