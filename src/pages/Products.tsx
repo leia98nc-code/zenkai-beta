@@ -5,14 +5,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import { MessageSquare, Users, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
+
 const Products = () => {
-  return <div className="min-h-screen bg-sand">
+  return (
+    <div className="min-h-screen bg-sand">
       <Navigation />
       
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          
           <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
             Nos Produits IA
           </h1>
@@ -29,17 +30,25 @@ const Products = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <div className="flex justify-center md:justify-start mb-6">
-                  <img src={leiaAvatar} alt="LEIA - L'Expert Intelligent Administratif" className="w-32 h-32 rounded-full shadow-zen" />
+                  <img 
+                    src={leiaAvatar} 
+                    alt="LEIA - L'Expert Intelligent Administratif" 
+                    className="w-32 h-32 rounded-full shadow-zen" 
+                  />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">LEIA</h2>
                 <p className="text-xl text-navy font-semibold mb-4">
-                  L'Expert RH    
+                  L'Expert RH    
                 </p>
                 <p className="text-lg text-stone leading-relaxed mb-8">
                   Assistant IA spécialisé en droit du travail applicable en Nouvelle-Calédonie. 
                   LEIA répond à vos questions 24/7 avec une expertise validée par des professionnels.
                 </p>
-                <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
+                >
                   <Link to="/auth">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </div>
@@ -96,730 +105,36 @@ const Products = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 space-y-4">
-              <Card className="p-6 border border-border bg-white">
+              <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sumi mb-2">Votre Community manager IA       </h4>
-                    <p className="text-stone">Un agent IA spécialiste des réseaux sociaux 
-qui vous produit le post idéal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </p>
+                    <h4 className="font-semibold text-sumi mb-2">Community manager IA</h4>
+                    <p className="text-stone">
+                      Un agent IA spécialiste des réseaux sociaux qui crée le post idéal pour votre audience
+                    </p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 border border-border bg-white">
+              <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sumi mb-2">Images générés par IA ou Recherche d'images web                          </h4>
-                    <p className="text-stone">Publiez l'image réelle voulue ou bénéficiez de la puissance des meilleurs IA génératives d'images pour illustrer vos posts. 
- 
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                                                                                                                                                                                           
-
-
-
-
-
-
-
-                                          </p>
+                    <h4 className="font-semibold text-sumi mb-2">Images générées par IA ou recherche web</h4>
+                    <p className="text-stone">
+                      Publiez vos propres images ou utilisez l'IA générative pour créer des visuels percutants
+                    </p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 border border-border bg-white">
+              <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sumi mb-2">Automatisation variée                       </h4>
-                    <p className="text-stone">Un outil adaptable à vos besoins. 
-Contribuez à la création ou automatisez la production                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </p>
+                    <h4 className="font-semibold text-sumi mb-2">Automatisation flexible</h4>
+                    <p className="text-stone">
+                      Adaptez l'outil à vos besoins : créez vos contenus avec assistance IA ou automatisez entièrement la production
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -835,11 +150,15 @@ Contribuez à la création ou automatisez la production            �
                 Communication Automatisée
               </p>
               <p className="text-lg text-stone leading-relaxed mb-8">
-                Automatisez votre webmarketing avec une IA qui produits vos campagnes selon vos critères.
+                Automatisez votre webmarketing avec une IA qui produit vos campagnes selon vos critères
               </p>
-              <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
+              >
                 <a href="http://localhost:5678/form/form-cm" target="_blank" rel="noopener noreferrer">
-                  Démo gratuite     <ArrowRight className="ml-2 w-4 h-4" />
+                  Démo gratuite<ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
             </div>
@@ -865,9 +184,14 @@ Contribuez à la création ou automatisez la production            �
                   Sur-Mesure Pour Votre Entreprise
                 </p>
                 <p className="text-lg text-stone leading-relaxed mb-8">
-                  Nous développons des solutions d'automatisation intelligente adaptées à vos processus métier spécifiques. De la gestion documentaire à de la création de contenus, libérez votre équipe des tâches répétitives.
+                  Nous développons des solutions d'automatisation intelligente adaptées à vos processus métier spécifiques. De la gestion documentaire à la création de contenus, libérez votre équipe des tâches répétitives.
                 </p>
-                <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300">
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300"
+                >
                   <Link to="/about">Contactez-nous</Link>
                 </Button>
               </div>
@@ -925,10 +249,19 @@ Contribuez à la création ou automatisez la production            �
               Découvrez comment nos solutions IA peuvent optimiser vos processus
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
+              >
                 <Link to="/auth">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300">
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg" 
+                className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300"
+              >
                 <Link to="/about">Nous contacter</Link>
               </Button>
             </div>
@@ -937,6 +270,8 @@ Contribuez à la création ou automatisez la production            �
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Products;
