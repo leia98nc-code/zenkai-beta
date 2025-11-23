@@ -215,7 +215,7 @@ La gestion d'entreprise boostée à l'IA
               </Card>
               <Card className="p-8 bg-sand-dark border-0">
                 <div className="text-3xl font-bold text-navy mb-2">2</div>
-                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Test LEIA gratuit</h3>
+                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Tester nos produits </h3>
                 <p className="text-stone">3 mois d'essai de notre assistant IA Droit du Travail pour évaluer les bénéfices</p>
               </Card>
               <Card className="p-8 bg-sand-dark border-0">
