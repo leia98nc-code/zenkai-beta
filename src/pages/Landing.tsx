@@ -76,11 +76,11 @@ const Landing = () => {
       
       {/* Hero Banner */}
       <div className="w-full -mt-4">
-        <img src={heroBanner} alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-40 md:h-64 object-cover object-center" />
+        <img alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-40 md:h-64 object-cover object-center" src="/lovable-uploads/9c0a6a6c-4cf0-4961-9839-e4eee54775f2.jpg" />
       </div>
       
       {/* Hero Section */}
-      <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-auto my-0 py-[30px]">
+      <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-auto my-0 mb-0 py-[64px] mr-0 ml-0">
           <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto my-[2px]">
           <div className="space-y-8 text-center md:text-left mx-auto md:mx-0">
             
@@ -108,7 +108,7 @@ La gestion d'entreprise boostée à l'IA
 
 
       {/* LEIA - Domaines d'expertise */}
-      <section className="container mx-auto px-6 py-32">
+      <section className="container mx-auto px-6 py-[150px]">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="flex justify-center mb-8">
             <img src={leiaAvatar} alt="LEIA - L'Expert Intelligent Administratif" className="w-32 h-32 rounded-full shadow-zen" />
