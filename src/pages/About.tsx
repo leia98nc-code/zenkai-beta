@@ -85,51 +85,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Engagements */}
-        <section className="py-20 bg-sand-dark">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-3xl font-bold text-center font-serif text-sumi">Nos Engagements</h2>
-
-              <div className="space-y-6">
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 font-serif text-sumi">
-                      Protection des Données
-                    </h3>
-                    <p className="text-stone">
-                      Vos conversations avec LEIA sont strictement confidentielles.
-                      Nous respectons le RGPD et ne partageons jamais vos données
-                      personnelles avec des tiers.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 font-serif text-sumi">Neutralité</h3>
-                    <p className="text-stone">
-                      LEIA fournit des informations objectives basées uniquement sur
-                      la législation en vigueur, sans parti pris ni influence
-                      externe.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 font-serif text-sumi">Fiabilité</h3>
-                    <p className="text-stone">
-                      Nous mettons régulièrement à jour LEIA pour refléter les
-                      dernières évolutions législatives et garantir l'exactitude des
-                      informations fournies.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
 
       </main>
 
