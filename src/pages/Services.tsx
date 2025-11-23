@@ -38,14 +38,16 @@ const Services = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Nos Prestations
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Découvrez notre gamme complète de services pour accompagner votre transformation et développer les compétences de vos équipes.
-            </p>
+        <section className="bg-gradient-sand py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <h1 className="text-4xl md:text-5xl font-bold font-serif text-sumi">
+                Nos{" "}
+                <span className="text-navy">
+                  Prestations
+                </span>
+              </h1>
+            </div>
           </div>
         </section>
 
