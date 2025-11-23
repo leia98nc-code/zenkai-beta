@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bot, Target, Users, Shield, Zap, Sparkles } from "lucide-react";
+import { Bot, Users, Shield, Zap, Sparkles } from "lucide-react";
 import leiaLogo from "@/assets/leia-logo.png";
 const About = () => {
   const benefits = [{
@@ -30,31 +30,6 @@ const About = () => {
               <p className="text-xl text-stone">
                 L'IA au service de la gestion de votre entreprise
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-3xl font-bold font-serif text-sumi">Notre Mission</h2>
-                <p className="text-lg text-stone max-w-2xl mx-auto leading-relaxed">
-                  Accompagner les TPE et PME calédoniennes vers une gestion de leur entreprises intégrant l'intelligence artificielle.
-                </p>
-              </div>
-
-              <div className="bg-sand-dark p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre positionnement unique</h3>
-                <ul className="space-y-3 text-stone">
-                  <li>• Une expertise managériale couplée à la puissance de l'IA, par des solutions concrètes d'utilisation</li>
-                  <li>• L'IA comme outil, pour centrer les compétences humaines sur les activités à forte valeur ajoutée                                                                                                                                                                                                                                                                                                                              </li>
-                </ul>
-              </div>
             </div>
           </div>
         </section>
