@@ -168,28 +168,6 @@ La gestion d'entreprise boostée à l'IA
       {/* FAQ */}
       
 
-      {/* Pourquoi choisir Zenkai */}
-      <section className="bg-gradient-sand py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Pourquoi choisir Zenkai ?</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 bg-white border-0 shadow-zen text-center">
-                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Expertise métier reconnue</h3>
-                <p className="text-stone leading-relaxed">10 années d'expérience en gestion des organisations, spécialisé droit social. Connaissance fine des TPE/PME de Nouvelle-Calédonie. Formateur certifié.</p>
-              </Card>
-              <Card className="p-8 bg-white border-0 shadow-zen text-center">
-                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Intégration de l'IA</h3>
-                <p className="text-stone leading-relaxed">Proposer des solutions no-code, intuitive et efficace, adaptée à vos besoins.</p>
-              </Card>
-              <Card className="p-8 bg-white border-0 shadow-zen text-center">
-                <h3 className="text-xl font-bold text-navy mb-4 font-serif">Ancrage local fort</h3>
-                <p className="text-stone leading-relaxed">Spécialisation en droit calédonien. Réseau professionnel établi. Disponibilité et proximité garanties.</p>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Final */}
       <section className="bg-white py-32">
