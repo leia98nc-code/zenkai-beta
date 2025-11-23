@@ -52,8 +52,13 @@ const Services = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
+            <div className="max-w-2xl mx-auto text-center mb-12">
+              <p className="text-lg text-stone">
+                Découvrez notre gamme complète de services pour accompagner votre transformation et développer les compétences de vos équipes.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow border-border/50">
