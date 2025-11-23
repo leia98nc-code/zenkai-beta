@@ -177,7 +177,7 @@ La gestion d'entreprise boostée à l'IA
             <p className="text-xl text-stone text-center mb-16 leading-relaxed">
               Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en automatisant les tâches des fonctions support (RH, communication, conformité, archivage, etc).
             </p>
-            <div className="space-y-6 max-w-3xl mx-auto">
+            <div className="space-y-6 max-w-3xl ml-[33.333%]">
               <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="text-navy mt-1"><Users className="w-5 h-5" /></div>
