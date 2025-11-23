@@ -12,14 +12,16 @@ const Products = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
-            Nos Produits IA
-          </h1>
-          <p className="text-lg md:text-xl text-stone leading-relaxed">
-            Des solutions d'intelligence artificielle adaptées à vos besoins professionnels
-          </p>
+      <section className="bg-gradient-sand py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
+              Nos Produits IA
+            </h1>
+            <p className="text-lg md:text-xl text-stone leading-relaxed">
+              Des solutions d'intelligence artificielle adaptées à vos besoins professionnels
+            </p>
+          </div>
         </div>
       </section>
 
@@ -53,7 +55,7 @@ const Products = () => {
                 </Button>
               </div>
               <div className="space-y-4">
-                <Card className="p-6 border border-border bg-sand-dark">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -62,7 +64,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 border border-border bg-sand-dark">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -71,7 +73,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 border border-border bg-sand-dark">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -80,7 +82,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 border border-border bg-sand-dark">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -92,8 +94,8 @@ const Products = () => {
               </div>
             </div>
             <div className="text-center">
-              <Card className="inline-block p-6 bg-sand border-0">
-                <p className="text-lg font-semibold text-navy">À partir de 4 900 XPF/mois</p>
+              <Card className="inline-block p-6 bg-navy border-0">
+                <p className="text-lg font-semibold text-white">À partir de 4 900 XPF/mois</p>
               </Card>
             </div>
           </div>
@@ -101,11 +103,12 @@ const Products = () => {
       </section>
 
       {/* SOCIA - Communication Automatisée */}
-      <section className="container mx-auto px-6 py-32">
+      <section className="bg-sand-dark py-32">
+        <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 space-y-4">
-              <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
@@ -116,7 +119,7 @@ const Products = () => {
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
@@ -127,7 +130,7 @@ const Products = () => {
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
+              <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                   <div>
@@ -164,10 +167,11 @@ const Products = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Automatisations Personnalisées */}
-      <section className="bg-gradient-sand py-32">
+      <section className="bg-white py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -196,7 +200,7 @@ const Products = () => {
                 </Button>
               </div>
               <div className="space-y-4">
-                <Card className="p-6 border border-border bg-white">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -205,7 +209,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 border border-border bg-white">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -214,7 +218,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 border border-border bg-white">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -223,7 +227,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 border border-border bg-white">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -239,7 +243,7 @@ const Products = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="bg-white py-32">
+      <section className="bg-gradient-sand py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-sumi font-serif">
