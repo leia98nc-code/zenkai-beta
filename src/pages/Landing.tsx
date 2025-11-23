@@ -224,7 +224,20 @@ La gestion d'entreprise boostée à l'IA
       </section>
 
       {/* FAQ */}
-      
+      <section className="container mx-auto px-6 py-32">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">Questions fréquentes</h2>
+            <p className="text-lg text-stone">Tout ce que vous devez savoir sur LEIA</p>
+          </div>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, idx) => <AccordionItem key={idx} value={`item-${idx}`} className="border border-border rounded-xl px-6 bg-white shadow-zen hover:shadow-hover transition-all duration-300">
+                <AccordionTrigger className="text-left text-lg font-semibold text-sumi hover:text-navy transition-colors">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-stone leading-relaxed pt-2">{faq.answer}</AccordionContent>
+              </AccordionItem>)}
+          </Accordion>
+        </div>
+      </section>
 
       {/* Pourquoi choisir Zenkai */}
       <section className="bg-gradient-sand py-32">
