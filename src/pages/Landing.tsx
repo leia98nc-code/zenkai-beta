@@ -183,7 +183,7 @@ La gestion d'entreprise boostée à l'IA
                 <img 
                   src={positioningImage} 
                   alt="Zenkai - Compétences humaines et Intelligence artificielle" 
-                  className="w-full max-w-md rounded-2xl shadow-zen"
+                  className="w-full h-full object-cover rounded-2xl shadow-zen"
                 />
               </div>
               <div className="space-y-6">
