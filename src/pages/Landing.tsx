@@ -216,7 +216,7 @@ La gestion d'entreprise boostée à l'IA
               <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
                 <Link to="/auth">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <p className="text-sm text-stone">« Prenons 30 minutes pour discuter de vos enjeux RH et Formation. »</p>
+              
             </div>
           </div>
         </div>
