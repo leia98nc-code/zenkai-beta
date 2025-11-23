@@ -79,6 +79,11 @@ const Landing = () => {
         <img alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-40 md:h-64 object-cover object-center" src="/lovable-uploads/9c0a6a6c-4cf0-4961-9839-e4eee54775f2.jpg" />
       </div>
       
+      {/* Hero Banner - Duplicate */}
+      <div className="w-full mt-4">
+        <img alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-40 md:h-64 object-cover object-center" src="/lovable-uploads/9c0a6a6c-4cf0-4961-9839-e4eee54775f2.jpg" />
+      </div>
+      
       {/* Hero Section */}
       <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-auto my-0 mb-0 py-[64px] mr-0 ml-0">
           <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto my-[2px]">
