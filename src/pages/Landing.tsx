@@ -108,7 +108,8 @@ La gestion d'entreprise boostée à l'IA
 
 
       {/* LEIA - Domaines d'expertise */}
-      <section className="container mx-auto px-6 py-[100px]">
+      <section className="bg-white py-[100px]">
+        <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="flex justify-center mb-8">
             <img src={leiaAvatar} alt="LEIA - L'Expert Intelligent Administratif" className="w-32 h-32 rounded-full shadow-zen" />
@@ -159,6 +160,7 @@ La gestion d'entreprise boostée à l'IA
               <Link to="/products">Découvrir nos autres produits<ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
+        </div>
         </div>
       </section>
 
