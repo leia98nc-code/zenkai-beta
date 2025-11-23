@@ -266,7 +266,7 @@ const Products = () => {
                 size="lg" 
                 className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300"
               >
-                <Link to="/about">Nous contacter</Link>
+                <a href="mailto:contact@zenkai.nc">Nous contacter</a>
               </Button>
             </div>
           </div>
