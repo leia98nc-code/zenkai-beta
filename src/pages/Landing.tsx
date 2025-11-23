@@ -180,11 +180,7 @@ La gestion d'entreprise boostée à l'IA
             </p>
             <div className="grid md:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
               <div className="flex items-center justify-center">
-                <img 
-                  src={positioningImage} 
-                  alt="Zenkai - Compétences humaines et Intelligence artificielle" 
-                  className="w-full h-full object-cover rounded-2xl shadow-zen"
-                />
+                <img alt="Zenkai - Compétences humaines et Intelligence artificielle" className="w-full h-full object-cover rounded-2xl shadow-zen" src="/lovable-uploads/66ed3717-8cb4-49c2-b52c-af1b97521e89.png" />
               </div>
               <div className="space-y-6">
                 <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
