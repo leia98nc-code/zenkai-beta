@@ -79,58 +79,7 @@ const About = () => {
         </section>
 
         {/* Services */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              <h2 className="text-3xl font-bold text-center font-serif text-sumi">Notre accompagnement RH</h2>
-              <p className="text-lg text-stone text-center max-w-3xl mx-auto">
-                Nous intervenons sur une large gamme de situations RH, transformant les défis en opportunités grâce à notre expertise boostée à l'intelligence artificielle.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6 space-y-3">
-                    <Shield className="w-8 h-8 text-navy" />
-                    <h3 className="text-xl font-semibold font-serif text-sumi">Audits de Conformité</h3>
-                    <p className="text-stone">
-                      Réalisez un diagnostic approfondi de vos pratiques RH pour prévenir les risques légaux et optimiser vos processus.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6 space-y-3">
-                    <Bot className="w-8 h-8 text-navy" />
-                    <h3 className="text-xl font-semibold font-serif text-sumi">LEIA</h3>
-                    <p className="text-stone">
-                      Votre assistant IA spécialisé en droit du travail, disponible 24/7 pour répondre à toutes vos questions.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6 space-y-3">
-                    <Users className="w-8 h-8 text-navy" />
-                    <h3 className="text-xl font-semibold font-serif text-sumi">Ateliers</h3>
-                    <p className="text-stone">
-                      Nous animons des ateliers pratiques pour faciliter la collaboration et l'émergence de solutions avec votre personnel.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-zen">
-                  <CardContent className="p-6 space-y-3">
-                    <Zap className="w-8 h-8 text-navy" />
-                    <h3 className="text-xl font-semibold font-serif text-sumi">Plans stratégiques</h3>
-                    <p className="text-stone">
-                      Nous concevons des plans stratégiques personnalisés pour implémenter les changements nécessaires à votre entreprise.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Engagements */}
         <section className="py-20 bg-sand-dark">
