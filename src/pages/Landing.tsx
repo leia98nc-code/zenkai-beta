@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import heroImage from "@/assets/zenkai-hero.png";
 import heroBanner from "@/assets/torii-banner-new.jpg";
-import positioningImage from "@/assets/positioning-illustration.png";
 import { FileText, Clock, Users, Calendar, Sparkles, Shield, BookOpen, Lock, Target, CheckCircle2, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -179,29 +177,22 @@ La gestion d'entreprise boostée à l'IA
             <p className="text-xl text-stone text-center mb-16 leading-relaxed">
               Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en automatisant les tâches des fonctions support (RH, communication, conformité, archivage, etc).
             </p>
-            <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
-              <div className="flex items-stretch justify-center h-full">
-                <AspectRatio ratio={9/16} className="w-full">
-                  <img alt="Zenkai - Compétences humaines et Intelligence artificielle" className="w-full h-full object-cover rounded-2xl shadow-zen" src="/lovable-uploads/66ed3717-8cb4-49c2-b52c-af1b97521e89.png" />
-                </AspectRatio>
-              </div>
-              <div className="space-y-6">
-                <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-navy mt-1"><Users className="w-5 h-5" /></div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-sumi mb-3">Compétences humaines</h3>
-                      <p className="text-stone leading-relaxed">ZENKAI apporte un accompagnement sur mesure, ancré dans une expertise locale approfondie des entreprises et organisations. L'IA n'est pas une fin en soit mais est un outil pour maximiser le savoir-faire humain.</p>
-                    </div>
+            <div className="space-y-6 max-w-3xl mx-auto">
+              <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="text-navy mt-1"><Users className="w-5 h-5" /></div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-sumi mb-3">Compétences humaines</h3>
+                    <p className="text-stone leading-relaxed">ZENKAI apporte un accompagnement sur mesure, ancré dans une expertise locale approfondie des entreprises et organisations. L'IA n'est pas une fin en soit mais est un outil pour maximiser le savoir-faire humain.</p>
                   </div>
                 </div>
-                <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-navy mt-1"><Sparkles className="w-5 h-5" /></div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-sumi mb-3">Intelligence artificielle</h3>
-                      <p className="text-stone leading-relaxed">ZENKAI rend l'Intelligence Artificielle accessible, concrète et mesurable, en offrant des solutions clés en main, des outils prêts à l'emploi. Elle favorise ainsi l'adaptation de votre entreprise à l'intelligence artificielle dans une démarche stratégique et perspicace.</p>
-                    </div>
+              </div>
+              <div className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="text-navy mt-1"><Sparkles className="w-5 h-5" /></div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-sumi mb-3">Intelligence artificielle</h3>
+                    <p className="text-stone leading-relaxed">ZENKAI rend l'Intelligence Artificielle accessible, concrète et mesurable, en offrant des solutions clés en main, des outils prêts à l'emploi. Elle favorise ainsi l'adaptation de votre entreprise à l'intelligence artificielle dans une démarche stratégique et perspicace.</p>
                   </div>
                 </div>
               </div>
