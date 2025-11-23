@@ -108,7 +108,7 @@ La gestion d'entreprise boostée à l'IA
 
 
       {/* LEIA - Domaines d'expertise */}
-      <section className="bg-white py-[100px]">
+      <section className="bg-white py-[80px]">
         <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="flex justify-center mb-8">
@@ -170,7 +170,7 @@ La gestion d'entreprise boostée à l'IA
 
 
       {/* Notre positionnement */}
-      <section className="py-20 bg-sand">
+      <section className="bg-sand py-[80px]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Notre positionnement</h2>
@@ -202,26 +202,26 @@ La gestion d'entreprise boostée à l'IA
       </section>
 
       {/* CTA Final */}
-      <section className="bg-white py-32">
+      <section className="bg-white py-[80px]">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-sumi font-serif">Commencez dès aujourd'hui</h2>
             <p className="text-xl text-stone leading-relaxed">Trois options pour démarrer votre transformation digitale avec Zenkai</p>
-            <div className="grid md:grid-cols-3 gap-6 pt-8">
-              <Card className="p-8 bg-sand-dark border-0">
+            <div className="grid md:grid-cols-3 gap-6 pt-8 my-0 py-0">
+              <Card className="p-8 bg-sand-dark border-0 py-[32px] my-[30px]">
                 <div className="text-3xl font-bold text-navy mb-2">1</div>
                 <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Atelier découverte gratuit</h3>
                 <p className="text-stone">1 heure pour explorer les possibilités de l'IA dans votre entreprise, sans engagement</p>
               </Card>
-              <Card className="p-8 bg-sand-dark border-0">
+              <Card className="p-8 bg-sand-dark border-0 my-[30px]">
                 <div className="text-3xl font-bold text-navy mb-2">2</div>
                 <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Tester nos produits </h3>
-                <p className="text-stone">3 mois d'essai de notre assistant IA Droit du Travail pour évaluer les bénéfices</p>
+                <p className="text-stone my-[40px]">1 mois d'essai gratuit de nos produits IA sans engagement            </p>
               </Card>
-              <Card className="p-8 bg-sand-dark border-0">
+              <Card className="p-8 bg-sand-dark border-0 my-[30px]">
                 <div className="text-3xl font-bold text-navy mb-2">3</div>
                 <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Audit express</h3>
-                <p className="text-stone">1 journée d'analyse de vos processus avec recommandations concrètes</p>
+                <p className="text-stone my-[72px]">1 journée d'analyse de vos processus avec recommandations concrètes</p>
               </Card>
             </div>
             <div className="flex flex-col items-center gap-4 pt-8">
