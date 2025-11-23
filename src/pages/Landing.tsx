@@ -16,7 +16,7 @@ const Landing = () => {
   }, {
     icon: <Shield className="w-6 h-6" />,
     title: "Sécurité juridique",
-    description: "Informations toujours à jour et conformes"
+    description: "Base de connaissance composée des textes réglementaires à jour. Confirmation par humain accessible"
   }, {
     icon: <Users className="w-6 h-6" />,
     title: "Autonomie des équipes",
