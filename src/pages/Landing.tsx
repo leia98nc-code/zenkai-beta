@@ -226,7 +226,7 @@ La gestion d'entreprise boostée à l'IA
             </div>
             <div className="flex flex-col items-center gap-4 pt-8">
               <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
-                <a href="mailto:contact@zenkai.nc">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></a>
+                <a href="mailto:contact@zenkai.nc">Contactez-nous<ArrowRight className="ml-2 w-4 h-4" /></a>
               </Button>
               
             </div>
