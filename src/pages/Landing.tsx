@@ -106,10 +106,6 @@ La gestion d'entreprise boostée à l'IA
         </div>
       </section>
 
-      {/* Hero Banner - Duplicate */}
-      <div className="w-full">
-        <img alt="Zenkai - Intelligence Artificielle pour les entreprises" className="w-full h-40 md:h-64 object-cover object-center" src="/lovable-uploads/9c0a6a6c-4cf0-4961-9839-e4eee54775f2.jpg" />
-      </div>
 
       {/* LEIA - Domaines d'expertise */}
       <section className="container mx-auto px-6 py-[150px]">
