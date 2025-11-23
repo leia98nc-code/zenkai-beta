@@ -57,7 +57,7 @@ const About = () => {
               <div className="bg-sand-dark p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Nos services</h3>
                 <p className="text-lg text-sumi">
-                  Nous conseillons et formons en gestion managériale et ressources humaines.
+                  Nous conseillons et formons en usage de l'IA, ainsi qu'en gestion managériale et ressources humaines.
                 </p>
               </div>
             </div>
