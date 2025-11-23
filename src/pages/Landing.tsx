@@ -26,15 +26,6 @@ const Landing = () => {
     title: "Économies substantielles",
     description: "Réduisez vos frais de conseils externes"
   }];
-  const benefits = [{
-    icon: <Users className="w-5 h-5" />,
-    title: "Compétences humaines",
-    description: "ZENKAI apporte un accompagnement sur mesure, ancré dans une expertise locale approfondie des entreprises et organisations. L'IA n'est pas une fin en soit mais est un outil pour maximiser le savoir-faire humain."
-  }, {
-    icon: <Sparkles className="w-5 h-5" />,
-    title: "Intelligence artificielle",
-    description: "ZENKAI rend l'Intelligence Artificielle accessible, concrète et mesurable, en offrant des solutions clés en main, des outils prêts à l'emploi. Elle favorise ainsi l'adaptation de votre entreprise à l'intelligence artificielle dans une démarche stratégique et perspicace."
-  }];
   const steps = [{
     number: "1",
     title: "Créez votre compte",
@@ -202,26 +193,6 @@ La gestion d'entreprise boostée à l'IA
         </div>
       </section>
 
-      {/* Notre approche */}
-      <section className="container mx-auto px-6 py-32">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Notre positionnement</h2>
-          <p className="text-xl text-stone text-center mb-16 leading-relaxed">
-            Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en réduisant les tâches répétitives, chronophages et manuelles.
-          </p>
-          <div className="space-y-6 max-w-3xl mx-auto">
-            {benefits.map((benefit, idx) => <div key={idx} className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="text-navy mt-1">{benefit.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-sumi mb-3">{benefit.title}</h3>
-                    <p className="text-stone leading-relaxed">{benefit.description}</p>
-                  </div>
-                </div>
-              </div>)}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       
