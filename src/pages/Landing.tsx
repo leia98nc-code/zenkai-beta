@@ -106,37 +106,6 @@ La gestion d'entreprise boostée à l'IA
         </div>
       </section>
 
-      {/* Notre Mission */}
-      <section className="bg-white py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">Qui sommes-nous ?</h2>
-            <p className="text-xl text-stone leading-relaxed mb-8">
-              Zenkai est votre partenaire de confiance pour l'intégration de l'Intelligence Artificielle dans votre entreprise.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-sand-dark p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Notre mission</h3>
-                <p className="text-lg text-sumi">
-                  Accompagner les TPE et PME calédoniennes vers une gestion de leur entreprise intégrant l'intelligence artificielle.
-                </p>
-              </div>
-              <div className="bg-sand-dark p-8 rounded-xl">
-                <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Nos produits</h3>
-                <p className="text-lg text-sumi">
-                  Nous proposons des solutions IA prêt-à-usage ou sur-mesure selon vos besoins.
-                </p>
-              </div>
-            </div>
-            <div className="bg-sand-dark p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-navy mb-4 font-serif">Nos services</h3>
-              <p className="text-lg text-sumi">
-                Nous conseillons et formons en gestion managériale et ressources humaines.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* LEIA - Domaines d'expertise */}
       <section className="container mx-auto px-6 py-32">
