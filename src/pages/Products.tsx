@@ -12,15 +12,15 @@ const Products = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-sand py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
-              Nos Produits IA
+      <section className="bg-gradient-sand py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold font-serif text-sumi">
+              Nos{" "}
+              <span className="text-navy">
+                Produits IA
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-stone leading-relaxed">
-              Des solutions d'intelligence artificielle adaptées à vos besoins professionnels
-            </p>
           </div>
         </div>
       </section>
