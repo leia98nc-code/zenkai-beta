@@ -92,29 +92,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Notre positionnement */}
-        <section className="py-20 bg-sand">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-12 text-center font-serif">Notre positionnement</h2>
-              <p className="text-xl text-stone text-center mb-16 leading-relaxed">
-                Avec ZENKAI, optimisez vos processus et la gestion interne de votre entreprises. Concentrez-vous sur la croissance de vos activités, en réduisant les tâches répétitives, chronophages et manuelles.
-              </p>
-              <div className="space-y-6 max-w-3xl mx-auto">
-                {benefits.map((benefit, idx) => <div key={idx} className="bg-white p-8 rounded-lg border border-border shadow-zen hover:shadow-hover transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="text-navy mt-1">{benefit.icon}</div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-sumi mb-3">{benefit.title}</h3>
-                        <p className="text-stone leading-relaxed">{benefit.description}</p>
-                      </div>
-                    </div>
-                  </div>)}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Pourquoi choisir Zenkai */}
         <section className="bg-gradient-sand py-32">
           <div className="container mx-auto px-6">
