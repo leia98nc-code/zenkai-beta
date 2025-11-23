@@ -128,23 +128,23 @@ La gestion d'entreprise boostée à l'IA
         <div className="max-w-4xl mx-auto mb-16">
           <h3 className="text-2xl font-bold text-navy mb-8 text-center font-serif">Fonctionnalités clés</h3>
           <div className="space-y-4">
-            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
-              <p className="text-stone">✓ Réponses instantanées à toutes vos questions RH</p>
+            <Card className="p-6 border-0 bg-sand-dark hover:shadow-zen transition-all duration-300">
+              <p className="text-sumi font-medium">✓ Réponses instantanées à toutes vos questions RH</p>
             </Card>
-            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
-              <p className="text-stone">✓ Human in the loop : accès à un expert humain en soutien de l'IA                    </p>
+            <Card className="p-6 border-0 bg-sand-dark hover:shadow-zen transition-all duration-300">
+              <p className="text-sumi font-medium">✓ Human in the loop : accès à un expert humain en soutien de l'IA                    </p>
             </Card>
-            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
-              <p className="text-stone">✓ Base de données : Code du travail NC, AIT, conventions collectives, jurisprudences et fiches pratiques</p>
+            <Card className="p-6 border-0 bg-sand-dark hover:shadow-zen transition-all duration-300">
+              <p className="text-sumi font-medium">✓ Base de données : Code du travail NC, AIT, conventions collectives, jurisprudences et fiches pratiques</p>
             </Card>
-            <Card className="p-6 border border-border bg-white hover:shadow-hover transition-all duration-300">
-              <p className="text-stone">✓ Accessible sur le web, WhatsApp ou Messenger</p>
+            <Card className="p-6 border-0 bg-sand-dark hover:shadow-zen transition-all duration-300">
+              <p className="text-sumi font-medium">✓ Accessible sur le web, WhatsApp ou Messenger</p>
             </Card>
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {features.map((feature, idx) => <Card key={idx} className="p-8 border border-border bg-white hover:shadow-hover transition-all duration-300 group">
+          {features.map((feature, idx) => <Card key={idx} className="p-8 border-0 bg-sand hover:bg-white hover:shadow-hover transition-all duration-300 group">
               <div className="text-navy mb-4 group-hover:text-navy-light transition-colors duration-300">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-sumi mb-3 font-serif">{feature.title}</h3>
               <p className="text-stone leading-relaxed">{feature.description}</p>
@@ -152,11 +152,11 @@ La gestion d'entreprise boostée à l'IA
         </div>
 
         <div className="mt-16 text-center space-y-4">
-          <Card className="inline-block p-6 bg-sand-dark border-0">
-            <p className="text-lg font-semibold text-navy">Tarif : À partir de 4 900 XPF/mois</p>
+          <Card className="inline-block p-6 bg-navy border-0 shadow-zen">
+            <p className="text-lg font-semibold text-white">Tarif : À partir de 4 900 XPF/mois</p>
           </Card>
           <div>
-            <Button asChild variant="outline" size="lg" className="border-stone text-stone hover:bg-stone hover:text-white transition-all duration-300">
+            <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300">
               <Link to="/products">Découvrir nos autres produits<ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
