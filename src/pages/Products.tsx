@@ -51,7 +51,7 @@ const Products = () => {
                   size="lg" 
                   className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
                 >
-                  <Link to="/auth">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to="/signup">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </div>
               <div className="space-y-4">
@@ -258,7 +258,7 @@ const Products = () => {
                 size="lg" 
                 className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
               >
-                <Link to="/auth">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/signup">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button 
                 asChild 

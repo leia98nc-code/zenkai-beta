@@ -56,7 +56,7 @@ const Navigation = () => {
           >
             Nos prestations
           </Link>
-          <Link to="/auth">
+          <Link to="/signup">
             <Button size="sm" className="bg-gradient-primary">
               Essayer LEIA
             </Button>
@@ -105,7 +105,7 @@ const Navigation = () => {
               Nos prestations
             </Link>
             <div className="px-4 pt-2 space-y-2">
-              <Link to="/auth" onClick={() => setIsOpen(false)}>
+              <Link to="/signup" onClick={() => setIsOpen(false)}>
                 <Button size="sm" className="w-full bg-gradient-primary">
                   Essayer LEIA
                 </Button>
