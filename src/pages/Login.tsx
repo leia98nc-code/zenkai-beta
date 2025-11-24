@@ -60,7 +60,14 @@ const Login = () => {
       setLoading(false);
     }
   };
-  return <div className="min-h-screen flex items-center justify-center bg-gradient-sand p-4">
+  return <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-sand p-4">
+      <Link to="/" className="mb-8">
+        <img 
+          alt="Zenkai" 
+          className="h-16 object-contain hover:opacity-80 transition-opacity" 
+          src="/lovable-uploads/4cba7409-435e-40e3-ad6e-8408931b5b9a.png" 
+        />
+      </Link>
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-elegant p-8">
           <div className="flex flex-col items-center mb-8">
