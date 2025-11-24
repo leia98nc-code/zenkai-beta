@@ -98,7 +98,7 @@ const Privacy = () => {
                   <li>Droit d'opposition au traitement</li>
                 </ul>
                 <p className="mt-2">
-                  Pour exercer ces droits, contactez-nous à : contact@leia.nc
+                  Pour exercer ces droits, contactez-nous à : contact@zenkai.nc
                 </p>
               </section>
 
@@ -144,7 +144,7 @@ const Privacy = () => {
                 </h2>
                 <p>
                   Pour toute question concernant cette politique de confidentialité ou
-                  vos données personnelles, contactez-nous à : contact@leia.nc
+                  vos données personnelles, contactez-nous à : contact@zenkai.nc
                 </p>
               </section>
             </div>

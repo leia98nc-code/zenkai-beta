@@ -116,7 +116,7 @@ const Terms = () => {
                 </h2>
                 <p>
                   Pour toute question concernant ces conditions d'utilisation,
-                  contactez-nous à : contact@leia.nc
+                  contactez-nous à : contact@zenkai.nc
                 </p>
               </section>
             </div>
