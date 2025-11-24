@@ -23,7 +23,7 @@ const Services = () => {
     {
       icon: <GraduationCap className="w-12 h-12" />,
       title: "Formations Management & RH",
-      description: "Développez les compétences de vos équipes avec nos formations sur-mesure en management, leadership et gestion des ressources humaines."
+      description: "Développez les compétences de vos équipes en management et gestion des ressources humaines par des formations délivrées par un formateur certifié (2021/1120)."
     },
     {
       icon: <Brain className="w-12 h-12" />,
