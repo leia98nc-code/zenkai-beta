@@ -49,6 +49,11 @@ const Signup = () => {
         password: validated.password,
         options: {
           emailRedirectTo: redirectUrl,
+          data: {
+            first_name: validated.firstName,
+            last_name: validated.lastName,
+            organization: validated.organization,
+          },
         },
       });
 
