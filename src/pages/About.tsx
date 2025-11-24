@@ -75,7 +75,7 @@ const About = () => {
                 </div>
                 <p className="text-lg text-stone mb-4">Fondateur de Zenkai</p>
                 <p className="text-stone leading-relaxed mb-4">
-                  Fort de 10 années d'expérience en management stratégique, Baptiste FAURE combine avec Zenkai une expertise métier éprouvée avec une maîtrise des technologies d'IA les plus performantes.
+                  Fort de 10 années d'expérience en management stratégique, Baptiste FAURE combine dans Zenkai une expertise métier éprouvée avec une maîtrise des technologies d'IA les plus performantes.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   <div className="bg-sand-dark p-6 rounded-lg">
