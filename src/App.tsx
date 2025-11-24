@@ -4,8 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Chat from "./pages/Chat";
-import Auth from "./pages/Auth";
+import Leia from "./pages/Leia";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
@@ -23,8 +24,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/leia" element={<Leia />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/services" element={<Services />} />

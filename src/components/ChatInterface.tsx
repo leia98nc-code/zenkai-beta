@@ -23,7 +23,7 @@ const ChatInterface = () => {
         title: "Déconnexion",
         description: "À bientôt !",
       });
-      navigate("/");
+      navigate("/login");
     }
   };
 

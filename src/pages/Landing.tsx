@@ -1,7 +1,10 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { Session } from "@supabase/supabase-js";
 import leiaAvatar from "@/assets/leia-avatar.png";
 import heroImage from "@/assets/zenkai-hero.png";
 import heroBanner from "@/assets/torii-banner-new.jpg";
@@ -9,6 +12,20 @@ import { FileText, Clock, Users, Calendar, Sparkles, Shield, BookOpen, Lock, Tar
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 const Landing = () => {
+  const [session, setSession] = useState<Session | null>(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
   const features = [{
     icon: <Clock className="w-6 h-6" />,
     title: "Gain de temps considérable",
@@ -120,7 +137,11 @@ La gestion d'entreprise boostée à l'IA
           </p>
           <div className="flex justify-center mt-8">
             <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
-              <Link to="/auth">Se connecter à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+              {session ? (
+                <Link to="/leia">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+              ) : (
+                <Link to="/login">Se connecter<ArrowRight className="ml-2 w-4 h-4" /></Link>
+              )}
             </Button>
           </div>
         </div>
