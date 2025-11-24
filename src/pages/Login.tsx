@@ -101,12 +101,17 @@ const Login = () => {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-stone mt-6">
-            Pas de compte ?{" "}
-            <Link to="/signup" className="text-navy hover:underline font-medium">
-              S'inscrire
+          <div className="text-center text-sm text-stone mt-6 space-y-2">
+            <Link to="/reset-password" className="block text-muted-foreground hover:text-navy transition-colors">
+              Mot de passe oublié ?
             </Link>
-          </p>
+            <p>
+              Pas de compte ?{" "}
+              <Link to="/signup" className="text-navy hover:underline font-medium">
+                S'inscrire
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>;
