@@ -105,7 +105,7 @@ const Landing = () => {
           <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto my-[2px]">
           <div className="space-y-8 text-center md:text-left mx-auto md:mx-0 py-[50px] my-0">
             
-            <h1 className="text-5xl text-sumi leading-tight font-serif text-left font-extrabold md:text-6xl">
+            <h1 className="text-5xl text-sumi leading-tight font-serif text-left font-extrabold md:text-7xl">
               
 La gestion d'entreprise boostée à l'IA
             </h1>
