@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { z } from "zod";
-import zenkaiLogo from "@/assets/zenkai-text-logo.png";
+import leiaLogo from "@/assets/leia-avatar-new.png";
 
 const signupSchema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis").max(100),
@@ -104,13 +104,11 @@ const Signup = () => {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-elegant p-8">
           <div className="flex flex-col items-center mb-8">
-            <Link to="/" className="mb-4">
-              <img 
-                src={zenkaiLogo} 
-                alt="Zenkai" 
-                className="h-12 object-contain hover:opacity-80 transition-opacity"
-              />
-            </Link>
+            <img 
+              src={leiaLogo} 
+              alt="LEIA" 
+              className="w-16 h-16 rounded-full object-cover mb-4"
+            />
             <h1 className="text-2xl font-semibold text-navy">
               Créer un compte
             </h1>
