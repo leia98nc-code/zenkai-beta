@@ -97,7 +97,7 @@ const Landing = () => {
       </div>
       
       {/* Hero Section */}
-      <section className="container px-6 pt-16 pb-40 md:pt-20 md:pb-48 mx-auto my-0 mb-0 mr-0 ml-0 py-[50px]">
+      <section className="w-full px-6 pt-16 pb-40 md:pt-20 md:pb-48 py-[50px]">
           <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto my-[2px]">
           <div className="space-y-8 text-center md:text-left mx-auto md:mx-0">
             
