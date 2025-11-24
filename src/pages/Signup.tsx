@@ -114,7 +114,7 @@ const Signup = () => {
 
           <form onSubmit={handleSignup} className="space-y-4">
             <div>
-              <Label htmlFor="firstName">Prénom</Label>
+              <Label htmlFor="firstName">Prénom *</Label>
               <Input
                 id="firstName"
                 type="text"
@@ -122,6 +122,7 @@ const Signup = () => {
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 className="mt-1"
                 disabled={loading}
+                required
               />
               {errors.firstName && (
                 <p className="text-sm text-destructive mt-1">{errors.firstName}</p>
@@ -129,7 +130,7 @@ const Signup = () => {
             </div>
 
             <div>
-              <Label htmlFor="lastName">Nom</Label>
+              <Label htmlFor="lastName">Nom *</Label>
               <Input
                 id="lastName"
                 type="text"
@@ -137,6 +138,7 @@ const Signup = () => {
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                 className="mt-1"
                 disabled={loading}
+                required
               />
               {errors.lastName && (
                 <p className="text-sm text-destructive mt-1">{errors.lastName}</p>
@@ -144,7 +146,7 @@ const Signup = () => {
             </div>
 
             <div>
-              <Label htmlFor="organization">Organisation</Label>
+              <Label htmlFor="organization">Organisation *</Label>
               <Input
                 id="organization"
                 type="text"
@@ -152,6 +154,7 @@ const Signup = () => {
                 onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                 className="mt-1"
                 disabled={loading}
+                required
               />
               {errors.organization && (
                 <p className="text-sm text-destructive mt-1">{errors.organization}</p>
@@ -159,7 +162,7 @@ const Signup = () => {
             </div>
 
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">Email *</Label>
               <Input
                 id="email"
                 type="email"
@@ -167,6 +170,7 @@ const Signup = () => {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="mt-1"
                 disabled={loading}
+                required
               />
               {errors.email && (
                 <p className="text-sm text-destructive mt-1">{errors.email}</p>
@@ -174,7 +178,7 @@ const Signup = () => {
             </div>
 
             <div>
-              <Label htmlFor="password">Mot de passe</Label>
+              <Label htmlFor="password">Mot de passe *</Label>
               <Input
                 id="password"
                 type="password"
@@ -182,6 +186,7 @@ const Signup = () => {
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className="mt-1"
                 disabled={loading}
+                required
               />
               {errors.password && (
                 <p className="text-sm text-destructive mt-1">{errors.password}</p>
@@ -189,7 +194,7 @@ const Signup = () => {
             </div>
 
             <div>
-              <Label htmlFor="confirmPassword">Confirmer le mot de passe</Label>
+              <Label htmlFor="confirmPassword">Confirmer le mot de passe *</Label>
               <Input
                 id="confirmPassword"
                 type="password"
@@ -197,6 +202,7 @@ const Signup = () => {
                 onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                 className="mt-1"
                 disabled={loading}
+                required
               />
               {errors.confirmPassword && (
                 <p className="text-sm text-destructive mt-1">{errors.confirmPassword}</p>
