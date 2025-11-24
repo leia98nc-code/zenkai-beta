@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { z } from "zod";
-import leiaLogo from "@/assets/leia-avatar-new.png";
+import zenkaiLogo from "@/assets/zenkai-text-logo.png";
 
 const loginSchema = z.object({
   email: z.string().trim().email("Email invalide").max(255),
@@ -70,11 +70,13 @@ const Login = () => {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-elegant p-8">
           <div className="flex flex-col items-center mb-8">
-            <img 
-              src={leiaLogo} 
-              alt="LEIA" 
-              className="w-16 h-16 rounded-full object-cover mb-4"
-            />
+            <Link to="/" className="mb-4">
+              <img 
+                src={zenkaiLogo} 
+                alt="Zenkai" 
+                className="h-12 object-contain hover:opacity-80 transition-opacity"
+              />
+            </Link>
             <h1 className="text-2xl font-semibold text-navy">
               Se connecter
             </h1>
