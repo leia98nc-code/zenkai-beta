@@ -13,19 +13,23 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 const Landing = () => {
   const [session, setSession] = useState<Session | null>(null);
-
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(({
+      data: {
+        session
+      }
+    }) => {
       setSession(session);
     });
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+    const {
+      data: {
+        subscription
+      }
+    } = supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
     });
-
     return () => subscription.unsubscribe();
   }, []);
-
   const features = [{
     icon: <Clock className="w-6 h-6" />,
     title: "Gain de temps considérable",
@@ -99,13 +103,13 @@ const Landing = () => {
       {/* Hero Section */}
       <section className="w-full px-6 pt-16 pb-40 md:pt-20 md:pb-48 py-[50px]">
           <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto my-[2px]">
-          <div className="space-y-8 text-center md:text-left mx-auto md:mx-0">
+          <div className="space-y-8 text-center md:text-left mx-auto md:mx-0 py-[50px] my-0">
             
-            <h1 className="text-5xl md:text-6xl font-bold text-sumi leading-tight font-serif">
+            <h1 className="text-5xl text-sumi leading-tight font-serif text-left font-extrabold md:text-6xl">
               
 La gestion d'entreprise boostée à l'IA
             </h1>
-            <p className="text-lg md:text-xl text-stone leading-relaxed">
+            <p className="text-lg md:text-xl text-stone leading-relaxed text-justify">
               Zenkai est votre partenaire de confiance pour l'intégration de l'Intelligence Artificielle dans votre entreprise
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -137,11 +141,7 @@ La gestion d'entreprise boostée à l'IA
           </p>
           <div className="flex justify-center mt-8">
             <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
-              {session ? (
-                <Link to="/leia">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
-              ) : (
-                <Link to="/login">Se connecter<ArrowRight className="ml-2 w-4 h-4" /></Link>
-              )}
+              {session ? <Link to="/leia">Accéder à LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link> : <Link to="/login">Se connecter<ArrowRight className="ml-2 w-4 h-4" /></Link>}
             </Button>
           </div>
         </div>
