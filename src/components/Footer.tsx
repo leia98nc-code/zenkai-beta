@@ -83,7 +83,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Zenkai. Tous droits réservés.
           </p>
           <p className="text-xs text-stone mt-2">
-            LEIA ne remplace pas un conseil juridique professionnel.
+            ​
           </p>
         </div>
       </div>

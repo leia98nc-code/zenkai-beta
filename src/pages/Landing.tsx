@@ -229,10 +229,10 @@ La gestion d'entreprise boostée à l'IA
             <h2 className="text-4xl md:text-5xl font-bold text-sumi font-serif">Commencez dès aujourd'hui</h2>
             <p className="text-xl text-stone leading-relaxed">Trois options pour démarrer votre transformation digitale avec Zenkai</p>
             <div className="grid md:grid-cols-3 gap-6 pt-8 my-0 py-0">
-              <Card className="p-8 bg-sand-dark border-0 py-[32px] my-[30px]">
+              <Card className="p-8 bg-sand-dark border-0 mb-0 pb-[34px] py-[32px] my-[30px]">
                 <div className="text-3xl font-bold text-navy mb-2">1</div>
-                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Atelier découverte gratuit</h3>
-                <p className="text-stone">1 heure pour explorer les possibilités de l'IA dans votre entreprise, sans engagement</p>
+                <h3 className="text-xl font-bold text-sumi mb-2 font-serif"> RDV découverte     </h3>
+                <p className="text-stone my-[72px]">1 heure pour explorer les possibilités de l'IA dans votre entreprise, sans engagement</p>
               </Card>
               <Card className="p-8 bg-sand-dark border-0 my-[30px]">
                 <div className="text-3xl font-bold text-navy mb-2">2</div>
@@ -245,7 +245,7 @@ La gestion d'entreprise boostée à l'IA
                 <p className="text-stone my-[72px]">1 journée d'analyse de vos processus avec recommandations concrètes</p>
               </Card>
             </div>
-            <div className="flex flex-col items-center gap-4 pt-8">
+            <div className="flex flex-col items-center gap-4 pt-8 py-0">
               <Button asChild size="lg" className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover">
                 <a href="mailto:contact@zenkai.nc">Contactez-nous<ArrowRight className="ml-2 w-4 h-4" /></a>
               </Button>
