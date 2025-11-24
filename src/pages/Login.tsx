@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { z } from "zod";
 import leiaLogo from "@/assets/leia-avatar-new.png";
+import zenkaiLogo from "@/assets/zenkai-logo.png";
 
 const loginSchema = z.object({
   email: z.string().trim().email("Email invalide").max(255),
@@ -66,7 +67,14 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-sand p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-sand p-4 relative">
+      <Link to="/" className="absolute top-6 left-6">
+        <img 
+          src={zenkaiLogo} 
+          alt="Retour à l'accueil" 
+          className="w-16 h-16 object-contain hover:opacity-80 transition-opacity"
+        />
+      </Link>
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-elegant p-8">
           <div className="flex flex-col items-center mb-8">
