@@ -88,6 +88,7 @@ const ChatInterface = () => {
           proactiveMessageEnabled: false,
         },
         clientId: "a3ab0d66-9824-413a-b644-e8feffc665cb",
+        selector: "#chat-container",
       });
     };
 
@@ -98,6 +99,15 @@ const ChatInterface = () => {
       if (document.head.contains(style)) {
         document.head.removeChild(style);
       }
+      if (window.botpress) {
+        try {
+          window.botpress.close?.();
+          window.botpress.destroy?.();
+        } catch (e) {
+          // Ignore cleanup errors
+        }
+      }
+      document.querySelectorAll('[class*="bp"], [id*="bp"]').forEach(el => el.remove());
     };
   }, []);
 
