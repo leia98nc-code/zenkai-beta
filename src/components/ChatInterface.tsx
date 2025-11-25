@@ -28,7 +28,7 @@ const ChatInterface = () => {
   };
 
   useEffect(() => {
-    // Ajouter les styles CSS pour forcer le mode plein écran
+    // Ajouter les styles CSS selon la doc officielle
     const style = document.createElement('style');
     style.innerHTML = `
       #webchat .bpWebchat {
@@ -41,17 +41,6 @@ const ChatInterface = () => {
       #webchat .bpFab {
         display: none !important;
       }
-      /* Force l'affichage du widget au lieu de la bulle */
-      #webchat .bpWidget {
-        display: flex !important;
-        position: relative !important;
-        width: 100% !important;
-        height: 100% !important;
-      }
-      /* Masque la bulle de chat */
-      .bpFloatingButton {
-        display: none !important;
-      }
     `;
     document.head.appendChild(style);
 
@@ -61,9 +50,15 @@ const ChatInterface = () => {
     script.async = true;
     document.body.appendChild(script);
 
-    // Initialiser Botpress une fois chargé
+    // Initialiser selon la doc officielle
     script.onload = () => {
       if (window.botpress) {
+        // IMPORTANT : Utiliser l'événement webchat:ready
+        window.botpress.on('webchat:ready', () => {
+          window.botpress.open();
+        });
+
+        // Initialiser avec votre config
         window.botpress.init({
           "botId": "f0490f8c-ab7a-4960-9809-9321526ce89d",
           "configuration": {
@@ -99,17 +94,8 @@ const ChatInterface = () => {
             "proactiveBubbleDelayTime": 10
           },
           "clientId": "a3ab0d66-9824-413a-b644-e8feffc665cb",
-          "selector": "#webchat",
-          "showWidget": true,
-          "hideWidget": false
+          "selector": "#webchat"
         });
-
-        // Forcer l'ouverture immédiate et permanente du chat
-        setTimeout(() => {
-          if (window.botpress.open) {
-            window.botpress.open();
-          }
-        }, 500);
       }
     };
 
@@ -149,7 +135,7 @@ const ChatInterface = () => {
         </Button>
       </header>
       
-      <div id="webchat" className="flex-1 bg-background" />
+      <div id="webchat" className="flex-1 bg-background" style={{ position: 'relative' }} />
     </div>
   );
 };
