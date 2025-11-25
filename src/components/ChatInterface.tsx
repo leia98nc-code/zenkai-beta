@@ -16,12 +16,12 @@ const ChatInterface = () => {
       toast({
         variant: "destructive",
         title: "Erreur",
-        description: "Impossible de se déconnecter"
+        description: "Impossible de se déconnecter",
       });
     } else {
       toast({
         title: "Déconnexion",
-        description: "À bientôt !"
+        description: "À bientôt !",
       });
       navigate("/login");
     }
@@ -29,19 +29,19 @@ const ChatInterface = () => {
 
   useEffect(() => {
     // Charger le script Botpress
-    const script1 = document.createElement('script');
-    script1.src = 'https://cdn.botpress.cloud/webchat/v2.2/inject.js';
+    const script1 = document.createElement("script");
+    script1.src = "https://cdn.botpress.cloud/webchat/v2.2/inject.js";
     script1.async = true;
     document.body.appendChild(script1);
 
-    const script2 = document.createElement('script');
-    script2.src = 'https://files.bpcontent.cloud/2024/12/24/02/20241224022426-F3HUKR3J.json';
+    const script2 = document.createElement("script");
+    script2.src = "https://files.bpcontent.cloud/2024/12/24/02/20241224022426-F3HUKR3J.json";
     script2.async = true;
     document.body.appendChild(script2);
 
     // Ajouter le CSS pour masquer le bouton Share
-    const style = document.createElement('style');
-    style.id = 'hide-botpress-share';
+    const style = document.createElement("style");
+    style.id = "hide-botpress-share";
     style.innerHTML = `
       /* Cache le bouton Share de Botpress */
       button:has([class*="share"]),
@@ -70,14 +70,14 @@ const ChatInterface = () => {
     setTimeout(() => {
       if (window.botpressWebChat) {
         window.botpressWebChat.init({
-          containerWidth: '100%',
-          layoutWidth: '100%',
+          containerWidth: "100%",
+          layoutWidth: "100%",
           hideWidget: true,
           disableAnimations: true,
         });
-        
+
         // Ouvrir automatiquement le chat
-        window.botpressWebChat.sendEvent({ type: 'show' });
+        window.botpressWebChat.sendEvent({ type: "show" });
       }
     }, 1000);
 
@@ -85,7 +85,7 @@ const ChatInterface = () => {
     return () => {
       document.body.removeChild(script1);
       document.body.removeChild(script2);
-      const styleElement = document.getElementById('hide-botpress-share');
+      const styleElement = document.getElementById("hide-botpress-share");
       if (styleElement) {
         document.head.removeChild(styleElement);
       }
@@ -96,27 +96,16 @@ const ChatInterface = () => {
     <div className="w-full h-screen flex flex-col">
       <header className="bg-card border-b border-border p-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img 
-            src={leiaLogo} 
-            alt="LEIA Logo" 
-            className="w-10 h-10 rounded-full object-cover" 
-          />
-          <h1 className="text-xl font-semibold bg-gradient-primary bg-clip-text text-transparent">
-            LEIA 
-          </h1>
+          <img src={leiaLogo} alt="LEIA Logo" className="w-10 h-10 rounded-full object-cover" />
+          <h1 className="text-xl font-semibold bg-gradient-primary bg-clip-text text-transparent">LEIA</h1>
         </div>
-        
-        <Button 
-          variant="outline" 
-          size="sm" 
-          onClick={handleLogout} 
-          className="gap-2"
-        >
+
+        <Button variant="outline" size="sm" onClick={handleLogout} className="gap-2">
           <LogOut className="w-4 h-4" />
           Déconnexion
         </Button>
       </header>
-      
+
       <div id="botpress-container" className="flex-1 bg-background" />
     </div>
   );
