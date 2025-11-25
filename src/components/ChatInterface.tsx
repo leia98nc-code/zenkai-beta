@@ -28,24 +28,75 @@ const ChatInterface = () => {
   };
 
   useEffect(() => {
-    // Script 1: inject.js
-    const script1 = document.createElement("script");
-    script1.src = "https://cdn.botpress.cloud/webchat/v3.4/inject.js";
-    script1.async = true;
-    document.body.appendChild(script1);
+    // Inject CSS styles
+    const style = document.createElement("style");
+    style.textContent = `
+      #chat-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .bpFab {
+        display: none !important;
+      }
+      .bpWebchat {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+      }
+    `;
+    document.head.appendChild(style);
 
-    // Script 2: config.js (avec defer)
-    const script2 = document.createElement("script");
-    script2.src = "https://files.bpcontent.cloud/2024/12/24/02/20241224022426-6LAGRWWK.js";
-    script2.defer = true;
-    document.body.appendChild(script2);
+    // Inject Botpress script
+    const script = document.createElement("script");
+    script.src = "https://cdn.botpress.cloud/webchat/v3.2/inject.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      // Use 'webchat:initialized' instead of 'webchat:ready'
+      window.botpress.on("webchat:initialized", () => {
+        window.botpress.open();
+      });
+
+      // Your config
+      window.botpress.init({
+        botId: "f0490f8c-ab7a-4960-9809-9321526ce89d",
+        configuration: {
+          version: "v2",
+          botName: "LEIA",
+          botAvatar: "https://files.bpcontent.cloud/2025/10/26/23/20251026233441-6E01QUON.png",
+          botDescription: "LEAI est un robot à l'intelligence artificielle générative...",
+          website: { title: "www.zenkai.nc", link: "www.zenkai.nc" },
+          email: { title: "contact@zenkai.nc", link: "contact@zenkai.nc" },
+          color: "#f6f0f2",
+          variant: "soft",
+          headerVariant: "solid",
+          themeMode: "dark",
+          fontFamily: "inter",
+          radius: 2.4,
+          feedbackEnabled: false,
+          footer: "by ZENKAI / www.zenkai.nc",
+          additionalStylesheetUrl: "https://files.bpcontent.cloud/2025/11/25/03/20251125031459-XDF9Z6RN.css",
+          allowFileUpload: false,
+          soundEnabled: false,
+          proactiveMessageEnabled: false,
+        },
+        clientId: "a3ab0d66-9824-413a-b644-e8feffc665cb",
+      });
+    };
 
     return () => {
-      if (document.body.contains(script1)) {
-        document.body.removeChild(script1);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
       }
-      if (document.body.contains(script2)) {
-        document.body.removeChild(script2);
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
       }
     };
   }, []);
