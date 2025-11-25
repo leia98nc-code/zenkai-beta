@@ -28,18 +28,29 @@ const ChatInterface = () => {
   };
 
   useEffect(() => {
-    // Ajouter les styles CSS pour le webchat
+    // Ajouter les styles CSS pour forcer le mode plein écran
     const style = document.createElement('style');
     style.innerHTML = `
       #webchat .bpWebchat {
-        position: unset;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        max-width: 100%;
+        position: unset !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        max-width: 100% !important;
       }
       #webchat .bpFab {
-        display: none;
+        display: none !important;
+      }
+      /* Force l'affichage du widget au lieu de la bulle */
+      #webchat .bpWidget {
+        display: flex !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+      /* Masque la bulle de chat */
+      .bpFloatingButton {
+        display: none !important;
       }
     `;
     document.head.appendChild(style);
@@ -53,10 +64,6 @@ const ChatInterface = () => {
     // Initialiser Botpress une fois chargé
     script.onload = () => {
       if (window.botpress) {
-        window.botpress.on("webchat:ready", () => {
-          window.botpress.open();
-        });
-
         window.botpress.init({
           "botId": "f0490f8c-ab7a-4960-9809-9321526ce89d",
           "configuration": {
@@ -92,8 +99,17 @@ const ChatInterface = () => {
             "proactiveBubbleDelayTime": 10
           },
           "clientId": "a3ab0d66-9824-413a-b644-e8feffc665cb",
-          "selector": "#webchat"
+          "selector": "#webchat",
+          "showWidget": true,
+          "hideWidget": false
         });
+
+        // Forcer l'ouverture immédiate et permanente du chat
+        setTimeout(() => {
+          if (window.botpress.open) {
+            window.botpress.open();
+          }
+        }, 500);
       }
     };
 
