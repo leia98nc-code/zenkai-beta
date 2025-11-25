@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import leiaLogo from "@/assets/leia-avatar-new.png";
+import { useEffect } from "react";
 
 const ChatInterface = () => {
   const navigate = useNavigate();
@@ -25,6 +26,103 @@ const ChatInterface = () => {
       navigate("/login");
     }
   };
+
+  useEffect(() => {
+    // Ajouter les styles CSS pour forcer le mode plein écran
+    const style = document.createElement('style');
+    style.innerHTML = `
+      #webchat .bpWebchat {
+        position: unset !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        max-width: 100% !important;
+      }
+      #webchat .bpFab {
+        display: none !important;
+      }
+      /* Force l'affichage du widget au lieu de la bulle */
+      #webchat .bpWidget {
+        display: flex !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+      /* Masque la bulle de chat */
+      .bpFloatingButton {
+        display: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Charger le script Botpress
+    const script = document.createElement('script');
+    script.src = 'https://cdn.botpress.cloud/webchat/v3.3/inject.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Initialiser Botpress une fois chargé
+    script.onload = () => {
+      if (window.botpress) {
+        window.botpress.init({
+          "botId": "f0490f8c-ab7a-4960-9809-9321526ce89d",
+          "configuration": {
+            "version": "v2",
+            "botName": "LEIA",
+            "botAvatar": "https://files.bpcontent.cloud/2025/10/26/23/20251026233441-6E01QUON.png",
+            "botDescription": "LEAI est un robot à l'intelligence artificielle générative, conçu par ZENKAI, répondant à toutes vos questions en matière de droit du travail applicable en Nouvelle-Calédonie",
+            "website": {
+              "title": "www.zenkai.nc",
+              "link": "www.zenkai.nc"
+            },
+            "email": {
+              "title": "contact@zenkai.nc",
+              "link": "contact@zenkai.nc"
+            },
+            "phone": {},
+            "termsOfService": {},
+            "privacyPolicy": {},
+            "color": "#f6f0f2",
+            "variant": "soft",
+            "headerVariant": "solid",
+            "themeMode": "dark",
+            "fontFamily": "inter",
+            "radius": 2.4,
+            "feedbackEnabled": false,
+            "footer": "by ZENKAI / www.zenkai.nc",
+            "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/11/25/03/20251125031459-XDF9Z6RN.css",
+            "allowFileUpload": false,
+            "soundEnabled": false,
+            "proactiveMessageEnabled": false,
+            "proactiveBubbleMessage": "Hi! 👋 Need help?",
+            "proactiveBubbleTriggerType": "afterDelay",
+            "proactiveBubbleDelayTime": 10
+          },
+          "clientId": "a3ab0d66-9824-413a-b644-e8feffc665cb",
+          "selector": "#webchat",
+          "showWidget": true,
+          "hideWidget": false
+        });
+
+        // Forcer l'ouverture immédiate et permanente du chat
+        setTimeout(() => {
+          if (window.botpress.open) {
+            window.botpress.open();
+          }
+        }, 500);
+      }
+    };
+
+    // Nettoyage
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
 
   return (
     <div className="w-full h-screen flex flex-col">
@@ -51,14 +149,7 @@ const ChatInterface = () => {
         </Button>
       </header>
       
-      <div className="flex-1 bg-background">
-        <iframe 
-          src="https://cdn.botpress.cloud/webchat/v3.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/24/02/20241224022426-F3HUKR3J.json" 
-          className="w-full h-full border-0" 
-          allow="microphone; camera" 
-          title="LEIA - Assistant Juridique IA"
-        />
-      </div>
+      <div id="webchat" className="flex-1 bg-background" />
     </div>
   );
 };
