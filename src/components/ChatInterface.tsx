@@ -28,7 +28,7 @@ const ChatInterface = () => {
   };
 
   useEffect(() => {
-    // Ajouter le style CSS pour le webchat
+    // Ajouter les styles CSS pour le webchat
     const style = document.createElement('style');
     style.innerHTML = `
       #webchat .bpWebchat {
@@ -38,46 +38,69 @@ const ChatInterface = () => {
         max-height: 100%;
         max-width: 100%;
       }
+      #webchat .bpFab {
+        display: none;
+      }
     `;
     document.head.appendChild(style);
 
-    // Charger le script d'injection Botpress
-    const script1 = document.createElement('script');
-    script1.src = 'https://cdn.botpress.cloud/webchat/v3.3/inject.js';
-    script1.async = true;
-    document.body.appendChild(script1);
+    // Charger le script Botpress
+    const script = document.createElement('script');
+    script.src = 'https://cdn.botpress.cloud/webchat/v3.3/inject.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-    // Attendre que le script soit chargé puis initialiser
-    script1.onload = () => {
-      if (window.botpressWebChat) {
-        window.botpressWebChat.init({
-          "termsOfService": {},
-          "privacyPolicy": {},
-          "color": "#f6f0f2",
-          "variant": "soft",
-          "headerVariant": "solid",
-          "themeMode": "dark",
-          "fontFamily": "inter",
-          "radius": 2.4,
-          "feedbackEnabled": false,
-          "footer": "by ZENKAI / www.zenkai.nc",
-          "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/11/25/03/20251125031459-XDF9ZGRN.css",
-          "allowFileUpload": false,
-          "soundEnabled": false,
-          "proactiveMessageEnabled": false,
-          "proactiveBubbleMessage": "Hi! 👋 Need help?",
-          "proactiveBubbleTriggerType": "afterDelay",
-          "proactiveBubbleDelayTime": 10
-        },
-        "a3ab0d66-9824-413a-b644-e8feffc665cb",
-        "#webchat"
-        );
+    // Initialiser Botpress une fois chargé
+    script.onload = () => {
+      if (window.botpress) {
+        window.botpress.on("webchat:ready", () => {
+          window.botpress.open();
+        });
+
+        window.botpress.init({
+          "botId": "f0490f8c-ab7a-4960-9809-9321526ce89d",
+          "configuration": {
+            "version": "v2",
+            "botName": "LEIA",
+            "botAvatar": "https://files.bpcontent.cloud/2025/10/26/23/20251026233441-6E01QUON.png",
+            "botDescription": "LEAI est un robot à l'intelligence artificielle générative, conçu par ZENKAI, répondant à toutes vos questions en matière de droit du travail applicable en Nouvelle-Calédonie",
+            "website": {
+              "title": "www.zenkai.nc",
+              "link": "www.zenkai.nc"
+            },
+            "email": {
+              "title": "contact@zenkai.nc",
+              "link": "contact@zenkai.nc"
+            },
+            "phone": {},
+            "termsOfService": {},
+            "privacyPolicy": {},
+            "color": "#f6f0f2",
+            "variant": "soft",
+            "headerVariant": "solid",
+            "themeMode": "dark",
+            "fontFamily": "inter",
+            "radius": 2.4,
+            "feedbackEnabled": false,
+            "footer": "by ZENKAI / www.zenkai.nc",
+            "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/11/25/03/20251125031459-XDF9Z6RN.css",
+            "allowFileUpload": false,
+            "soundEnabled": false,
+            "proactiveMessageEnabled": false,
+            "proactiveBubbleMessage": "Hi! 👋 Need help?",
+            "proactiveBubbleTriggerType": "afterDelay",
+            "proactiveBubbleDelayTime": 10
+          },
+          "clientId": "a3ab0d66-9824-413a-b644-e8feffc665cb",
+          "selector": "#webchat"
+        });
       }
     };
 
+    // Nettoyage
     return () => {
-      if (document.body.contains(script1)) {
-        document.body.removeChild(script1);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
       }
       if (document.head.contains(style)) {
         document.head.removeChild(style);
