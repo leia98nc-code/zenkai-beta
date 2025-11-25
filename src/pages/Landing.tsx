@@ -241,9 +241,10 @@ découverte     </h3>
                 <p className="text-stone my-[40px]">1 mois d'essai gratuit de nos produits IA sans engagement            </p>
               </Card>
               <Card className="p-8 bg-sand-dark border-0 my-[30px]">
-                <div className="text-3xl font-bold text-navy mb-2">3</div>
+                <div className="text-3xl font-bold text-navy mb-2">Audit 
+express</div>
                 <h3 className="text-xl font-bold text-sumi mb-2 font-serif">Audit express</h3>
-                <p className="text-stone my-[72px]">1 journée d'analyse de vos processus avec recommandations concrètes</p>
+                <p className="text-stone my-[40px]">1 journée d'analyse de vos processus avec recommandations concrètes</p>
               </Card>
             </div>
             <div className="flex flex-col items-center gap-4 pt-8 py-0">
