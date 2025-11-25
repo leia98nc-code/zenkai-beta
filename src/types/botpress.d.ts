@@ -1,5 +1,7 @@
 interface Window {
-  botpressWebChat: {
-    init: (config: any, clientId: string, selector: string) => void;
+  botpress: {
+    init: (config: any) => void;
+    on: (event: string, callback: () => void) => void;
+    open: () => void;
   };
 }
