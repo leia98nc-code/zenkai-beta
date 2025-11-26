@@ -58,6 +58,21 @@ const ChatInterface = () => {
         max-height: 100% !important;
         max-width: 100% !important;
       }
+      
+      /* Bulles utilisateur sombres - Thème ZENKAI */
+      [data-message-type="user"] {
+        background-color: #12365C !important;
+        color: #F5EFE7 !important;
+      }
+      
+      /* Alternative selectors pour les messages utilisateur */
+      .bpUserMessage,
+      [class*="userMessage"],
+      [class*="User"] [class*="bubble"],
+      [class*="user"] [class*="message"] {
+        background-color: #12365C !important;
+        color: #F5EFE7 !important;
+      }
     `;
     document.head.appendChild(style);
 
