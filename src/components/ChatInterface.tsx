@@ -60,17 +60,27 @@ const ChatInterface = () => {
       }
       
       /* Bulles utilisateur sombres - Thème ZENKAI */
-      [data-message-type="user"] {
+      /* Sélecteurs Botpress v3 pour messages utilisateur */
+      [data-from="user"],
+      [data-role="user"],
+      div[class*="message"][class*="user"],
+      div[class*="user"][class*="message"],
+      .bpw-from-user,
+      .bpw-user-message,
+      [class*="UserMessage"],
+      [class*="user-message"],
+      [class*="message-user"],
+      div[style*="justify-content: flex-end"] > div,
+      div[style*="margin-left: auto"] {
         background-color: #12365C !important;
         color: #F5EFE7 !important;
       }
       
-      /* Alternative selectors pour les messages utilisateur */
-      .bpUserMessage,
-      [class*="userMessage"],
-      [class*="User"] [class*="bubble"],
-      [class*="user"] [class*="message"] {
-        background-color: #12365C !important;
+      /* Texte dans les bulles utilisateur */
+      [data-from="user"] *,
+      [data-role="user"] *,
+      .bpw-from-user *,
+      [class*="UserMessage"] * {
         color: #F5EFE7 !important;
       }
     `;
