@@ -231,8 +231,8 @@ La gestion d'entreprise boostée à l'IA
             <div className="grid md:grid-cols-3 gap-6 pt-8 my-0 py-0">
               <Card className="p-8 bg-sand-dark border-0 mb-0 pb-[34px] py-[32px] my-[30px]">
                 <div className="text-3xl font-bold text-navy mb-2">1</div>
-                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">RDV
-découverte     </h3>
+                <h3 className="text-xl font-bold text-sumi mb-2 font-serif">RDV 
+découverte</h3>
                 <p className="text-stone my-[40px]">1 heure pour explorer les possibilités de l'IA dans votre entreprise, sans engagement</p>
               </Card>
               <Card className="p-8 bg-sand-dark border-0 my-[30px]">
