@@ -5,11 +5,19 @@ export const useSessionTracking = () => {
   const currentSessionId = useRef<string | null>(null);
   const hasCheckedInitialSession = useRef(false);
 
+  console.log('🔍 useSessionTracking hook initialized');
+
   useEffect(() => {
+    console.log('🔍 useSessionTracking useEffect started');
+    
     // Vérifier la session existante au montage
     const checkExistingSession = async () => {
-      if (hasCheckedInitialSession.current) return;
+      if (hasCheckedInitialSession.current) {
+        console.log('⏭️ Initial session already checked, skipping');
+        return;
+      }
       hasCheckedInitialSession.current = true;
+      console.log('🔍 Checking for existing session...');
 
       const { data: { session } } = await supabase.auth.getSession();
       console.log('Checking existing session:', session?.user?.id);
