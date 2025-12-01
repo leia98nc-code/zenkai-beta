@@ -29,30 +29,11 @@ const Login = () => {
     setErrors({});
     try {
       const validated = loginSchema.parse(formData);
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signInWithPassword({
         email: validated.email,
         password: validated.password
       });
       if (error) throw error;
-      
-      // Enregistrer la session de connexion
-      if (data.user) {
-        console.log('Tentative d\'enregistrement de session pour user:', data.user.id);
-        
-        const { data: sessionData, error: sessionError } = await supabase
-          .from('user_sessions')
-          .insert({
-            user_id: data.user.id,
-            login_at: new Date().toISOString(),
-          })
-          .select();
-        
-        if (sessionError) {
-          console.error('Erreur lors de l\'enregistrement de la session:', sessionError);
-        } else {
-          console.log('Session enregistrée avec succès:', sessionData);
-        }
-      }
       
       toast({
         title: "Connexion réussie",

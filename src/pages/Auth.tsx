@@ -66,24 +66,7 @@ const Auth = () => {
               description: error.message,
             });
           }
-        } else if (data.user) {
-          console.log('Tentative d\'enregistrement de session pour user:', data.user.id);
-          
-          // Enregistrer la session de connexion
-          const { data: sessionData, error: sessionError } = await supabase
-            .from('user_sessions')
-            .insert({
-              user_id: data.user.id,
-              login_at: new Date().toISOString(),
-            })
-            .select();
-          
-          if (sessionError) {
-            console.error('Erreur lors de l\'enregistrement de la session:', sessionError);
-          } else {
-            console.log('Session enregistrée avec succès:', sessionData);
-          }
-          
+        } else {
           toast({
             title: "Connexion réussie",
             description: "Bienvenue !",
