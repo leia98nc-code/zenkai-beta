@@ -15,7 +15,9 @@ const Header = () => {
       // Enregistrer la déconnexion dans la dernière session active
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {
-        const { data: sessions } = await supabase
+        console.log('Recherche de la dernière session pour user:', user.id);
+        
+        const { data: sessions, error: selectError } = await supabase
           .from('user_sessions')
           .select('id')
           .eq('user_id', user.id)
@@ -23,11 +25,15 @@ const Header = () => {
           .order('login_at', { ascending: false })
           .limit(1);
         
+        console.log('Sessions trouvées:', sessions, 'Erreur:', selectError);
+        
         if (sessions && sessions.length > 0) {
-          await supabase
+          const { error: updateError } = await supabase
             .from('user_sessions')
             .update({ logout_at: new Date().toISOString() })
             .eq('id', sessions[0].id);
+          
+          console.log('Mise à jour logout_at - Erreur:', updateError);
         }
       }
       
