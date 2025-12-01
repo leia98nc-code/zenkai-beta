@@ -29,19 +29,16 @@ const Login = () => {
     setErrors({});
     try {
       const validated = loginSchema.parse(formData);
-      const {
-        error
-      } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email: validated.email,
         password: validated.password
       });
       if (error) throw error;
       
       // Enregistrer la session de connexion
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
+      if (data.user) {
         await supabase.from('user_sessions').insert({
-          user_id: user.id,
+          user_id: data.user.id,
           login_at: new Date().toISOString(),
         });
       }
