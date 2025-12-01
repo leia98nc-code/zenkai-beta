@@ -36,6 +36,16 @@ const Login = () => {
         password: validated.password
       });
       if (error) throw error;
+      
+      // Enregistrer la session de connexion
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        await supabase.from('user_sessions').insert({
+          user_id: user.id,
+          login_at: new Date().toISOString(),
+        });
+      }
+      
       toast({
         title: "Connexion réussie",
         description: "Bienvenue sur LEIA !"
