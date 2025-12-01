@@ -37,10 +37,21 @@ const Login = () => {
       
       // Enregistrer la session de connexion
       if (data.user) {
-        await supabase.from('user_sessions').insert({
-          user_id: data.user.id,
-          login_at: new Date().toISOString(),
-        });
+        console.log('Tentative d\'enregistrement de session pour user:', data.user.id);
+        
+        const { data: sessionData, error: sessionError } = await supabase
+          .from('user_sessions')
+          .insert({
+            user_id: data.user.id,
+            login_at: new Date().toISOString(),
+          })
+          .select();
+        
+        if (sessionError) {
+          console.error('Erreur lors de l\'enregistrement de la session:', sessionError);
+        } else {
+          console.log('Session enregistrée avec succès:', sessionData);
+        }
       }
       
       toast({
