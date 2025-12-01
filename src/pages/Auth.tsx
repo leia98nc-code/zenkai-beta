@@ -47,7 +47,7 @@ const Auth = () => {
       setLoading(true);
 
       if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { data, error } = await supabase.auth.signInWithPassword({
           email: validatedData.email,
           password: validatedData.password,
         });
@@ -66,15 +66,12 @@ const Auth = () => {
               description: error.message,
             });
           }
-        } else {
+        } else if (data.user) {
           // Enregistrer la session de connexion
-          const { data: { user } } = await supabase.auth.getUser();
-          if (user) {
-            await supabase.from('user_sessions').insert({
-              user_id: user.id,
-              login_at: new Date().toISOString(),
-            });
-          }
+          await supabase.from('user_sessions').insert({
+            user_id: data.user.id,
+            login_at: new Date().toISOString(),
+          });
           
           toast({
             title: "Connexion réussie",
