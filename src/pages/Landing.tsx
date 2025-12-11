@@ -158,9 +158,6 @@ La gestion d'entreprise boostée à l'IA
             <Card className="p-6 border-0 bg-sand-dark hover:shadow-zen transition-all duration-300">
               <p className="text-sumi font-medium">✓ Base de données : Code du travail NC, AIT, conventions collectives, jurisprudences et fiches pratiques</p>
             </Card>
-            <Card className="p-6 border-0 bg-sand-dark hover:shadow-zen transition-all duration-300">
-              <p className="text-sumi font-medium">✓ Accessible sur le web, WhatsApp ou Messenger</p>
-            </Card>
           </div>
         </div>
 
