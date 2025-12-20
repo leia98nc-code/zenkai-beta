@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import leiaAvatar from "@/assets/leia-avatar.png";
-import { MessageSquare, Users, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
+import { MessageSquare, Users, Zap, ArrowRight, CheckCircle2, Radar, Search, Brain, Send } from "lucide-react";
 
 const Products = () => {
   return (
@@ -158,6 +158,67 @@ const Products = () => {
             </div>
           </div>
         </div>
+        </div>
+      </section>
+
+      {/* MONITORIA - Veille Automatisée */}
+      <section className="bg-white py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <div className="flex justify-center md:justify-start mb-6">
+                  <div className="w-24 h-24 rounded-full bg-navy flex items-center justify-center shadow-zen">
+                    <Radar className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">MONITORIA</h2>
+                <p className="text-xl text-navy font-semibold mb-4">
+                  La Veille Automatisée
+                </p>
+                <p className="text-lg text-stone leading-relaxed mb-8">
+                  Automatisez le suivi des évolutions des tendances de marché, des concurrents, des clients, des réglementations et autres éléments qui peuvent impacter l'activité de votre entreprise.
+                </p>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300"
+                >
+                  <Link to="/about">Nous contacter</Link>
+                </Button>
+              </div>
+              <div className="space-y-4">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <Search className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-sumi mb-2">Collecte des informations</h4>
+                      <p className="text-stone">Extraction automatique des données à partir des différentes sources les plus pertinentes pour votre entreprise</p>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <Brain className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-sumi mb-2">Analyse intelligente</h4>
+                      <p className="text-stone">Trie, organise, classe et interprète les informations collectées pour les transformer en connaissances exploitables</p>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <Send className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-sumi mb-2">Diffusion ciblée</h4>
+                      <p className="text-stone">Utilisation des canaux de diffusion les plus pertinents pour votre entreprise selon le type d'information et votre usage</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
