@@ -223,7 +223,7 @@ const Products = () => {
       </section>
 
       {/* Automatisations Personnalisées */}
-      <section className="bg-white py-32">
+      <section className="bg-sand-dark py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -252,7 +252,7 @@ const Products = () => {
                 </Button>
               </div>
               <div className="space-y-4">
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -261,7 +261,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -270,7 +270,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -279,7 +279,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
