@@ -86,7 +86,7 @@ const Products = () => {
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-sumi mb-2">Multi-plateforme</h4>
+                      <h4 className="font-semibold text-sumi mb-2">Accessible partout</h4>
                       <p className="text-stone">Accessible sur le web, WhatsApp ou Messenger</p>
                     </div>
                   </div>
