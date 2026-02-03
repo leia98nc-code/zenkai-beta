@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, Sparkles, FileText } from "lucide-react";
 import leiaLogo from "@/assets/leia-logo.png";
 const About = () => {
   const benefits = [{
@@ -59,6 +60,14 @@ const About = () => {
                 <p className="text-lg text-sumi">
                   Nous conseillons et formons en usage de l'IA, ainsi qu'en gestion managériale et ressources humaines.
                 </p>
+              </div>
+              <div className="mt-8">
+                <Button asChild className="bg-navy hover:bg-navy/90 text-white">
+                  <a href="https://app.zenkai.nc/documents/Pr%C3%A9sentationZENKAI.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileText className="w-5 h-5 mr-2" />
+                    Découvrez notre plaquette de présentation
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
