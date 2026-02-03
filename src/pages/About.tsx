@@ -62,9 +62,9 @@ const About = () => {
                 </p>
               </div>
               <div className="mt-8">
-                <Button asChild className="bg-navy hover:bg-navy/90 text-white">
+                <Button asChild className="bg-navy hover:bg-navy/90 text-white text-lg px-10 py-6 h-auto">
                   <a href="https://app.zenkai.nc/documents/Pr%C3%A9sentationZENKAI.pdf" target="_blank" rel="noopener noreferrer">
-                    <FileText className="w-5 h-5 mr-2" />
+                    <FileText className="w-6 h-6 mr-3" />
                     Découvrez notre plaquette de présentation
                   </a>
                 </Button>
