@@ -46,7 +46,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4 text-sumi">Légal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/legal/terms" className="text-sm text-stone hover:text-navy transition-colors">
+                <Link to="/cgu" className="text-sm text-stone hover:text-navy transition-colors">
                   Conditions d'utilisation
                 </Link>
               </li>
