@@ -4,23 +4,17 @@ import { supabase } from '@/integrations/supabase/client';
 export const useSessionTracking = () => {
   const currentSessionId = useRef<string | null>(null);
   const hasCheckedInitialSession = useRef(false);
-
-  console.log('🔍 useSessionTracking hook initialized');
+  const isCreatingSession = useRef(false);
 
   useEffect(() => {
-    console.log('🔍 useSessionTracking useEffect started');
-    
     // Vérifier la session existante au montage
     const checkExistingSession = async () => {
       if (hasCheckedInitialSession.current) {
-        console.log('⏭️ Initial session already checked, skipping');
         return;
       }
       hasCheckedInitialSession.current = true;
-      console.log('🔍 Checking for existing session...');
 
       const { data: { session } } = await supabase.auth.getSession();
-      console.log('Checking existing session:', session?.user?.id);
       
       if (session?.user) {
         // Vérifier s'il existe déjà une session active pour cet utilisateur
@@ -33,8 +27,8 @@ export const useSessionTracking = () => {
           .limit(1);
         
         if (!existingSessions || existingSessions.length === 0) {
-          console.log('No active session found, creating one...');
-          const { data, error } = await supabase
+          isCreatingSession.current = true;
+          const { data } = await supabase
             .from('user_sessions')
             .insert({
               user_id: session.user.id,
@@ -43,14 +37,11 @@ export const useSessionTracking = () => {
             .select()
             .single();
           
-          if (error) {
-            console.error('Erreur création session initiale:', error);
-          } else {
-            console.log('Session initiale créée:', data);
+          if (data) {
             currentSessionId.current = data.id;
           }
+          isCreatingSession.current = false;
         } else {
-          console.log('Active session already exists:', existingSessions[0].id);
           currentSessionId.current = existingSessions[0].id;
         }
       }
@@ -61,11 +52,20 @@ export const useSessionTracking = () => {
     // Écouter les changements d'authentification
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        console.log('Auth event:', event, 'User:', session?.user?.id);
-        
         if (event === 'SIGNED_IN' && session?.user) {
+          // Prevent duplicate session creation
+          if (currentSessionId.current || isCreatingSession.current) {
+            return;
+          }
+          
           // Utiliser setTimeout pour éviter le blocage
           setTimeout(() => {
+            // Double-check to prevent race conditions
+            if (currentSessionId.current || isCreatingSession.current) {
+              return;
+            }
+            isCreatingSession.current = true;
+            
             supabase
               .from('user_sessions')
               .insert({
@@ -74,13 +74,11 @@ export const useSessionTracking = () => {
               })
               .select()
               .single()
-              .then(({ data, error }) => {
-                if (error) {
-                  console.error('Erreur création session:', error);
-                } else {
-                  console.log('Session créée:', data);
+              .then(({ data }) => {
+                if (data) {
                   currentSessionId.current = data.id;
                 }
+                isCreatingSession.current = false;
               });
           }, 0);
         }
@@ -91,12 +89,7 @@ export const useSessionTracking = () => {
             supabase
               .from('user_sessions')
               .update({ logout_at: new Date().toISOString() })
-              .eq('id', currentSessionId.current)
-              .then(({ error }) => {
-                if (error) {
-                  console.error('Erreur mise à jour logout:', error);
-                }
-              });
+              .eq('id', currentSessionId.current);
           }, 0);
           
           currentSessionId.current = null;
