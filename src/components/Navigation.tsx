@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { trackCtaClick } from "@/hooks/useGoogleAnalytics";
 import zenkaiLogo from "@/assets/zenkai-logo.png";
 
 const Navigation = () => {
@@ -56,7 +57,7 @@ const Navigation = () => {
           >
             Nos prestations
           </Link>
-          <Link to="/signup">
+          <Link to="/signup" onClick={() => trackCtaClick('Essayer LEIA', 'navigation')}>
             <Button size="sm" className="bg-gradient-primary">
               Essayer LEIA
             </Button>
@@ -105,7 +106,7 @@ const Navigation = () => {
               Nos prestations
             </Link>
             <div className="px-4 pt-2 space-y-2">
-              <Link to="/signup" onClick={() => setIsOpen(false)}>
+              <Link to="/signup" onClick={() => { setIsOpen(false); trackCtaClick('Essayer LEIA', 'navigation-mobile'); }}>
                 <Button size="sm" className="w-full bg-gradient-primary">
                   Essayer LEIA
                 </Button>
