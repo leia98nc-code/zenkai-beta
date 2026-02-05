@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Building2, Server, Shield, FileText, Mail } from "lucide-react";
-import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const MentionsLegales = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-3xl font-bold text-sumi mb-8">Mentions Légales</h1>
 
