@@ -27,8 +27,7 @@ const Header = () => {
         });
         navigate("/");
       }
-    } catch (error) {
-      console.error('Erreur lors de la déconnexion:', error);
+    } catch {
       toast({
         variant: "destructive",
         title: "Erreur",
