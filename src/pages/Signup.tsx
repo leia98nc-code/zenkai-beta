@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import leiaLogo from "@/assets/leia-avatar-new.png";
 import zenkaiLogo from "@/assets/zenkai-logo.png";
@@ -16,6 +17,9 @@ const signupSchema = z.object({
   email: z.string().trim().email("Email invalide").max(255),
   password: z.string().min(6, "Le mot de passe doit contenir au moins 6 caractères"),
   confirmPassword: z.string().min(6, "Veuillez confirmer votre mot de passe"),
+  acceptTerms: z.literal(true, {
+    errorMap: () => ({ message: "Vous devez accepter les conditions d'utilisation" }),
+  }),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Les mots de passe ne correspondent pas",
   path: ["confirmPassword"],
@@ -32,6 +36,7 @@ const Signup = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    acceptTerms: false as boolean,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -220,6 +225,37 @@ const Signup = () => {
               {errors.confirmPassword && (
                 <p className="text-sm text-destructive mt-1">{errors.confirmPassword}</p>
               )}
+            </div>
+
+            <div className="flex items-start space-x-3">
+              <Checkbox
+                id="acceptTerms"
+                checked={formData.acceptTerms}
+                onCheckedChange={(checked) => 
+                  setFormData({ ...formData, acceptTerms: checked === true })
+                }
+                disabled={loading}
+                className="mt-0.5"
+              />
+              <div className="grid gap-1.5 leading-none">
+                <Label
+                  htmlFor="acceptTerms"
+                  className="text-sm font-normal cursor-pointer"
+                >
+                  J'accepte les{" "}
+                  <Link
+                    to="/cgu"
+                    target="_blank"
+                    className="text-navy hover:underline font-medium"
+                  >
+                    conditions générales d'utilisation
+                  </Link>{" "}
+                  et la politique de confidentialité *
+                </Label>
+                {errors.acceptTerms && (
+                  <p className="text-sm text-destructive">{errors.acceptTerms}</p>
+                )}
+              </div>
             </div>
 
             <Button
