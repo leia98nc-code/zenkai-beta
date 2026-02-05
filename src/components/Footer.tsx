@@ -51,7 +51,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <span className="text-sm text-stone">Mentions légales</span>
+                <Link to="/mentions-legales" className="text-sm text-stone hover:text-navy transition-colors">
+                  Mentions légales
+                </Link>
               </li>
             </ul>
           </div>
