@@ -1,3 +1,4 @@
+// Force lockfile regeneration - 2026-02-06
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
