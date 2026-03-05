@@ -305,10 +305,10 @@ const Terms = () => {
                   <div className="bg-card border border-border p-4 rounded-lg">
                     <p className="font-semibold">Prestataire de modèle d'intelligence artificielle</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Service</strong> : Modèle d'intelligence artificielle Claude (moteur de LEIA)</li>
+                      <li><strong>Service</strong> : Modèle d'intelligence artificielle </li>
                       <li><strong>Données traitées</strong> : Vos questions à LEIA (traitement en temps réel)</li>
-                      <li><strong>Conservation</strong> : AUCUNE selon la politique Anthropic</li>
-                      <li><strong>Note</strong> : Vos conversations ne sont PAS conservées par Anthropic, seulement par Botpress Cloud dans l'UE</li>
+                      <li><strong>Conservation</strong> : AUCUNE selon la politique du prestataire</li>
+                      <li><strong>Note</strong> : Vos conversations ne sont PAS conservées par Prestataire de modèle d'intelligence artificielle, seulement par Prestataire d'infrastructure chatbot dans l'UE</li>
                     </ul>
                   </div>
                 </div>
