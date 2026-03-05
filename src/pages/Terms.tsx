@@ -155,7 +155,7 @@ const Terms = () => {
                 <h3 className="text-xl font-medium text-foreground mb-3">5.2 Données Collectées</h3>
                 <p className="mb-4">Nous collectons les informations suivantes lorsque vous utilisez nos services :</p>
 
-                <h4 className="text-lg font-medium text-foreground mb-2">5.2.1 Données d'Inscription (Supabase Auth)</h4>
+                <h4 className="text-lg font-medium text-foreground mb-2">5.2.1 Données d'Inscription </h4>
                 <p className="mb-2">Lors de votre inscription à ZENKAI :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li><strong>Adresse e-mail</strong> : pour créer votre compte et vous contacter</li>
@@ -206,7 +206,7 @@ const Terms = () => {
                       <tr>
                         <td className="border border-border p-3 font-mono text-sm">sb-access-token</td>
                         <td className="border border-border p-3">Session</td>
-                        <td className="border border-border p-3">Authentification Supabase (vous garder connecté)</td>
+                        <td className="border border-border p-3">Authentification (vous garder connecté)</td>
                       </tr>
                       <tr>
                         <td className="border border-border p-3 font-mono text-sm">sb-refresh-token</td>
@@ -273,7 +273,7 @@ const Terms = () => {
                 
                 <div className="space-y-4 mb-6">
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Supabase Inc.</p>
+                    <p className="font-semibold">Prestataire d'authentification et base de données</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
                       <li><strong>Service</strong> : Authentification et base de données</li>
                       <li><strong>Localisation</strong> : Union Européenne (région EU)</li>
@@ -283,7 +283,7 @@ const Terms = () => {
                   </div>
                   
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Botpress Cloud</p>
+                    <p className="font-semibold">Prestataire d'infrastructure chatbot</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
                       <li><strong>Service</strong> : Infrastructure chatbot LEIA</li>
                       <li><strong>Localisation</strong> : Union Européenne (région EU)</li>
@@ -293,7 +293,7 @@ const Terms = () => {
                   </div>
                   
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Netlify Inc.</p>
+                    <p className="font-semibold">Prestataire d'hébergement web</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
                       <li><strong>Service</strong> : Hébergement du site web zenkai.nc</li>
                       <li><strong>Localisation</strong> : Mondial avec CDN EU</li>
@@ -303,7 +303,7 @@ const Terms = () => {
                   </div>
                   
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Anthropic PBC (via Botpress)</p>
+                    <p className="font-semibold">Prestataire de modèle d'intelligence artificielle</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
                       <li><strong>Service</strong> : Modèle d'intelligence artificielle Claude (moteur de LEIA)</li>
                       <li><strong>Données traitées</strong> : Vos questions à LEIA (traitement en temps réel)</li>
@@ -412,8 +412,8 @@ const Terms = () => {
                 
                 <p className="font-medium mb-2">Accès technique (infrastructure) :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
-                  <li><strong>Botpress Cloud</strong> : Hébergement et stockage sécurisé des conversations (UE, RGPD)</li>
-                  <li><strong>Anthropic (Claude AI)</strong> : Traitement en temps réel uniquement, AUCUNE conservation</li>
+                  <li><strong>Notre prestataire chatbot</strong> : Hébergement et stockage sécurisé des conversations (UE, RGPD)</li>
+                  <li><strong>Notre prestataire IA</strong> : Traitement en temps réel uniquement, AUCUNE conservation</li>
                 </ul>
                 
                 <p className="font-medium mb-2">AUCUN accès :</p>
