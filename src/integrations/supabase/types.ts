@@ -19,8 +19,10 @@ export type Database = {
           created_at: string
           first_name: string
           id: string
+          is_active: boolean
           last_name: string
           organization: string
+          trial_end_date: string | null
           updated_at: string
           user_id: string
         }
@@ -28,8 +30,10 @@ export type Database = {
           created_at?: string
           first_name: string
           id?: string
+          is_active?: boolean
           last_name: string
           organization: string
+          trial_end_date?: string | null
           updated_at?: string
           user_id: string
         }
@@ -37,8 +41,10 @@ export type Database = {
           created_at?: string
           first_name?: string
           id?: string
+          is_active?: boolean
           last_name?: string
           organization?: string
+          trial_end_date?: string | null
           updated_at?: string
           user_id?: string
         }
