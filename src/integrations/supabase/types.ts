@@ -109,7 +109,22 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_expiring_users_j1: {
+        Args: never
+        Returns: {
+          first_name: string
+          trial_end_date: string
+          user_id: string
+        }[]
+      }
+      get_expiring_users_j7: {
+        Args: never
+        Returns: {
+          first_name: string
+          trial_end_date: string
+          user_id: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
