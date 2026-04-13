@@ -24,6 +24,8 @@ const Leia = () => {
         .eq("user_id", currentSession.user.id)
         .single();
 
+      console.log("PROFILE DEBUG:", profile, "ERROR:", error);
+      
       if (error || !profile) {
         navigate("/login");
         setLoading(false);
