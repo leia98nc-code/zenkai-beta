@@ -23,8 +23,6 @@ const Leia = () => {
         .select("is_active, trial_end_date, role")
         .eq("user_id", currentSession.user.id)
         .single();
-
-      console.log("PROFILE DEBUG:", profile, "ERROR:", error);
       
       if (error || !profile) {
         navigate("/login");
