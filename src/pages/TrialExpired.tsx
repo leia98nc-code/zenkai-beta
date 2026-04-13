@@ -142,7 +142,7 @@ const TrialExpired = () => {
               e.currentTarget.style.color = "#12365C";
             }}
           >
-            Contacter Baptiste
+            Contacter ZENKAI
           </a>
 
         </div>
@@ -161,7 +161,7 @@ const TrialExpired = () => {
             color: "#999999",
             letterSpacing: "0.04em",
           }}>
-            baptiste@zenkai.nc · zenkai.nc
+            contact@zenkai.nc · zenkai.nc
           </span>
           <button
             onClick={() => navigate("/login")}
