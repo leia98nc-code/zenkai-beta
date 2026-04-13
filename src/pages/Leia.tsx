@@ -39,7 +39,7 @@ const Leia = () => {
         new Date(profile.trial_end_date) > new Date();
 
       if (!isAdmin && !isPaid && !trialValid) {
-        navigate("/products");
+        navigate("/trial-expired");
         setLoading(false);
         return;
       }
