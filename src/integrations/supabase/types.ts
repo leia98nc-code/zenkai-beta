@@ -22,6 +22,7 @@ export type Database = {
           is_active: boolean
           last_name: string
           organization: string
+          role: string
           trial_end_date: string | null
           updated_at: string
           user_id: string
@@ -33,6 +34,7 @@ export type Database = {
           is_active?: boolean
           last_name: string
           organization: string
+          role?: string
           trial_end_date?: string | null
           updated_at?: string
           user_id: string
@@ -44,6 +46,7 @@ export type Database = {
           is_active?: boolean
           last_name?: string
           organization?: string
+          role?: string
           trial_end_date?: string | null
           updated_at?: string
           user_id?: string
@@ -106,13 +109,27 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      user_sessions_details: {
+        Row: {
+          created_at: string | null
+          first_name: string | null
+          id: string | null
+          last_name: string | null
+          login_at: string | null
+          logout_at: string | null
+          organization: string | null
+          user_id: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
+      deactivate_expired_users: { Args: never; Returns: undefined }
       get_expiring_users_j1: {
         Args: never
         Returns: {
           first_name: string
+          last_name: string
           trial_end_date: string
           user_id: string
         }[]
@@ -121,10 +138,12 @@ export type Database = {
         Args: never
         Returns: {
           first_name: string
+          last_name: string
           trial_end_date: string
           user_id: string
         }[]
       }
+      get_user_email: { Args: { p_user_id: string }; Returns: string }
     }
     Enums: {
       [_ in never]: never
