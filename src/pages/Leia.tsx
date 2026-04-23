@@ -1,79 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
-import ChatInterface from "@/components/ChatInterface";
-import { Session } from "@supabase/supabase-js";
 
 const Leia = () => {
-  const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const checkAccess = async (currentSession: Session | null) => {
-      if (!currentSession) {
-        navigate("/login");
-        setLoading(false);
-        return;
-      }
-
-      // Vérifier le profil : is_active et trial_end_date
-      const { data: profile, error } = await supabase
-        .from("profiles")
-        .select("is_active, trial_end_date, role")
-        .eq("user_id", currentSession.user.id)
-        .single();
-      
-      if (error || !profile) {
-        navigate("/login");
-        setLoading(false);
-        return;
-      }
-
-      const isAdmin = profile.role === "admin";
-      const isPaid = profile.role === "paid";
-      const trialValid =
-        profile.role === "trial" &&
-        profile.is_active === true &&
-        profile.trial_end_date !== null &&
-        new Date(profile.trial_end_date) > new Date();
-
-      if (!isAdmin && !isPaid && !trialValid) {
-        navigate("/trial-expired");
-        setLoading(false);
-        return;
-      }
-
-      setSession(currentSession);
-      setLoading(false);
-    };
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        checkAccess(session);
-      }
-    );
-
     supabase.auth.getSession().then(({ data: { session } }) => {
-      checkAccess(session);
+      if (!session) {
+        navigate("/login");
+        return;
+      }
+      // Passe les tokens à app.zenkai.nc via URL hash (cross-domain Supabase)
+      const params = new URLSearchParams({
+        access_token:  session.access_token,
+        refresh_token: session.refresh_token,
+        token_type:    "bearer",
+        expires_in:    String(session.expires_in ?? 3600),
+      });
+      window.location.href = `https://app.zenkai.nc/leia.html#${params.toString()}`;
     });
-
-    return () => subscription.unsubscribe();
   }, [navigate]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="animate-pulse text-muted-foreground">Chargement...</div>
+  return (
+    <div className="min-h-screen flex items-center justify-center"
+         style={{ background: "#F5EFE7" }}>
+      <div className="flex flex-col items-center gap-4">
+        <img src="https://app.zenkai.nc/images/logo-zenkai-icon-rogne.png"
+             alt="" className="w-12 h-12 opacity-60"
+             onError={e => (e.currentTarget.style.display = "none")} />
+        <p style={{ fontFamily: "Merriweather, serif", fontStyle: "italic",
+                    fontSize: "0.88rem", color: "#4D4D4D" }}>
+          Redirection vers LEIA…
+        </p>
       </div>
-    );
-  }
-
-  if (!session) {
-    return null;
-  }
-
-  return <ChatInterface />;
+    </div>
+  );
 };
 
 export default Leia;
