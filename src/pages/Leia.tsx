@@ -18,7 +18,7 @@ const Leia = () => {
         token_type:    "bearer",
         expires_in:    String(session.expires_in ?? 3600),
       });
-      window.location.href = `https://app.zenkai.nc/leia.html#${params.toString()}`;
+      window.location.href = `https://app.zenkai.nc/leia#${params.toString()}`;
     });
   }, [navigate]);
 
