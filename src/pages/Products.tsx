@@ -160,7 +160,7 @@ const Products = () => {
                 size="lg" 
                 className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
               >
-                <a href="https://app.zenkai.nc/generateur-post.html" target="_blank" rel="noopener noreferrer">
+                <a href="https://app.zenkai.nc/socia.html" target="_blank" rel="noopener noreferrer">
                   Démo test gratuite<ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
