@@ -1,14 +1,20 @@
 import { createClient } from 'npm:@supabase/supabase-js@2';
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': req.headers.get('origin') === 'https://app.zenkai.nc' ? 'https://app.zenkai.nc' : 'https://www.zenkai.nc',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, x-webhook-secret',
-};
+const allowedOrigins = ['https://www.zenkai.nc', 'https://app.zenkai.nc'];
+
+function getCorsHeaders(req: Request) {
+  const origin = req.headers.get('origin') || '';
+  const allowedOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  return {
+    'Access-Control-Allow-Origin': allowedOrigin,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, x-webhook-secret',
+  };
+}
 
 Deno.serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
   if (req.method === 'OPTIONS') return new Response('ok', { status: 200, headers: corsHeaders });
-
   try {
     const secret = Deno.env.get('N8N_WEBHOOK_SECRET');
     if (!secret || req.headers.get('x-webhook-secret') !== secret) {
@@ -17,7 +23,6 @@ Deno.serve(async (req) => {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
-
     const { user_id } = await req.json();
     if (typeof user_id !== 'string' || !/^[0-9a-f-]{36}$/i.test(user_id)) {
       return new Response(JSON.stringify({ error: 'Invalid user_id' }), {
@@ -25,19 +30,15 @@ Deno.serve(async (req) => {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
-
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL')!,
       Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
     );
-
     const { error } = await supabase
       .from('active_sessions')
       .delete()
       .eq('user_id', user_id);
-
     if (error) throw error;
-
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
