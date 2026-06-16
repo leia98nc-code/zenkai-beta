@@ -1,7 +1,7 @@
 import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://www.zenkai.nc',
+  'Access-Control-Allow-Origin': req.headers.get('origin') === 'https://app.zenkai.nc' ? 'https://app.zenkai.nc' : 'https://www.zenkai.nc',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, x-webhook-secret',
 };
