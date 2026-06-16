@@ -2,22 +2,22 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 
+const ZENKAI_SESSION_URL    = 'https://rolungturaelkdccjdfo.supabase.co/functions/v1';
+const ZENKAI_WEBHOOK_SECRET = import.meta.env.VITE_ZENKAI_WEBHOOK_SECRET;
+
 const Leia = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const checkAccessAndRedirect = async () => {
-      // ✅ FIX 1 : getUser() valide la session côté serveur (vs getSession() qui lit
-      // uniquement le localStorage sans vérifier si le token est réellement valide)
+      // ✅ FIX 1 : getUser() valide la session côté serveur
       const { data: { user }, error: authError } = await supabase.auth.getUser();
-
       if (!user || authError) {
         navigate("/login");
         return;
       }
 
       // ✅ FIX 2 : Vérification du statut d'accès AVANT la redirection
-      // On contrôle is_active ET trial_end_date côté serveur
       const { data: profile, error: profileError } = await supabase
         .from("profiles")
         .select("is_active, trial_end_date")
@@ -25,7 +25,6 @@ const Leia = () => {
         .single();
 
       if (profileError || !profile) {
-        // Profil introuvable → on renvoie au login par sécurité
         navigate("/login");
         return;
       }
@@ -39,24 +38,39 @@ const Leia = () => {
         return;
       }
 
-      // ✅ Utilisateur authentifié et actif → on récupère la session pour les tokens
-      const { data: { session } } = await supabase.auth.getSession();
+      // ✅ Utilisateur authentifié et actif → créer session ZENKAI
+      try {
+        const res = await fetch(`${ZENKAI_SESSION_URL}/create-session`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-webhook-secret": ZENKAI_WEBHOOK_SECRET,
+          },
+          body: JSON.stringify({
+            user_id:    user.id,
+            user_agent: navigator.userAgent,
+          }),
+        });
 
-      if (!session) {
-        // Cas rare : getUser() a réussi mais la session locale a disparu entre-temps
+        const { session_token } = await res.json();
+
+        if (!session_token) {
+          navigate("/login");
+          return;
+        }
+
+        // Passer session_token + user_id + email à leia.html via hash
+        const params = new URLSearchParams({
+          session_token,
+          user_id:    user.id,
+          user_email: user.email ?? "",
+        });
+        window.location.href = `https://app.zenkai.nc/leia#${params.toString()}`;
+
+      } catch (e) {
+        console.error('[ZENKAI] Erreur create-session:', e);
         navigate("/login");
-        return;
       }
-
-      // Passage des tokens vers app.zenkai.nc via URL hash (cross-domain Supabase)
-      const params = new URLSearchParams({
-        access_token:  session.access_token,
-        refresh_token: session.refresh_token,
-        token_type:    "bearer",
-        expires_in:    String(session.expires_in ?? 3600),
-      });
-
-      window.location.href = `https://app.zenkai.nc/leia#${params.toString()}`;
     };
 
     checkAccessAndRedirect();
