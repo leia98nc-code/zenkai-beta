@@ -1,8 +1,13 @@
 import { createClient } from 'npm:@supabase/supabase-js@2';
-import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'https://www.zenkai.nc',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, x-webhook-secret',
+};
 
 Deno.serve(async (req) => {
-  if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders });
+  if (req.method === 'OPTIONS') return new Response('ok', { status: 200, headers: corsHeaders });
 
   try {
     const secret = Deno.env.get('N8N_WEBHOOK_SECRET');
