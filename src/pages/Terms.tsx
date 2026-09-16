@@ -396,7 +396,7 @@ const Terms = () => {
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li>Toutes vos questions posées à LEIA</li>
                   <li>Toutes les réponses générées par LEIA</li>
-                  <li>Les éventuels retours/feedbacks (👍👎)</li>
+                  <li>Le contenu textuel des documents PDF que vous joignez à la conversation</li>
                 </ul>
                 <p className="font-medium mb-2">Métadonnées techniques :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
@@ -462,14 +462,14 @@ const Terms = () => {
                 </ul>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.8 Recommandation d'Usage</h3>
-                <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-4">
-                  <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ Vos conversations sont associées à votre identité :</p>
-                  <p className="mt-2">Compte tenu de cette association, formulez vos questions de manière générale, sans mentionner d'informations personnelles inutiles concernant des tiers (salariés, collègues).</p>
-                </div>
-                <ul className="space-y-1 mb-6">
-                  <li className="flex items-start gap-2"><span className="text-green-500">✅</span> "Quel est le délai de préavis pour un licenciement en Nouvelle-Calédonie ?"</li>
-                  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> "Je suis Jean Dupont, gérant de Boulangerie du Centre, je veux licencier mon employé Marc Martin pour..."</li>
-                </ul>
+<div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-4">
+  <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ Vos conversations sont associées à votre identité :</p>
+  <p className="mt-2">Compte tenu de cette association, formulez vos questions de manière générale, sans mentionner d'informations personnelles inutiles concernant des tiers (salariés, collègues). Cette recommandation s'applique aussi aux documents que vous joignez à la conversation.</p>
+</div>
+<ul className="space-y-1 mb-6">
+  <li className="flex items-start gap-2"><span className="text-green-500">✅</span> "Quel est le délai de préavis pour un licenciement en Nouvelle-Calédonie ?"</li>
+  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> "Je suis Jean Dupont, gérant de Boulangerie du Centre, je veux licencier mon employé Marc Martin pour..."</li>
+</ul>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.9 Retrait du Consentement</h3>
                 <p className="mb-2">Vous pouvez retirer votre consentement à l'enregistrement des conversations à tout moment :</p>
