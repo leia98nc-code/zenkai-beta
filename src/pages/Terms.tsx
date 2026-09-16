@@ -191,35 +191,10 @@ const Terms = () => {
                 </ul>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.4 Cookies Techniques</h4>
-                <p className="mb-3">Nous utilisons uniquement des cookies strictement nécessaires :</p>
-                <div className="overflow-x-auto mb-4">
-                  <table className="w-full border-collapse border border-border">
-                    <thead>
-                      <tr className="bg-muted">
-                        <th className="border border-border p-3 text-left">Cookie</th>
-                        <th className="border border-border p-3 text-left">Durée</th>
-                        <th className="border border-border p-3 text-left">Finalité</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="border border-border p-3 font-mono text-sm">sb-access-token</td>
-                        <td className="border border-border p-3">Session</td>
-                        <td className="border border-border p-3">Authentification (vous garder connecté)</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-border p-3 font-mono text-sm">sb-refresh-token</td>
-                        <td className="border border-border p-3">30 jours</td>
-                        <td className="border border-border p-3">Renouvellement automatique de session</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-border p-3 font-mono text-sm">cookie-consent</td>
-                        <td className="border border-border p-3">12 mois</td>
-                        <td className="border border-border p-3">Mémorisation de vos préférences cookies</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <h4 className="text-lg font-medium text-foreground mb-2">5.2.4 Cookies Techniques</h4>
+<p className="mb-6">
+  Nous utilisons un cookie strictement nécessaire au fonctionnement du service, ainsi qu'un mécanisme de mesure d'audience optionnel, dont le détail figure à la section 7.
+</p>
                 <p className="text-sm mb-6">Ces cookies sont <strong>exemptés de consentement</strong> car strictement nécessaires au fonctionnement du service (Article 82 RGPD).</p>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.5 Données que nous NE collectons PAS</h4>
@@ -493,41 +468,47 @@ const Terms = () => {
                 <h3 className="text-xl font-medium text-foreground mb-3">7.1 Qu'est-ce qu'un Cookie ?</h3>
                 <p className="mb-6">Un cookie est un petit fichier texte stocké sur votre appareil lors de la visite d'un site web.</p>
 
-                <h3 className="text-xl font-medium text-foreground mb-3">7.2 Cookies Utilisés sur zenkai.nc</h3>
-                <p className="mb-3"><strong>Cookies strictement nécessaires (pas de consentement requis) :</strong></p>
-                <div className="overflow-x-auto mb-4">
-                  <table className="w-full border-collapse border border-border">
-                    <thead>
-                      <tr className="bg-muted">
-                        <th className="border border-border p-3 text-left">Cookie</th>
-                        <th className="border border-border p-3 text-left">Durée</th>
-                        <th className="border border-border p-3 text-left">Finalité</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="border border-border p-3 font-mono text-sm">session_token</td>
-                        <td className="border border-border p-3">Session</td>
-                        <td className="border border-border p-3">Authentification et gestion de session</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-border p-3 font-mono text-sm">cookie_consent</td>
-                        <td className="border border-border p-3">12 mois</td>
-                        <td className="border border-border p-3">Mémorisation de vos préférences cookies</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <h3 className="text-xl font-medium text-foreground mb-3">7.2 Cookies et Stockage Utilisés sur zenkai.nc</h3>
+<p className="mb-3"><strong>Cookie strictement nécessaire (aucun consentement requis) :</strong></p>
+<div className="overflow-x-auto mb-4">
+  <table className="w-full border-collapse border border-border">
+    <thead>
+      <tr className="bg-muted">
+        <th className="border border-border p-3 text-left">Nom</th>
+        <th className="border border-border p-3 text-left">Type</th>
+        <th className="border border-border p-3 text-left">Durée</th>
+        <th className="border border-border p-3 text-left">Finalité</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="border border-border p-3 font-mono text-sm">n8n-auth</td>
+        <td className="border border-border p-3">Cookie</td>
+        <td className="border border-border p-3">30 jours</td>
+        <td className="border border-border p-3">Authentification et gestion de session</td>
+      </tr>
+      <tr>
+        <td className="border border-border p-3 font-mono text-sm">cookie_consent_analytics</td>
+        <td className="border border-border p-3">Stockage local du navigateur</td>
+        <td className="border border-border p-3">Jusqu'à suppression par vos soins</td>
+        <td className="border border-border p-3">Mémoriser votre choix concernant les cookies de mesure d'audience</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-                <p className="mb-6"><strong>Cookies analytics (consentement requis) :</strong> Nous utilisons Netlify Analytics (pas de cookies tiers, pas de tracking inter-sites) pour mesurer l'audience de notre site.</p>
+<p className="mb-3"><strong>Cookies de mesure d'audience (chargés uniquement après votre consentement) :</strong></p>
+<p className="mb-4">
+  Notre site intègre Google Analytics 4, activé uniquement si vous acceptez la bannière de cookies présentée lors de votre première visite. Lorsqu'il est actif, ce dispositif anonymise votre adresse IP dès la collecte. À ce jour, il ne collecte cependant aucune donnée.
+</p>
 
-                <h3 className="text-xl font-medium text-foreground mb-3">7.3 Gestion des Cookies</h3>
-                <p className="mb-2">Vous pouvez à tout moment :</p>
-                <ul className="list-disc pl-6 space-y-1 mb-4">
-                  <li>Modifier vos préférences via le lien "Gestion des cookies" en bas de page</li>
-                  <li>Désactiver les cookies dans les paramètres de votre navigateur</li>
-                </ul>
-                <p className="text-sm mb-6">⚠️ La désactivation des cookies strictement nécessaires peut affecter le fonctionnement du service.</p>
+<h3 className="text-xl font-medium text-foreground mb-3">7.3 Gestion des Cookies</h3>
+<p className="mb-2">Vous pouvez à tout moment :</p>
+<ul className="list-disc pl-6 space-y-1 mb-4">
+  <li>Modifier votre choix concernant les cookies de mesure d'audience via le bouton dédié sur notre page Mentions Légales</li>
+  <li>Configurer votre navigateur pour bloquer les cookies</li>
+</ul>
+<p className="text-sm mb-6">⚠️ La désactivation du cookie strictement nécessaire (n8n-auth) empêchera la connexion à nos services.</p>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">7.4 Pas de Publicité Ciblée</h3>
                 <p>ZENKAI n'utilise <strong>AUCUN cookie de publicité ciblée</strong> ou de tracking comportemental.</p>
