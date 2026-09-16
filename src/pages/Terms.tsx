@@ -191,11 +191,9 @@ const Terms = () => {
                 </ul>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.4 Cookies Techniques</h4>
-                <h4 className="text-lg font-medium text-foreground mb-2">5.2.4 Cookies Techniques</h4>
 <p className="mb-6">
   Nous utilisons un cookie strictement nécessaire au fonctionnement du service, ainsi qu'un mécanisme de mesure d'audience optionnel, dont le détail figure à la section 7.
 </p>
-                <p className="text-sm mb-6">Ces cookies sont <strong>exemptés de consentement</strong> car strictement nécessaires au fonctionnement du service (Article 82 RGPD).</p>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.5 Données que nous NE collectons PAS</h4>
                 <p className="mb-3">Pour votre information, nous ne collectons AUCUNE des données suivantes :</p>
