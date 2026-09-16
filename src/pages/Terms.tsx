@@ -647,7 +647,7 @@ const Terms = () => {
 
                 <h3 className="text-xl font-medium text-foreground mb-3">10.4 Vos Contenus (Questions à LEIA)</h3>
                 <p className="mb-2">Vous conservez tous les droits sur vos questions posées à LEIA.</p>
-                <p>En utilisant LEIA, vous accordez à ZENKAI une licence mondiale, gratuite, non exclusive pour : traiter vos questions, analyser et améliorer le service, utiliser vos questions de manière anonymisée à des fins statistiques.</p>
+                <p>En utilisant LEIA, vous accordez à ZENKAI une licence mondiale, gratuite, non exclusive pour : traiter vos questions, analyser et améliorer le service.</p>
               </section>
 
               {/* Section 11 */}
