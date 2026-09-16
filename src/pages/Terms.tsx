@@ -182,7 +182,7 @@ const Terms = () => {
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.3 Données de Navigation</h4>
                 <p className="mb-2">Collectées automatiquement lors de votre visite sur <a href="https://zenkai.nc" className="text-primary hover:underline">zenkai.nc</a> :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-6">
-                  <li><strong>Adresse IP</strong> (anonymisée après 24 heures)</li>
+                  <li><strong>Adresse IP</strong> (30 jours par hébergeur)</li>
                   <li><strong>Type de navigateur</strong> et version</li>
                   <li><strong>Système d'exploitation</strong></li>
                   <li><strong>Pages consultées</strong> et durée de visite</li>
