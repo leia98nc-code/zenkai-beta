@@ -12,12 +12,12 @@ const Terms = () => {
             <div className="text-center space-y-4">
               <h1 className="text-4xl font-bold">Conditions Générales d'Utilisation et Politique de Confidentialité</h1>
               <p className="text-xl font-semibold text-primary">ZENKAI</p>
-              <p className="text-muted-foreground">Dernière mise à jour : 4 février 2026</p>
+              <p className="text-muted-foreground">Dernière mise à jour : 16 septembre 2026</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg">
               <p className="text-foreground">
-                En utilisant les services ZENKAI, vous acceptez les présentes conditions générales d'utilisation et notre politique de confidentialité.
+                En utilisant les services ZENKAI, vous acceptez les présentes conditions générales d'utilisation et notre politique de confidentialité. Ces conditions vous sont présentées et redemandées à chaque connexion.
               </p>
             </div>
 
@@ -61,13 +61,13 @@ const Terms = () => {
               {/* Section 2 */}
               <section id="description">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">2. Description des Services</h2>
-                
+
                 <h3 className="text-xl font-medium text-foreground mb-3">2.1 ZENKAI</h3>
                 <p className="mb-4">
                   ZENKAI est une entreprise de conseil, formation et solutions, spécialisée dans l'accompagnement des TPE/PME de Nouvelle-Calédonie dans leur management dopé à l'intelligence artificielle.
                 </p>
 
-                <h3 className="text-xl font-medium text-foreground mb-3">2.2 LEIA (L'Expert IA Assisté)</h3>
+                <h3 className="text-xl font-medium text-foreground mb-3">2.2 LEIA </h3>
                 <p className="mb-4">
                   LEIA est un assistant d'information juridique basé sur l'intelligence artificielle, spécialisé dans le droit du travail et la gestion RH de Nouvelle-Calédonie.
                 </p>
@@ -81,7 +81,7 @@ const Terms = () => {
               {/* Section 3 */}
               <section id="utilisation">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">3. Utilisation des Services</h2>
-                
+
                 <h3 className="text-xl font-medium text-foreground mb-3">3.1 Conditions d'utilisation</h3>
                 <p className="mb-3">Vous vous engagez à :</p>
                 <ul className="space-y-2 mb-6">
@@ -112,7 +112,7 @@ const Terms = () => {
               {/* Section 4 */}
               <section id="compte">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">4. Création et Gestion de Compte</h2>
-                
+
                 <h3 className="text-xl font-medium text-foreground mb-3">4.1 Inscription</h3>
                 <p className="mb-3">L'utilisation complète de certains services ZENKAI nécessite la création d'un compte utilisateur.</p>
                 <p className="mb-2">Lors de l'inscription, vous devez fournir :</p>
@@ -134,7 +134,7 @@ const Terms = () => {
                   Vous pouvez demander la suppression de votre compte à tout moment en contactant : <a href="mailto:contact@zenkai.nc" className="text-primary hover:underline">contact@zenkai.nc</a>
                 </p>
                 <p>
-                  La suppression du compte entraînera la suppression de vos données personnelles conformément à notre politique de conservation (voir section 6.4).
+                  La suppression du compte entraînera la suppression de vos données personnelles conformément à notre politique de conservation (voir section 6.5).
                 </p>
               </section>
 
@@ -155,7 +155,7 @@ const Terms = () => {
                 <h3 className="text-xl font-medium text-foreground mb-3">5.2 Données Collectées</h3>
                 <p className="mb-4">Nous collectons les informations suivantes lorsque vous utilisez nos services :</p>
 
-                <h4 className="text-lg font-medium text-foreground mb-2">5.2.1 Données d'Inscription </h4>
+                <h4 className="text-lg font-medium text-foreground mb-2">5.2.1 Données d'Inscription</h4>
                 <p className="mb-2">Lors de votre inscription à ZENKAI :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li><strong>Adresse e-mail</strong> : pour créer votre compte et vous contacter</li>
@@ -164,7 +164,7 @@ const Terms = () => {
                   <li><strong>Date de dernière connexion</strong></li>
                 </ul>
                 <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-6">
-                  <p>⚠️ <strong>Vos mots de passe ne sont JAMAIS accessibles par ZENKAI</strong>. Ils sont gérés de façon irréversible par notre prestataire d'authentification Supabase selon les standards de sécurité les plus élevés (hachage bcrypt avec salt unique).</p>
+                  <p>⚠️ <strong>Vos mots de passe ne sont JAMAIS accessibles par ZENKAI</strong>. Ils sont gérés de façon irréversible par notre prestataire d'authentification (Supabase, opéré via Lovable) selon les standards de sécurité les plus élevés (hachage bcrypt avec salt unique).</p>
                 </div>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.2 Conversations avec le Chatbot LEIA</h4>
@@ -172,23 +172,22 @@ const Terms = () => {
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li><strong>Contenu intégral de vos messages</strong> et des réponses de LEIA</li>
                   <li><strong>Date et heure</strong> de chaque échange</li>
-                  <li><strong>Identifiant de conversation unique</strong> (pour retrouver l'historique)</li>
-                  <li><strong>Statut de la conversation</strong> (en cours, terminée, etc.)</li>
+                  <li><strong>Identifiant de conversation unique</strong></li>
                   <li><strong>Métadonnées techniques</strong> : identifiant de session, canal utilisé (web)</li>
                 </ul>
                 <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-6">
-                  <p>⚠️ <strong>Les conversations sont stockées de manière anonyme</strong> : votre nom n'apparaît pas dans les conversations, seulement "Anonymous User" + un identifiant technique.</p>
+                  <p>⚠️ <strong>Vos conversations sont associées à votre adresse e-mail</strong> (elles ne sont pas anonymes). Elles sont conservées uniquement le temps de leur traitement technique, avec une purge automatique après 7 jours (voir section 6.5).</p>
                 </div>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.3 Données de Navigation</h4>
                 <p className="mb-2">Collectées automatiquement lors de votre visite sur <a href="https://zenkai.nc" className="text-primary hover:underline">zenkai.nc</a> :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-6">
                   <li><strong>Adresse IP</strong> (anonymisée après 24 heures)</li>
-                  <li><strong>Type de navigateur</strong> et version (ex: Chrome 120, Firefox 115)</li>
-                  <li><strong>Système d'exploitation</strong> (Windows, macOS, Linux, Android, iOS)</li>
+                  <li><strong>Type de navigateur</strong> et version</li>
+                  <li><strong>Système d'exploitation</strong></li>
                   <li><strong>Pages consultées</strong> et durée de visite</li>
-                  <li><strong>Provenance</strong> (site d'où vous venez)</li>
-                  <li><strong>Horodatage</strong> (date et heure de connexion)</li>
+                  <li><strong>Provenance</strong></li>
+                  <li><strong>Horodatage</strong></li>
                 </ul>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.2.4 Cookies Techniques</h4>
@@ -231,7 +230,7 @@ const Terms = () => {
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Adresse postale</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Informations bancaires ou de paiement</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Données de géolocalisation précise (GPS)</li>
-                  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Données biométriques (empreintes, reconnaissance faciale)</li>
+                  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Données biométriques</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Historique de navigation en dehors de zenkai.nc</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Cookies publicitaires ou de tracking comportemental</li>
                 </ul>
@@ -240,8 +239,8 @@ const Terms = () => {
                 <p className="mb-2">Nous utilisons vos données pour :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-6">
                   <li><strong>Fourniture du service</strong> : Permettre l'accès à votre compte et aux fonctionnalités</li>
-                  <li><strong>Amélioration du service</strong> : Analyser l'utilisation pour améliorer LEIA et nos services</li>
-                  <li><strong>Communication</strong> : Vous informer des mises à jour, nouvelles fonctionnalités</li>
+                  <li><strong>Amélioration du service</strong> : Analyser l'utilisation pour améliorer LEIA</li>
+                  <li><strong>Communication</strong> : Vous informer des mises à jour</li>
                   <li><strong>Sécurité</strong> : Prévenir les fraudes et assurer la sécurité des systèmes</li>
                   <li><strong>Obligations légales</strong> : Répondre aux obligations légales et réglementaires</li>
                 </ul>
@@ -249,7 +248,7 @@ const Terms = () => {
                 <h3 className="text-xl font-medium text-foreground mb-3">5.4 Base Légale du Traitement</h3>
                 <p className="mb-2">Le traitement de vos données repose sur :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-6">
-                  <li><strong>Consentement</strong> : Acceptation des présentes conditions lors de l'inscription</li>
+                  <li><strong>Consentement</strong> : Acceptation des présentes conditions, redemandée à chaque connexion</li>
                   <li><strong>Exécution du contrat</strong> : Nécessaire pour fournir les services demandés</li>
                   <li><strong>Intérêt légitime</strong> : Amélioration de nos services, sécurité des systèmes</li>
                   <li><strong>Obligation légale</strong> : Conservation des données pour conformité légale</li>
@@ -263,52 +262,63 @@ const Terms = () => {
                   <p className="font-semibold">Baptiste FAURE - ZENKAI (gérant)</p>
                   <ul className="list-disc pl-6 mt-2 space-y-1">
                     <li><strong>Accès à</strong> : Emails, conversations LEIA, statistiques d'utilisation</li>
-                    <li><strong>PAS d'accès à</strong> : Mots de passe (gérés par Supabase de façon irréversible)</li>
+                    <li><strong>PAS d'accès à</strong> : Mots de passe (gérés de façon irréversible)</li>
                     <li><strong>Finalité</strong> : Amélioration du service, support utilisateur, réponse aux demandes</li>
                   </ul>
                 </div>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.5.2 Prestataires Techniques (Sous-traitants RGPD)</h4>
-                <p className="mb-3">Tous nos prestataires sont sous contrat de confidentialité et conformes RGPD :</p>
-                
+                <p className="mb-3">Tous nos prestataires sont liés par un accord de traitement des données conforme au RGPD :</p>
+
                 <div className="space-y-4 mb-6">
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Prestataire d'authentification et base de données</p>
+                    <p className="font-semibold">Authentification, profils et sessions</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Service</strong> : Authentification et base de données</li>
-                      <li><strong>Localisation</strong> : Union Européenne (région EU)</li>
-                      <li><strong>Données traitées</strong> : Email, UUID, dates de connexion</li>
-                      <li><strong>Certification</strong> : SOC 2 Type II, ISO 27001</li>
+                      <li><strong>Prestataire</strong> : Lovable (infrastructure Supabase gérée par Lovable)</li>
+                      <li><strong>Localisation</strong> : en cours de confirmation auprès du prestataire</li>
+                      <li><strong>Données traitées</strong> : email, UUID, statut d'abonnement</li>
                     </ul>
                   </div>
-                  
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Prestataire d'infrastructure chatbot</p>
+                    <p className="font-semibold">Moteur d'automatisation LEIA</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Service</strong> : Infrastructure chatbot LEIA</li>
-                      <li><strong>Localisation</strong> : Union Européenne (région EU)</li>
-                      <li><strong>Données traitées</strong> : Conversations complètes avec LEIA</li>
-                      <li><strong>Certification</strong> : Conformité RGPD</li>
+                      <li><strong>Prestataire</strong> : serveur privé dédié opéré via Hetzner</li>
+                      <li><strong>Localisation</strong> : Nuremberg, Allemagne (Union européenne)</li>
+                      <li><strong>Données traitées</strong> : orchestration des workflows, contenu des conversations</li>
                     </ul>
                   </div>
-                  
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Prestataire d'hébergement web</p>
+                    <p className="font-semibold">Base de connaissance vectorielle</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Service</strong> : Hébergement du site web zenkai.nc</li>
-                      <li><strong>Localisation</strong> : Mondial avec CDN EU</li>
-                      <li><strong>Données traitées</strong> : Logs de connexion, IP (anonymisée)</li>
-                      <li><strong>Certification</strong> : SOC 2 Type II, conformité RGPD</li>
+                      <li><strong>Prestataire</strong> : Qdrant Cloud</li>
+                      <li><strong>Localisation</strong> : États-Unis</li>
+                      <li><strong>Données traitées</strong> : corpus juridique et recherche de similarité sur vos requêtes, sans conservation</li>
+                      <li><strong>Transfert</strong> : encadré par des clauses contractuelles types (SCC)</li>
                     </ul>
                   </div>
-                  
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Prestataire de modèle d'intelligence artificielle</p>
+                    <p className="font-semibold">Génération des réponses</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Service</strong> : Modèle d'intelligence artificielle </li>
-                      <li><strong>Données traitées</strong> : Vos questions à LEIA (traitement en temps réel)</li>
-                      <li><strong>Conservation</strong> : AUCUNE selon la politique du prestataire</li>
-                      <li><strong>Note</strong> : Vos conversations ne sont PAS conservées par Prestataire de modèle d'intelligence artificielle, seulement par Prestataire d'infrastructure chatbot dans l'UE</li>
+                      <li><strong>Prestataire</strong> : Anthropic (API Claude, conditions commerciales)</li>
+                      <li><strong>Localisation</strong> : États-Unis</li>
+                      <li><strong>Conservation</strong> : non utilisée pour l'entraînement de modèles</li>
+                      <li><strong>Transfert</strong> : accord de traitement des données avec clauses contractuelles types</li>
+                    </ul>
+                  </div>
+                  <div className="bg-card border border-border p-4 rounded-lg">
+                    <p className="font-semibold">Vectorisation des requêtes</p>
+                    <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                      <li><strong>Prestataire</strong> : OpenAI (API)</li>
+                      <li><strong>Localisation</strong> : États-Unis</li>
+                      <li><strong>Conservation</strong> : non utilisée pour l'entraînement de modèles</li>
+                    </ul>
+                  </div>
+                  <div className="bg-card border border-border p-4 rounded-lg">
+                    <p className="font-semibold">Hébergement du site web et résolution DNS</p>
+                    <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                      <li><strong>Prestataires</strong> : Netlify (hébergement), Cloudflare (DNS)</li>
+                      <li><strong>Localisation</strong> : réseau mondial</li>
+                      <li><strong>Données traitées</strong> : logs de connexion, IP anonymisée</li>
                     </ul>
                   </div>
                 </div>
@@ -328,34 +338,46 @@ const Terms = () => {
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Régies publicitaires</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Courtiers en données</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Partenaires marketing</li>
-                  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Réseaux sociaux (Facebook, Google, LinkedIn, etc.)</li>
+                  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Réseaux sociaux</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Aucune autre entreprise à des fins commerciales</li>
                 </ul>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">5.6 Transfert de Données</h3>
                 <p className="mb-6">
-                  Vos données sont hébergées et traitées dans l'Union Européenne (région EU) pour garantir la conformité RGPD. Nos prestataires (Netlify, Botpress) sont conformes RGPD et disposent de certifications appropriées.
+                  Vos données sont traitées par une combinaison de prestataires situés dans l'Union européenne (orchestration technique, Allemagne) et aux États-Unis (recherche documentaire et génération des réponses). Chaque transfert hors Union européenne est encadré par un accord de traitement des données intégrant des clauses contractuelles types (SCC), conformément au RGPD.
                 </p>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">5.7 Sécurité des Données</h3>
                 <p className="mb-4">Nous mettons en œuvre des mesures techniques et organisationnelles pour protéger vos données :</p>
-                
                 <p className="font-medium mb-2">Mesures techniques :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li>Chiffrement SSL/TLS (HTTPS) pour toutes les communications</li>
-                  <li>Chiffrement des données sensibles en base de données</li>
                   <li>Authentification sécurisée (hachage bcrypt des mots de passe)</li>
-                  <li>Protection contre les attaques DDOS</li>
-                  <li>Sauvegardes régulières et sécurisées</li>
+                  <li>Isolation infrastructure : serveur privé dédié, non mutualisé au niveau applicatif</li>
+                  <li>Purge automatique programmée des données de conversation après 7 jours</li>
                 </ul>
-                
                 <p className="font-medium mb-2">Mesures organisationnelles :</p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Accès restreint aux données (principe du moindre privilège)</li>
-                  <li>Authentification à deux facteurs (2FA) pour les accès administrateurs</li>
-                  <li>Journalisation des accès aux données personnelles</li>
-                  <li>Procédures de gestion des incidents de sécurité</li>
+                  <li>Acceptation renouvelée des présentes conditions à chaque connexion</li>
                 </ul>
+
+                <h3 className="text-xl font-medium text-foreground mb-3 mt-6">5.9 Clients Professionnels Agissant en Qualité de Responsable du Traitement</h3>
+                <p className="mb-3">
+                  Lorsqu'un client professionnel souscrit à LEIA pour l'usage de ses propres collaborateurs, ce client agit en qualité de responsable du traitement au sens du RGPD, et ZENKAI agit en qualité de sous-traitant pour son compte. Conformément à l'article 28 du RGPD :
+                </p>
+                <ul className="list-disc pl-6 space-y-1 mb-4">
+                  <li>ZENKAI traite les données uniquement sur instruction documentée du client.</li>
+                  <li>Les personnes autorisées à traiter les données sont soumises à une obligation de confidentialité.</li>
+                  <li>Le client autorise le recours aux sous-traitants ultérieurs listés en 5.5.2 ; ZENKAI l'informe de tout changement, avec un droit d'opposition de 15 jours pour motif légitime.</li>
+                  <li>ZENKAI notifie au client toute violation de données le concernant dans un délai de 48 heures.</li>
+                  <li>ZENKAI assiste le client pour répondre aux demandes d'exercice des droits des personnes concernées.</li>
+                  <li>Au terme du contrat, ZENKAI supprime ou restitue, au choix du client, l'ensemble des données concernées.</li>
+                  <li>ZENKAI permet la réalisation d'audits raisonnables, moyennant un préavis approprié.</li>
+                </ul>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Un client professionnel qui souhaite un document contractuel autonome reprenant ces dispositions peut en faire la demande à <a href="mailto:contact@zenkai.nc" className="text-primary hover:underline">contact@zenkai.nc</a>.
+                </p>
               </section>
 
               {/* Section 6 */}
@@ -364,119 +386,86 @@ const Terms = () => {
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.1 Information Préalable</h3>
                 <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-6">
-                  <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ IMPORTANT : Toutes vos conversations avec LEIA sont enregistrées.</p>
-                  <p className="mt-2">Avant votre première interaction avec LEIA, un message d'information vous est présenté clairement. En continuant à utiliser LEIA, vous consentez à l'enregistrement de vos conversations.</p>
+                  <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ IMPORTANT : Toutes vos conversations avec LEIA sont enregistrées et associées à votre adresse e-mail.</p>
+                  <p className="mt-2">Ces conditions vous sont présentées et redemandées à chaque connexion. En continuant à utiliser LEIA, vous consentez à l'enregistrement de vos conversations.</p>
                 </div>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.2 Données Collectées</h3>
                 <p className="mb-2">Lorsque vous échangez avec LEIA, nous enregistrons :</p>
-                
                 <p className="font-medium mb-2">Contenu complet :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li>Toutes vos questions posées à LEIA</li>
                   <li>Toutes les réponses générées par LEIA</li>
                   <li>Les éventuels retours/feedbacks (👍👎)</li>
                 </ul>
-                
                 <p className="font-medium mb-2">Métadonnées techniques :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
                   <li>Date et heure de chaque message</li>
                   <li>Identifiant de conversation unique</li>
-                  <li>Identifiant de session utilisateur (technique, anonyme)</li>
                   <li>Canal de communication (webchat)</li>
-                  <li>Statut de la conversation (en cours, terminée, abandonnée)</li>
                 </ul>
-                
                 <p className="font-medium mb-2">Informations personnelles mentionnées :</p>
-                <p className="mb-6">Si vous mentionnez volontairement dans vos questions des informations personnelles (nom, entreprise, situation professionnelle), elles seront également enregistrées dans la conversation.</p>
+                <p className="mb-6">Si vous mentionnez volontairement dans vos questions des informations personnelles (nom, entreprise, situation professionnelle), elles seront également enregistrées.</p>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.3 Finalités de l'Enregistrement</h3>
                 <p className="mb-2">Nous enregistrons vos conversations avec LEIA pour :</p>
                 <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li><strong>Améliorer LEIA</strong> (finalité principale) : Analyser les questions fréquentes, identifier les lacunes de connaissances, détecter les réponses incorrectes ou imprécises, enrichir la base de connaissances juridiques</li>
-                  <li><strong>Support utilisateur</strong> : Vous aider en cas de problème technique, répondre à vos demandes de clarification, retrouver l'historique de vos échanges</li>
-                  <li><strong>Conformité et sécurité</strong> : Détecter les utilisations abusives du service, conserver une trace en cas de litige, répondre aux obligations légales de conservation</li>
-                  <li><strong>Analyse statistique</strong> : Mesurer l'utilisation du chatbot, identifier les thématiques les plus demandées, calculer le taux de satisfaction</li>
+                  <li><strong>Améliorer LEIA</strong> : Analyser les questions fréquentes, identifier les lacunes de connaissances</li>
+                  <li><strong>Support utilisateur</strong> : Vous aider en cas de problème technique</li>
+                  <li><strong>Conformité et sécurité</strong> : Détecter les utilisations abusives du service</li>
                 </ol>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.4 Qui a Accès à Vos Conversations ?</h3>
-                
-                <p className="font-medium mb-2">Accès complet aux conversations :</p>
                 <div className="bg-card border border-border p-4 rounded-lg mb-4">
                   <p className="font-semibold">Baptiste FAURE (gérant de ZENKAI)</p>
                   <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li><strong>Pourquoi</strong> : Amélioration du service, formation du bot, support utilisateur</li>
+                    <li><strong>Pourquoi</strong> : Amélioration du service, support utilisateur</li>
                     <li><strong>Garantie</strong> : Confidentialité professionnelle, pas de partage</li>
                   </ul>
                 </div>
-                
                 <p className="font-medium mb-2">Accès technique (infrastructure) :</p>
                 <ul className="list-disc pl-6 space-y-1 mb-4">
-                  <li><strong>Notre prestataire chatbot</strong> : Hébergement et stockage sécurisé des conversations (UE, RGPD)</li>
-                  <li><strong>Notre prestataire IA</strong> : Traitement en temps réel uniquement, AUCUNE conservation</li>
+                  <li><strong>Moteur d'automatisation</strong> : orchestration et stockage temporaire (Hetzner, UE), purgé après 7 jours</li>
+                  <li><strong>Base de connaissance vectorielle</strong> : recherche de similarité en transit uniquement, sans conservation (Qdrant Cloud, États-Unis)</li>
+                  <li><strong>Modèles de langage</strong> : traitement en temps réel, aucune conservation à des fins d'entraînement (Anthropic, OpenAI)</li>
                 </ul>
-                
                 <p className="font-medium mb-2">AUCUN accès :</p>
                 <ul className="space-y-1 mb-6">
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Autres utilisateurs de ZENKAI</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Tiers commerciaux ou partenaires</li>
-                  <li className="flex items-start gap-2"><span className="text-red-500">❌</span> Régies publicitaires</li>
                 </ul>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.5 Durée de Conservation des Conversations</h3>
-                
                 <div className="space-y-4 mb-6">
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Phase 1 : Conversations identifiables (90 jours)</p>
-                    <p className="mt-2">Pendant <strong>3 mois</strong> après votre dernière conversation avec LEIA : conservation complète avec toutes les métadonnées, possibilité pour vous de demander une copie ou la suppression.</p>
+                    <p className="font-semibold">Purge automatique après 7 jours</p>
+                    <p className="mt-2">Le contenu de vos conversations est conservé uniquement le temps de son traitement technique par notre moteur d'automatisation, avec une purge automatique après 7 jours (168 heures). Passé ce délai, aucune trace du contenu ne subsiste dans nos systèmes.</p>
                   </div>
-                  
-                  <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Phase 2 : Anonymisation automatique (après 90 jours)</p>
-                    <p className="mt-2">Après <strong>3 mois</strong> : suppression de l'identifiant de session utilisateur, suppression de toute donnée permettant de vous identifier, conservation du contenu anonymisé pour statistiques.</p>
-                  </div>
-                  
-                  <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Phase 3 : Suppression définitive (après 12 mois)</p>
-                    <p className="mt-2">Après <strong>12 mois</strong> : suppression définitive et irréversible, aucune trace ne subsiste dans nos systèmes.</p>
-                  </div>
-                  
                   <div className="bg-primary/10 border border-primary/30 p-4 rounded-lg">
                     <p className="font-semibold">Sur demande (immédiat)</p>
-                    <p className="mt-2">Vous pouvez demander la suppression de vos conversations à tout moment. Délai de traitement : <strong>48 heures maximum</strong>. Procédure : Email à <a href="mailto:contact@zenkai.nc" className="text-primary hover:underline">contact@zenkai.nc</a></p>
+                    <p className="mt-2">Vous pouvez demander la suppression anticipée de vos conversations à tout moment. Délai de traitement : <strong>48 heures maximum</strong>. Procédure : email à <a href="mailto:contact@zenkai.nc" className="text-primary hover:underline">contact@zenkai.nc</a></p>
                   </div>
                 </div>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.6 Base Légale du Traitement</h3>
-                <p className="mb-2">Le traitement de vos conversations repose sur :</p>
+                <p className="mb-2">Le traitement de vos conversations, associées à votre adresse e-mail, repose sur :</p>
                 <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li><strong>Votre consentement explicite</strong> (Article 6.1.a RGPD) : Donné lors de la première utilisation de LEIA, révocable à tout moment</li>
-                  <li><strong>Notre intérêt légitime</strong> (Article 6.1.f RGPD) : Amélioration continue du service LEIA, développement de nouvelles fonctionnalités</li>
+                  <li><strong>Votre consentement explicite</strong> (Article 6.1.a RGPD) : recueilli et renouvelé à chaque connexion, révocable à tout moment</li>
+                  <li><strong>L'exécution du contrat</strong> (Article 6.1.b RGPD) : nécessaire pour vous fournir une continuité de service et un support personnalisé</li>
                 </ol>
-                <p className="mb-6">Vous pouvez vous opposer à ce traitement à tout moment (voir section 8.6).</p>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.7 Vos Droits Spécifiques sur les Conversations</h3>
-                <p className="mb-2">Au-delà des droits RGPD généraux (section 8), vous disposez des droits suivants :</p>
                 <ul className="list-disc pl-6 space-y-2 mb-6">
-                  <li><strong>Droit d'accès</strong> : Obtenir une copie de toutes vos conversations avec LEIA (format JSON ou TXT, délai 30 jours max)</li>
+                  <li><strong>Droit d'accès</strong> : Obtenir une copie de toutes vos conversations (format JSON ou TXT, délai 30 jours max)</li>
                   <li><strong>Droit de suppression immédiate</strong> : Demander la suppression à tout moment (délai 48h max)</li>
                   <li><strong>Droit d'opposition</strong> : Cesser d'utiliser LEIA = fin de l'enregistrement</li>
                 </ul>
 
-                <h3 className="text-xl font-medium text-foreground mb-3">6.8 Anonymat et Protection de votre Vie Privée</h3>
-                <p className="mb-2"><strong>Conversations anonymes par défaut :</strong></p>
-                <ul className="list-disc pl-6 space-y-1 mb-4">
-                  <li>Vous apparaissez comme "Anonymous User" dans le système Botpress</li>
-                  <li>Aucun nom, prénom ou identité directe n'est collecté automatiquement</li>
-                  <li>Seul un identifiant technique est utilisé (pour regrouper vos conversations)</li>
-                </ul>
-                
+                <h3 className="text-xl font-medium text-foreground mb-3">6.8 Recommandation d'Usage</h3>
                 <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-4">
-                  <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ Attention aux informations que vous partagez :</p>
-                  <p className="mt-2">Si vous mentionnez volontairement votre nom, prénom, entreprise, des données sensibles ou des informations confidentielles, elles seront enregistrées dans la conversation.</p>
+                  <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ Vos conversations sont associées à votre identité :</p>
+                  <p className="mt-2">Compte tenu de cette association, formulez vos questions de manière générale, sans mentionner d'informations personnelles inutiles concernant des tiers (salariés, collègues).</p>
                 </div>
-                
-                <p className="mb-2"><strong>Recommandation :</strong> Posez vos questions de manière générale sans mentionner d'informations personnelles inutiles.</p>
                 <ul className="space-y-1 mb-6">
                   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> "Quel est le délai de préavis pour un licenciement en Nouvelle-Calédonie ?"</li>
                   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> "Je suis Jean Dupont, gérant de Boulangerie du Centre, je veux licencier mon employé Marc Martin pour..."</li>
@@ -484,19 +473,16 @@ const Terms = () => {
 
                 <h3 className="text-xl font-medium text-foreground mb-3">6.9 Retrait du Consentement</h3>
                 <p className="mb-2">Vous pouvez retirer votre consentement à l'enregistrement des conversations à tout moment :</p>
-                
                 <div className="space-y-4 mb-4">
                   <div className="bg-card border border-border p-4 rounded-lg">
                     <p className="font-semibold">Option 1 : Cesser d'utiliser LEIA</p>
-                    <p className="mt-2">Simple arrêt d'utilisation. Aucune nouvelle conversation ne sera enregistrée. Les conversations passées restent stockées selon la durée de conservation (90 jours).</p>
+                    <p className="mt-2">Aucune nouvelle conversation ne sera enregistrée. Les conversations passées suivent la purge automatique de 7 jours décrite en 6.5.</p>
                   </div>
-                  
                   <div className="bg-card border border-border p-4 rounded-lg">
                     <p className="font-semibold">Option 2 : Suppression + arrêt</p>
                     <p className="mt-2">Email à <a href="mailto:contact@zenkai.nc" className="text-primary hover:underline">contact@zenkai.nc</a> : "Je retire mon consentement et demande la suppression de mes conversations". Suppression sous 48h avec confirmation par email.</p>
                   </div>
                 </div>
-                
                 <p className="text-sm"><strong>Conséquence du retrait :</strong> Le retrait du consentement ne remet pas en cause la licéité des traitements effectués avant le retrait.</p>
               </section>
 
@@ -532,7 +518,7 @@ const Terms = () => {
                     </tbody>
                   </table>
                 </div>
-                
+
                 <p className="mb-6"><strong>Cookies analytics (consentement requis) :</strong> Nous utilisons Netlify Analytics (pas de cookies tiers, pas de tracking inter-sites) pour mesurer l'audience de notre site.</p>
 
                 <h3 className="text-xl font-medium text-foreground mb-3">7.3 Gestion des Cookies</h3>
@@ -736,7 +722,7 @@ const Terms = () => {
                   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Utiliser ZENKAI et LEIA de manière légale et conforme</li>
                   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Ne pas tenter de contourner les mesures de sécurité</li>
                   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Comprendre que LEIA ne remplace pas un conseil juridique personnalisé</li>
-                  <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Accepter l'enregistrement de vos conversations avec LEIA (90 jours, puis anonymisation)</li>
+                  <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Accepter l'enregistrement de vos conversations avec LEIA, associées à votre adresse e-mail et purgées automatiquement après 7 jours</li>
                   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Respecter les droits de propriété intellectuelle de ZENKAI</li>
                   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> Maintenir la confidentialité de vos identifiants de connexion</li>
                 </ul>
@@ -746,12 +732,12 @@ const Terms = () => {
             {/* Footer */}
             <div className="pt-8 border-t border-border space-y-4">
               <p className="text-sm text-muted-foreground">
-                <strong>Date de dernière mise à jour :</strong> 4 février 2026
+                <strong>Date de dernière mise à jour :</strong> 16 septembre 2026
               </p>
               <p className="text-sm text-muted-foreground">
-                <strong>Version :</strong> 1.0
+                <strong>Version :</strong> 2.0
               </p>
-              
+
               <div className="bg-card border border-border p-4 rounded-lg mt-6">
                 <p className="font-semibold">ZENKAI</p>
                 <p className="text-sm text-muted-foreground mt-2">Baptiste FAURE</p>
