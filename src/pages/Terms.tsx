@@ -439,6 +439,14 @@ const Terms = () => {
   <p className="font-semibold text-amber-700 dark:text-amber-400">⚠️ Vos conversations sont associées à votre identité :</p>
   <p className="mt-2">Compte tenu de cette association, formulez vos questions de manière générale, sans mentionner d'informations personnelles inutiles concernant des tiers (salariés, collègues). Cette recommandation s'applique aussi aux documents que vous joignez à la conversation.</p>
 </div>
+                <p className="mb-2">Nous recommandons explicitement de ne pas saisir dans LEIA :</p>
+<ul className="list-disc pl-6 space-y-1 mb-4">
+  <li>Nom, prénom ou tout élément permettant d'identifier une personne (salarié, tiers)</li>
+  <li>Données de santé (arrêts maladie, situations médicales de salariés)</li>
+  <li>Appartenance syndicale, opinions politiques ou religieuses</li>
+  <li>Détails nominatifs de procédures disciplinaires visant des tiers identifiés</li>
+  <li>Données bancaires ou financières personnelles</li>
+</ul>
 <ul className="space-y-1 mb-6">
   <li className="flex items-start gap-2"><span className="text-green-500">✅</span> "Quel est le délai de préavis pour un licenciement en Nouvelle-Calédonie ?"</li>
   <li className="flex items-start gap-2"><span className="text-red-500">❌</span> "Je suis Jean Dupont, gérant de Boulangerie du Centre, je veux licencier mon employé Marc Martin pour..."</li>
