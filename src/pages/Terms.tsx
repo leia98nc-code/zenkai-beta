@@ -163,6 +163,7 @@ const Terms = () => {
                   <li><strong>Date de création du compte</strong></li>
                   <li><strong>Date de dernière connexion</strong></li>
                 </ul>
+                <p className="mt-2 text-sm">Ces données sont conservées pendant toute la durée d'activation de votre compte. En cas de résiliation de votre abonnement, elles sont supprimées dans un délai de 7 jours suivant la date de résiliation effective.</p>
                 <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-lg mb-6">
                   <p>⚠️ <strong>Vos mots de passe ne sont JAMAIS accessibles par ZENKAI</strong>. Ils sont gérés de façon irréversible par notre prestataire d'authentification (Supabase, opéré via Lovable) selon les standards de sécurité les plus élevés (hachage bcrypt avec salt unique).</p>
                 </div>
@@ -245,13 +246,14 @@ const Terms = () => {
 
                 <div className="space-y-4 mb-6">
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Authentification, profils et sessions</p>
-                    <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Prestataire</strong> : Lovable (infrastructure Supabase gérée par Lovable)</li>
-                      <li><strong>Localisation</strong> : en cours de confirmation auprès du prestataire</li>
-                      <li><strong>Données traitées</strong> : email, UUID, statut d'abonnement</li>
-                    </ul>
-                  </div>
+  <p className="font-semibold">Authentification, profils et sessions</p>
+  <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+    <li><strong>Prestataire</strong> : Lovable (infrastructure Supabase gérée par Lovable)</li>
+    <li><strong>Localisation</strong> : Suisse (Zurich)</li>
+    <li><strong>Données traitées</strong> : email, UUID, statut d'abonnement</li>
+    <li><strong>Transfert</strong> : décision d'adéquation de la Commission européenne pour la Suisse (réaffirmée le 15 janvier 2024)</li>
+  </ul>
+</div>
                   <div className="bg-card border border-border p-4 rounded-lg">
                     <p className="font-semibold">Moteur d'automatisation LEIA</p>
                     <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
@@ -287,13 +289,14 @@ const Terms = () => {
                     </ul>
                   </div>
                   <div className="bg-card border border-border p-4 rounded-lg">
-                    <p className="font-semibold">Hébergement du site web et résolution DNS</p>
-                    <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-                      <li><strong>Prestataires</strong> : Netlify (hébergement), Cloudflare (DNS)</li>
-                      <li><strong>Localisation</strong> : réseau mondial</li>
-                      <li><strong>Données traitées</strong> : logs de connexion, IP anonymisée</li>
-                    </ul>
-                  </div>
+  <p className="font-semibold">Hébergement du site web et résolution DNS</p>
+  <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+    <li><strong>Prestataires</strong> : Netlify (hébergement), Cloudflare (DNS)</li>
+    <li><strong>Localisation</strong> : réseau mondial</li>
+    <li><strong>Données traitées</strong> : logs de connexion, IP</li>
+    <li><strong>Transfert</strong> : Netlify — DPA intégré par référence à ses conditions générales, incluant les clauses contractuelles types ; Cloudflare — DPA avec clauses contractuelles types et adhésion au cadre de protection des données UE-États-Unis (Data Privacy Framework)</li>
+  </ul>
+</div>
                 </div>
 
                 <h4 className="text-lg font-medium text-foreground mb-2">5.5.3 Autorités Légales</h4>
