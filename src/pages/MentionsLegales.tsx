@@ -45,7 +45,7 @@ const MentionsLegales = () => {
             <div>
   <p className="font-medium text-sumi">Base de données et authentification :</p>
   <p className="text-stone">
-    Lovable Labs Incorporated (infrastructure Supabase gérée par Lovable) - <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="text-navy hover:underline">https://lovable.dev</a>
+    Lovable Labs Incorporated (infrastructure Supabase gérée par Lovable, hébergée en Suisse) - <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="text-navy hover:underline">https://lovable.dev</a>
   </p>
 </div>
           </div>
