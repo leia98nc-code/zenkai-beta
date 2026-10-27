@@ -28,20 +28,60 @@ const UpdatePassword = () => {
   const [validSession, setValidSession] = useState(false);
 
   useEffect(() => {
-    // Vérifier qu'on a une session valide (venant du lien email)
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) {
-        setValidSession(true);
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Session invalide",
-          description: "Le lien de réinitialisation est invalide ou a expiré.",
-        });
-        navigate("/reset-password");
-      }
+    let resolved = false;
+    const markValid = () => {
+      if (resolved) return;
+      resolved = true;
+      clearTimeout(timer);
+      setValidSession(true);
+    };
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "PASSWORD_RECOVERY" || session) markValid();
     });
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) markValid();
+    });
+
+    // Délai de grâce de 5 secondes maximum avant de conclure que le lien est invalide
+    const timer = setTimeout(() => {
+      if (resolved) return;
+      resolved = true;
+      toast({
+        variant: "destructive",
+        title: "Session invalide",
+        description: "Le lien de réinitialisation est invalide ou a expiré.",
+      });
+      navigate("/reset-password");
+    }, 5000);
+
+    return () => {
+      resolved = true;
+      clearTimeout(timer);
+      subscription.unsubscribe();
+    };
   }, [navigate, toast]);
+
+  const translateAuthError = (message: string): string => {
+    const m = message.toLowerCase();
+    if (m.includes("different from the old password") || m.includes("same_password")) {
+      return "Le nouveau mot de passe doit être différent de l'ancien.";
+    }
+    if (m.includes("at least") && m.includes("characters")) {
+      return "Le mot de passe est trop court.";
+    }
+    if (m.includes("weak") || m.includes("pwned") || m.includes("leaked") || m.includes("should contain")) {
+      return "Le mot de passe est trop faible. Choisissez-en un plus robuste (lettres, chiffres, symboles).";
+    }
+    if (m.includes("session") && (m.includes("missing") || m.includes("expired") || m.includes("not found"))) {
+      return "Votre session a expiré. Veuillez redemander un lien de réinitialisation.";
+    }
+    if (m.includes("rate limit") || m.includes("too many")) {
+      return "Trop de tentatives. Veuillez patienter quelques minutes avant de réessayer.";
+    }
+    return message;
+  };
 
   const handleUpdatePassword = async (e: FormEvent) => {
     e.preventDefault();
@@ -75,10 +115,13 @@ const UpdatePassword = () => {
         });
         setErrors(fieldErrors);
       } else {
+        const raw = error instanceof Error && error.message ? error.message : "";
         toast({
           variant: "destructive",
           title: "Erreur",
-          description: "Une erreur est survenue lors de la mise à jour du mot de passe.",
+          description: raw
+            ? translateAuthError(raw)
+            : "Une erreur est survenue lors de la mise à jour du mot de passe.",
         });
       }
     } finally {
