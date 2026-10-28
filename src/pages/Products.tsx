@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import leiaAvatar from "@/assets/leia-avatar.png";
-import { Zap, ArrowRight, CheckCircle2, Radar, Search, Brain, Send } from "lucide-react";
+import { Zap, ArrowRight, FileText, CheckCircle2, Radar, Search, Brain, Send } from "lucide-react";
 
 const Products = () => {
   return (
@@ -46,13 +46,25 @@ const Products = () => {
                   Assistant IA spécialisé en droit du travail applicable en Nouvelle-Calédonie. 
                   LEIA répond à vos questions 24/7 avec une expertise validée par des professionnels.
                 </p>
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
-                >
-                  <Link to="/signup">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
+                  >
+                    <Link to="/signup">Essayer LEIA<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300"
+                  >
+                    <a href="https://app.zenkai.nc/documents/LEIA-Presentation.pdf" target="_blank" rel="noopener noreferrer">
+                      En savoir plus<FileText className="ml-2 w-4 h-4" />
+                    </a>
+                  </Button>
+                </div>
               </div>
               <div className="space-y-4">
                 <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
