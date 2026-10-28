@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import leiaAvatar from "@/assets/leia-avatar.png";
-import { MessageSquare, Users, Zap, ArrowRight, CheckCircle2, Radar, Search, Brain, Send } from "lucide-react";
+import { Zap, ArrowRight, CheckCircle2, Radar, Search, Brain, Send } from "lucide-react";
 
 const Products = () => {
   return (
@@ -102,76 +102,8 @@ const Products = () => {
         </div>
       </section>
 
-      {/* SOCIA - Communication Automatisée */}
-      <section className="bg-sand-dark py-32">
-        <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 space-y-4">
-              <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-sumi mb-2">Community manager IA</h4>
-                    <p className="text-stone">
-                      Un agent IA spécialiste des réseaux sociaux qui crée le post idéal pour votre audience
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-sumi mb-2">Images générées par IA ou recherche web</h4>
-                    <p className="text-stone">
-                      Publiez vos propres images ou utilisez l'IA générative pour créer des visuels percutants
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-sumi mb-2">Automatisation flexible</h4>
-                    <p className="text-stone">
-                      Adaptez l'outil à vos besoins : créez vos contenus avec assistance IA ou automatisez entièrement la production
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="flex justify-center mb-6">
-                <div className="w-24 h-24 rounded-full bg-navy flex items-center justify-center shadow-zen">
-                  <MessageSquare className="w-12 h-12 text-white" />
-                </div>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-sumi mb-6 font-serif">SOCIA</h2>
-              <p className="text-xl text-navy font-semibold mb-4">
-                Communication Automatisée
-              </p>
-              <p className="text-lg text-stone leading-relaxed mb-8">
-                Automatisez votre webmarketing avec une IA qui produit vos campagnes selon vos critères
-              </p>
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-navy hover:bg-navy-light transition-all duration-300 shadow-zen hover:shadow-hover"
-              >
-                <a href="https://app.zenkai.nc/socia.html" target="_blank" rel="noopener noreferrer">
-                  Démo test gratuite<ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-
       {/* MONITORIA - Veille Automatisée */}
-      <section className="bg-white py-32">
+      <section className="bg-sand-dark py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -198,7 +130,7 @@ const Products = () => {
                 </Button>
               </div>
               <div className="space-y-4">
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <Search className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -207,7 +139,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <Brain className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -216,7 +148,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <Send className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -232,7 +164,7 @@ const Products = () => {
       </section>
 
       {/* Automatisations Personnalisées */}
-      <section className="bg-sand-dark py-32">
+      <section className="bg-white py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -261,7 +193,7 @@ const Products = () => {
                 </Button>
               </div>
               <div className="space-y-4">
-                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -270,7 +202,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -279,7 +211,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
@@ -288,7 +220,7 @@ const Products = () => {
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 bg-white border-0 shadow-zen hover:shadow-hover transition-all duration-300">
+                <Card className="p-6 bg-sand border-0 shadow-zen hover:shadow-hover transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-navy flex-shrink-0 mt-1" />
                     <div>
